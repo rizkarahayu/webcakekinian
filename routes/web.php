@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('ck-admin')->group(function () {
+    Route::get('test', 'Admin\Users\UsersController@index');
+
+    Route::get('users', 'Admin\Users\UsersController@index');
+});
