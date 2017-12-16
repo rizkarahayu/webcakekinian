@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 Route::prefix('ck-admin')->group(function () {
-    Route::get('test', 'Admin\Users\UsersController@index');
+    Route::get('/', 'Admin\DashboardController@index');
 
-    Route::get('users', 'Admin\Users\UsersController@index');
+    Route::get('/test', 'Admin\Users\UsersController@index');
+    Route::get('/users', 'Admin\Users\UsersController@index');
 });
+
+include_once "web_routing/nadila.php";
+include_once "web_routing/reza.php";
+include_once "web_routing/rizka.php";
