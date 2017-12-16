@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('')->group(function () {
+    Route::get('/', 'Website\HomeController@index');
 });
 
 Route::prefix('ck-admin')->group(function () {
@@ -22,6 +22,7 @@ Route::prefix('ck-admin')->group(function () {
     Route::get('/users', 'Admin\Users\UsersController@index');
 });
 
+include_once "web_routing/beny.php";
 include_once "web_routing/nadila.php";
 include_once "web_routing/reza.php";
 include_once "web_routing/rizka.php";

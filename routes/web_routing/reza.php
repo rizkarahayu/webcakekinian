@@ -1,5 +1,5 @@
 <?php
 
-Route::prefix('ck-admin')->group(function () {
+Route::prefix('')->group(function () {
 
 });
