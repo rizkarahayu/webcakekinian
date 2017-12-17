@@ -31,6 +31,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
             <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="{{ url('/test') }}"><i class="fa fa-link"></i> <span>Test</span></a></li>
 
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
