@@ -23,7 +23,7 @@
                     <h3 class="box-title">Hover Data Table</h3>
                 </div>
                 <div class="box-body">
-                    {{--Content--}}
+                    <table><th>Nama</th></table>
                 </div>
             </div>
         </div>
