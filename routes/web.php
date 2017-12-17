@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::prefix('')->group(function () {
     Route::get('/user', 'Website\HomeController@index');
 });
