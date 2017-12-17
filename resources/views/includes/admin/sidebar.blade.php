@@ -41,7 +41,12 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/ck-admin/users') }}">Users</a></li>
-                     <li><a href="{{ url('/ck-admin/produk') }}">Produk</a></li>
+                    <li><a href="{{ url('/ck-admin/customer') }}">Customer</a></li> 
+                    <li><a href="{{ url('/ck-admin/toko') }}">Toko</a></li>
+                    <li><a href="{{ url('/ck-admin/produk') }}">Produk</a></li>
+                    <li><a href="{{ url('/ck-admin/events') }}">Events</a></li>
+                    
+
                 </ul>
             </li>
 
