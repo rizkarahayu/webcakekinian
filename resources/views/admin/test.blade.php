@@ -20,6 +20,7 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Hover Data Table</h3>
+                    <h1>Test</h1>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

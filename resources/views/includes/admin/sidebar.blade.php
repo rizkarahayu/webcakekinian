@@ -30,7 +30,21 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
-            <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/ck-admin/users') }}">Users</a></li>
+                </ul>
+            </li>
+
+
+
 
 
 

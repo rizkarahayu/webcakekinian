@@ -12,14 +12,11 @@
 */
 
 Route::prefix('')->group(function () {
-    Route::get('/', 'Website\HomeController@index');
+    Route::get('/user', 'Website\HomeController@index');
 });
 
 Route::prefix('ck-admin')->group(function () {
     Route::get('/', 'Admin\DashboardController@index');
-
-    Route::get('/test', 'Admin\Users\UsersController@index');
-    Route::get('/users', 'Admin\Users\UsersController@index');
 });
 
 include_once "web_routing/beny.php";

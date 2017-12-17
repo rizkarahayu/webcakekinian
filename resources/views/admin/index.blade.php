@@ -1,7 +1,7 @@
 @extends('layout.admin_template')
-@section('title', 'Dashboard')
-@section('page_title', 'Dashboard')
-@section('page_description', 'Dashboard Administrator')
+@section('title', 'Title')
+@section('page_title', 'Judul')
+@section('page_description', 'Deskripsi')
 
 @section('breadcrumb')
     <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -17,11 +17,17 @@
 @section('content')
     <div class="row">
         <div class="col-xs-12">
-
+            <div class="box">
+                <div class="box-header">
+                    {{--Title--}}
+                    <h3 class="box-title">Hover Data Table</h3>
+                </div>
+                <div class="box-body">
+                    {{--Content--}}
+                </div>
+            </div>
         </div>
-        <!-- /.col -->
     </div>
-    <!-- /.row -->
 @endsection
 
 
