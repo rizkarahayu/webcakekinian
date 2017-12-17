@@ -32,6 +32,7 @@
             <li class="header">MAIN</li>
             <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
             <li class="active"><a href="{{ url('/ck-admin/test')}}"><i class="fa fa-link"></i> <span>Test</span></a></li>
+            <li class="active"><a href="{{url('/tes')}}"><i class="fa fa-link"></i> <span>Tes</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
                     <span class="pull-right-container">
