@@ -32,6 +32,11 @@
         <link rel="stylesheet" href="{{ url('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
         @yield('custom_css')
+        <style>
+            .skin-purple .main-header .navbar, .skin-purple .main-header .logo {
+                background: #ca60bd;
+            }
+        </style>
     </head>
     <!--
     BODY TAG OPTIONS:
@@ -53,7 +58,7 @@
     |               | sidebar-mini                            |
     |---------------------------------------------------------|
     -->
-    <body class="hold-transition skin-purple sidebar-mini">
+    <body class="hold-transition skin-purple sidebar-mini" >
     <div class="wrapper">
         <!-- Main Header -->
     @include('includes.admin.header')

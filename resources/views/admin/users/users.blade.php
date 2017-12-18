@@ -1,20 +1,22 @@
 @extends('layout.admin_template')
 
-@section('title', 'Data Toko')
-@section('page_title', 'Data Toko')
-@section('page_description', 'adalah data yang berisi tentang toko.')
+@section('title', 'Data User')
+@section('page_title', 'Data User')
+@section('page_description', 'adalah data yang berisi tentang user.')
 
 
 @section('content')
-    <div class="row">@section('title', 'Data Toko')
-@section('page_title', 'Data Toko')
-@section('page_description', 'adalah data yang berisi tentang toko.')
+<div class="row">
+@section('title', 'Data User')
+@section('page_title', 'Data User')
+@section('page_description', 'adalah data yang berisi tentang user.')
+
 @section('content')
 <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <a data-toggle='modal' data-target='#add-game-setting'>
+                   <a data-toggle='modal' data-target='#add-game-setting'>
                   <button class='btn bg-purple flat'><span class='fa fa-plus-circle'></span> Tambah Data</button>
               </a>
                     
@@ -23,10 +25,11 @@
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>Nama</th>
-                  <th>SIUP</th>
-                  <th>NPWP</th>
-                  <th>Nomor Rekening</th>
+                  <th>Nama</th>
+                  <th>Username</th>
+                    <th>Alamat</th>
+                  <th>Nomor Telepon</th>
+                    <th>Email</th>
                 
                   <th>Aksi</th>
                 </tr>
@@ -34,6 +37,7 @@
                 <tbody>
                 
                 <tr>
+                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>

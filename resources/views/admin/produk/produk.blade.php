@@ -15,12 +15,42 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    {{--Title--}}
-                    <h3 class="box-title">Hover Data Table</h3>
+                    <a data-toggle='modal' data-target='#add-game-setting'>
+                  <button class='btn bg-purple flat'><span class='fa fa-plus-circle'></span> Tambah Data</button>
+              </a>
+                    
                 </div>
                 <div class="box-body">
-
-                   <table><th>Nama</th></table>
+                    <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                   <th>Nama Produk</th>
+                  <th>Nama Toko</th>
+                  <th>Stok</th>
+                  <th>Harga</th>
+                  <th>Deskripsi</th>
+                  <th>Gambar</th>
+                  <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>  <a href="." class="btn btn-warning">
+                      <i class="fa fa-pencil"></i>
+                  </a>
+                      <a class="btn btn-danger" onclick="">
+                      <i class="fa fa-trash"></i>
+                    </a></td>
+                </tr>
+                 </tbody>
+              </table>
                 </div>
             </div>
         </div>
