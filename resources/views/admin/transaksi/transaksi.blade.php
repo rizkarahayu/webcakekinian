@@ -5,6 +5,7 @@
 @section('content')
     <div class="row">@section('title', 'Data Toko')
 @section('page_title', 'Data Transaksi')
+@section('page_description', 'Data Transaksi')
 @section('content')
 <div class="row">
         <div class="col-xs-12">
@@ -19,6 +20,7 @@
                   <th style="text-align:center">Nama Customer</th>
                   <th style="text-align:center">Nama Toko</th>
                   <th style="text-align:center">Total</th>
+                  <th style="text-align:center">Detail Pengiriman</th>
                   <th style="text-align:center">Status Bayar</th>
                   <th style="text-align:center">Kode Bayar</th>
                   <th style="text-align:center">Status Pengiriman</th>
@@ -31,10 +33,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
-                  <td width="80px" style="text-align:center"><button class="btn btn-primary">Kirim</button></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center"><button width=50px class="btn btn-primary">Detail</button></td>
+                  <td style="text-align:center"><input width=50px  type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center"><button width=50px class="btn btn-primary">Kirim</button></td>
+                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
                 </tr>
               </table>
                     <br/>
