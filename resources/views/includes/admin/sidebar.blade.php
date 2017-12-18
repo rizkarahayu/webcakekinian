@@ -31,8 +31,6 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
             <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
-             <li class="active"><a href="{{ url('ck-admin/test') }}"><i class="fa fa-link"></i> <span>Tes</span></a></li>
-            <li class="active"><a href="{{url('/tes')}}"><i class="fa fa-link"></i> <span>Tes</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
                     <span class="pull-right-container">
@@ -49,25 +47,25 @@
 
                 </ul>
             </li>
-
-
-
-
-
-
-            <li class="header">EXAMPLE</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-            <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+             <li class="treeview">
+                <a href="#"><i class="fa fa-link"></i> <span>Data Transaksi</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="{{ url('/ck-admin/transaksi') }}">Transaksi</a></li>
+                    <li><a href="{{ url('/ck-admin/detailtransaksi') }}">Detail Transaksi</a></li> 
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class="fa fa-link"></i> <span>Laporan</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/ck-admin/laporanbln') }}">Laporan Perbulan</a></li>
                 </ul>
             </li>
         </ul>
