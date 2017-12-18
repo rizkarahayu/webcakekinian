@@ -519,7 +519,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 }
 .callbacks_nav.next {
 	background: transparent url("../../img/website/images/themes.png") no-repeat -46px 0px;
-  left: 100%;
+    left: 100%;
 }
 #slider3-pager a,#slider4-pager a  {
   display: inline-block;
@@ -1481,6 +1481,21 @@ a.single-item{
     outline: none;
     -webkit-appearance: none;
     padding: 8px 15px 9px 15px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.log-button {
+    background:#7B7B7B;
+    color: #fff !important;
+    font-size: 17px !important;
+    border: none;
+    width: 100%;
+    outline: none;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    padding: 10px 135px 10px 135px;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;

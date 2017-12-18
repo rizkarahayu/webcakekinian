@@ -732,7 +732,8 @@
                                         <label for="brand"><span></span>Remember Me.</label>
                                     </div>
                                     <div class="sign-in">
-                                        <input type="submit" value="SIGNIN" >
+                                        <!--<input type="submit" value="SIGNIN" >-->
+                                        <a href="{{ url('/ck-admin') }}" class="log-button">SIGN IN</a>
                                     </div>
                                 </form>
                             </div>
