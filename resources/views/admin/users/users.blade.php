@@ -6,18 +6,17 @@
 
 
 @section('content')
-<div class="row">
+    <div class="row">
 @section('title', 'Data User')
 @section('page_title', 'Data User')
 @section('page_description', 'adalah data yang berisi tentang user.')
-
 @section('content')
 <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                   <a data-toggle='modal' data-target='#add-game-setting'>
-                  <button class='btn bg-purple flat'><span class='fa fa-plus-circle'></span> Tambah Data</button>
+                    <a href="{{url('ck-admin/users/tambah')}}">
+                  <button class='btn bg-purple flat'><span class='fa fa-plus-circle'></span> Tambah User</button>
               </a>
                     
                 </div>
@@ -25,13 +24,12 @@
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Nama</th>
-                  <th>Username</th>
-                    <th>Alamat</th>
-                  <th>Nomor Telepon</th>
-                    <th>Email</th>
-                
-                  <th>Aksi</th>
+                 <th>Nama</th>
+                 <th>Username</th>
+                 <th>Alamat</th>
+                 <th>Nomor Telepon</th>
+                 <th>Email</th>
+                 <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
