@@ -35,7 +35,7 @@
         @yield('custom_css')
         <style>
             .skin-purple .main-header .navbar, .skin-purple .main-header .logo {
-                background: #ca60bd;
+                background: #d83192;
             }
         </style>
     </head>

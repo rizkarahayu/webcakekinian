@@ -10,4 +10,7 @@ class UserController extends Controller
      public function index(){
         return view('admin.users.users');
     }
+      public function tambah(){
+        return view('admin.users.users_tambah');
+    }
 }
