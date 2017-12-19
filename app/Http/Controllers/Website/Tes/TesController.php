@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 class TesController extends Controller
 {
     public function tes(){
-    	return view ('websites.Tes.tes');
+    	return view ('websites.tes.tes');
     }
-
 }

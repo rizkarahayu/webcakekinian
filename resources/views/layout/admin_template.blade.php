@@ -30,8 +30,14 @@
 
 
         <link rel="stylesheet" href="{{ url('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url('plugins/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css')}}">
 
         @yield('custom_css')
+        <style>
+            .skin-purple .main-header .navbar, .skin-purple .main-header .logo {
+                background: #ca60bd;
+            }
+        </style>
     </head>
     <!--
     BODY TAG OPTIONS:
@@ -53,7 +59,7 @@
     |               | sidebar-mini                            |
     |---------------------------------------------------------|
     -->
-    <body class="hold-transition skin-purple sidebar-mini">
+    <body class="hold-transition skin-purple sidebar-mini" >
     <div class="wrapper">
         <!-- Main Header -->
     @include('includes.admin.header')
@@ -104,6 +110,7 @@
 
     <script src="{{ url('bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ url('plugins/bootstrap-switch-master/dist/js/bootstrap-switch.min.js')}}"></script>
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the
