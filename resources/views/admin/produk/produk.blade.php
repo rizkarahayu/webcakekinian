@@ -15,7 +15,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <a data-toggle='modal' data-target='#add-game-setting'>
+                    <a href="{{url('ck-admin/produk/tambah')}}">
                   <button class='btn bg-purple flat'><span class='fa fa-plus-circle'></span> Tambah Data</button>
               </a>
                     

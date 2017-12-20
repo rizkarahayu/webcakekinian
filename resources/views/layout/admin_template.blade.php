@@ -36,7 +36,7 @@
         @yield('custom_css')
         <style>
             .skin-purple .main-header .navbar, .skin-purple .main-header .logo {
-                background: #ca60bd;
+                background: #d83192;
             }
         </style>
     </head>
@@ -99,8 +99,9 @@
     </div>
     <!-- ./wrapper -->
 
-    <!-- REQUIRED JS SCRIPTS -->
+    @yield('modal')
 
+    <!-- REQUIRED JS SCRIPTS -->
     <!-- jQuery 3 -->
     <script src="{{ url('bower_components/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap 3.3.7 -->

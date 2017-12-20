@@ -10,4 +10,7 @@ class TokoController extends Controller
      public function index(){
         return view('admin.toko.toko');
     }
+    public function tambah(){
+        return view('admin.toko.toko_tambah');
+    }
 }

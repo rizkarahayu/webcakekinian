@@ -13,6 +13,7 @@
 
 
 Route::prefix('')->group(function () {
+    Route::get('/', 'Website\HomeController@index');
     Route::get('/user', 'Website\HomeController@index');
 });
 
