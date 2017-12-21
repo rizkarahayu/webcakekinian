@@ -21,7 +21,7 @@
                   <th style="text-align:center">Total</th>
                   <th style="text-align:center">Detail Pengiriman</th>
                   <th style="text-align:center">Status Bayar</th>
-                  <th style="text-align:center">Kode Bayar</th>
+                  <th style="text-align:center">Detail Transaksi</th>
                   <th style="text-align:center">Status Pengiriman</th>
                   <th style="text-align:center">Status Kedatangan</th>
                 </tr>
@@ -37,12 +37,21 @@
                       @if($status_bayar == 0)
                     <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</label>
                       @else
-                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i> bayar</label>
+                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>bayar</label>
                       @endif
                   </td>
-                  <td style="text-align:center"><button width=50px class="btn btn-primary">Kirim</button></td>
+                  <td style="text-align:center"><a href="{{url('ck-admin/detailtransaksi')}}">
+                  <button class='btn btn-info'>Detail Transaksi</button>
+                   </a></td>
                   <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
-                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center">
+                      @php $status_datang = 0; @endphp
+                      @if($status_datang == 0)
+                    <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum Sampai</label>
+                      @else
+                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>Sampai</label>
+                      @endif
+                  </td>
                 </tr>
             </table>
              <div id="myModal" class="modal fade" role="dialog">
