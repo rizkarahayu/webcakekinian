@@ -5,6 +5,7 @@
 @section('content')
     <div class="row">@section('title', 'Data Toko')
 @section('page_title', 'Data Transaksi')
+@section('page_description', 'Data Transaksi')
 @section('content')
 <div class="row">
         <div class="col-xs-12">
@@ -12,13 +13,13 @@
                 <div class="box-header">
                 </div>
                 <div class="box-body">
-
-                         <table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th style="text-align:center">Nama Customer</th>
                   <th style="text-align:center">Nama Toko</th>
                   <th style="text-align:center">Total</th>
+                  <th style="text-align:center">Detail Pengiriman</th>
                   <th style="text-align:center">Status Bayar</th>
                   <th style="text-align:center">Kode Bayar</th>
                   <th style="text-align:center">Status Pengiriman</th>
@@ -26,53 +27,97 @@
                 </tr>
                 </thead>
                 <tbody></tbody>
-                    
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
-                  <td width="80px" style="text-align:center"><button class="btn btn-primary">Kirim</button></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
-                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
+                  <td>Beni</td>
+                  <td>Patata</td>
+                  <td>Rp 65000</td>
+                  <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                  <td style="text-align:center">
+                      @php $status_bayar = 1; @endphp
+                      @if($status_bayar == 0)
+                    <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</label>
+                      @else
+                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i> bayar</label>
+                      @endif
+                  </td>
+                  <td style="text-align:center"><button width=50px class="btn btn-primary">Kirim</button></td>
+                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
                 </tr>
-              </table>
-                    <br/>
-                    <br/>
-                    <div class="row" style="display:none">
-                    <div class="col-md-6 col-md-offset-3">
-                    <div class="box box-info">
-                    <form class="form-horizontal" border="2">
-                          <div class="box-body">
-                            <div class="form-group">
-                              <label for="inputEmail3" class="col-sm-2 control-label">Nama Produk</label>
+            </table>
+             <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                  <div class="row">
+                  <div class="col-md-12 col-md-offset-0">
+                  <form action='' method='POST' class="form-horizontal" role="form">
+                    <fieldset>
+                    <center><legend>Details Pengiriman</legend></center>
+                <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Alamat Pengiriman</h3>
+            </div>
+            <form class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Pembeli</label>
 
-                              <div class="col-sm-10">
-                                <input type="" class="form-control" id="" placeholder="Nama Produk">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputPassword3" class="col-sm-2 control-label">Harga </label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Beni">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">No Telepon</label>
 
-                              <div class="col-sm-10">
-                                <input type="" class="form-control" id="" placeholder="Rp. ">
-                              </div>
-                            </div>
-                              <div class="form-group">
-                              <label for="inputPassword3" class="col-sm-2 control-label">QTY </label>
-                            <div class="btn-group"></div>
-                            </div>
-                            <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Subtotal</label>
-                            <div class="col-sm-10">
-                                <input type="" class="form-control" id="" placeholder="Rp. ">
-                            </div>
-                            </div>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="082285698889">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
+
+                  <div class="col-sm-10">
+                   <textarea class="form-control" rows="4" placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Kecamatan</label>
+                  <div class="col-sm-4">
+                    <input type="" class="form-control" id="" placeholder="Sukolilo">
+                  </div>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Kabupaten</label>
+                  <div class="col-sm-4">
+                    <input type="" class="form-control" id="" placeholder="Surabaya">
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Provinsi</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Jawa Timur">
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="61111">
+                  </div>
+                </div>  
                           </div>
-                    </form>
+                        </form>
+                      </div>
+                      </fieldset>
+                     </form>
                     </div>
                     </div>
                     </div>
+                  </div>
+                 </div>
+                </div>
                 </div>
             </div>
         </div>

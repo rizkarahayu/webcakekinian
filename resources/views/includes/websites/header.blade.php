@@ -2,8 +2,8 @@
 <div class="header">
     <div class="container">
         <ul>
-            <li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
-            <li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Free shipping On all orders</li>
+            <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
+            <li><span class="fa fa-cart-arrow-down" aria-hidden="true"></span>Free shipping On all orders</li>
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
         </ul>
     </div>
@@ -112,7 +112,7 @@
                                     <div class="row">
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Banana Foster Lampung</a></li>
+                                                <li><a href="{{url('/toko/fosterlampung')}}">Banana Foster Lampung</a></li>
                                                 <li><a href="womens.html">Bandung Makuta</a></li>
                                                 <li><a href="womens.html">Bogor Rain Cake</a></li>
                                                 <li><a href="womens.html">Bosang Makassar</a></li>
@@ -152,7 +152,7 @@
             <div class="cart box_1">
                 <a href="checkout.html">
                     <h3> <div class="total">
-                            <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                             <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 
                     </h3>

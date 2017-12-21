@@ -5,7 +5,7 @@
                 <h3>3 LANGKAH MUDAH BELI CAKE-KINIAN</h3>
             </div>
             <div class="col-md-3 coupons-gd">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                 <h4>LOGIN TO YOUR ACCOUNT</h4>
                 <p>Sign up dan login menggunakan username dan password</p>
             </div>
