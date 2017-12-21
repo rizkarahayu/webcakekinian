@@ -10,21 +10,19 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    {{--Title--}}
-                    <h3 class="box-title">Data Transaksi</h3>
                 </div>
                 <div class="box-body">
 
                          <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Nama Customer</th>
-                  <th>Nama Toko</th>
-                    <th>Total</th>
-                    <th>Status Pembayaran</th>
-                    <th>Kode Pembayaran</th>
-                    <th>Status Pengiriman</th>
-                    <th>Status Kedatangan</th>
+                  <th style="text-align:center">Nama Customer</th>
+                  <th style="text-align:center">Nama Toko</th>
+                  <th style="text-align:center">Total</th>
+                  <th style="text-align:center">Status Bayar</th>
+                  <th style="text-align:center">Kode Bayar</th>
+                  <th style="text-align:center">Status Pengiriman</th>
+                  <th style="text-align:center">Status Kedatangan</th>
                 </tr>
                 </thead>
                 <tbody></tbody>
@@ -33,12 +31,48 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><input type="checkbox" name="my-checkbox" checked></td>
-                  <td><button class="btn btn-primary">Kirim</button></td>
-                  <td><input type="checkbox" name="my-checkbox" checked></td>
-                  <td><input type="checkbox" name="my-checkbox" checked></td>
+                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
+                  <td width="80px" style="text-align:center"><button class="btn btn-primary">Kirim</button></td>
+                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
+                  <td width="80px" style="text-align:center"><input type="checkbox" name="my-checkbox" checked></td>
                 </tr>
               </table>
+                    <br/>
+                    <br/>
+                    <div class="row" style="display:none">
+                    <div class="col-md-6 col-md-offset-3">
+                    <div class="box box-info">
+                    <form class="form-horizontal" border="2">
+                          <div class="box-body">
+                            <div class="form-group">
+                              <label for="inputEmail3" class="col-sm-2 control-label">Nama Produk</label>
+
+                              <div class="col-sm-10">
+                                <input type="" class="form-control" id="" placeholder="Nama Produk">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputPassword3" class="col-sm-2 control-label">Harga </label>
+
+                              <div class="col-sm-10">
+                                <input type="" class="form-control" id="" placeholder="Rp. ">
+                              </div>
+                            </div>
+                              <div class="form-group">
+                              <label for="inputPassword3" class="col-sm-2 control-label">QTY </label>
+                            <div class="btn-group"></div>
+                            </div>
+                            <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Subtotal</label>
+                            <div class="col-sm-10">
+                                <input type="" class="form-control" id="" placeholder="Rp. ">
+                            </div>
+                            </div>
+                          </div>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

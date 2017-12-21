@@ -29,35 +29,54 @@
 
             <form class="form-horizontal">
               <div class="box-body">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Produk</label>
-
-                  <div class="col-sm-10">
-                    <input type="" class="form-control" id="" placeholder="Nama Produk">
+<table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Nama Produk</th>
+                  <th>Varian</th>
+                  <th>Harga</th>
+                  <th>QTY</th>
+                  <th>Subtotal</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+                    
+                <tr>
+                  <td>Patata</td>
+                  <td>Keju</td>
+                  <td>Rp 65000,-</td>
+                  <td>5</td>
+                  <td>Rp 325000,-</td>
+                </tr>
+                <tr>
+                  <td>Patata</td>
+                  <td>Keju</td>
+                  <td>Rp 65000,-</td>
+                  <td>5</td>
+                  <td>Rp 325000,-</td>
+                </tr>
+              </table>
+                  <div class="form-group">
+                  <label class="col-sm-2"></label>
+                  <div class="col-sm-4">
                   </div>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Diskon</label>
+                  <div class="col-sm-4">
+                     <div class="input-group">
+                  <input type="text" class="form-control">
                 </div>
-                <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Harga </label>
-
-                  <div class="col-sm-10">
-                    <input type="" class="form-control" id="" placeholder="Rp. ">
                   </div>
                 </div>
                   <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">QTY </label>
-                  <div class="container">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-primary">+</button>
-                        <button type="button" class="btn btn-default">0</button>
-                        <button type="button" class="btn btn-primary">-</button>
-                      </div>
-                    </div>
+                  <label class="col-sm-2"></label>
+                  <div class="col-sm-4">
+                  </div>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Total</label>
+                  <div class="col-sm-4">
+                     <div class="input-group">
+                  <input type="text" class="form-control">
                 </div>
-                <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">Subtotal</label>
-                <div class="col-sm-10">
-                    <input type="" class="form-control" id="" placeholder="Rp. ">
-                </div>
+                  </div>
                 </div>
               </div>
               <!-- /.box-body -->

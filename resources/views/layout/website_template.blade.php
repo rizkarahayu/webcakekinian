@@ -1,113 +1,62 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cake-kinian - @yield('title')</title>
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link rel="stylesheet" href="{{ url('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="{{ url('bower_components/Ionicons/css/ionicons.min.css') }}">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="{{ url('bower_components/admin-lte/dist/css/AdminLTE.min.css') }}">
-        <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-              page. However, you can choose any other skin. Make sure you
-              apply the skin class to the body tag so the changes take effect. -->
-        <link rel="stylesheet" href="{{ url('bower_components/admin-lte/dist/css/skins/skin-purple.min.css') }}">
+<head>
+    <title>Cake-kinian - @yield('title')</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    {{--    <link rel="stylesheet" href="{{ url('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">--}}
+    <link rel="stylesheet" href="{{ url('css/website/bootstrap.css') }}">
+    <!-- pignose css -->
+    <link href="{{ url('plugins/pignose/pignose.layerslider.css') }}" rel="stylesheet" type="text/css" media="all" />
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <!-- //pignose css -->
+    <link href="{{ url('css/website/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+    
+     <!-- //font-awesome css -->
+    <link href="{{ url('plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet" type="text/css" media="all" />
 
-        <!-- Google Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-
-        <link rel="stylesheet" href="{{ url('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
-
-        @yield('custom_css')
-    </head>
-    <!--
-    BODY TAG OPTIONS:
-    =================
-    Apply one or more of the following classes to get the
-    desired effect
-    |---------------------------------------------------------|
-    | SKINS         | skin-blue                               |
-    |               | skin-black                              |
-    |               | skin-purple                             |
-    |               | skin-yellow                             |
-    |               | skin-red                                |
-    |               | skin-green                              |
-    |---------------------------------------------------------|
-    |LAYOUT OPTIONS | fixed                                   |
-    |               | layout-boxed                            |
-    |               | layout-top-nav                          |
-    |               | sidebar-collapse                        |
-    |               | sidebar-mini                            |
-    |---------------------------------------------------------|
-    -->
-    <body class="hold-transition skin-purple sidebar-mini">
-    <div class="wrapper">
-        <!-- Main Header -->
-    @include('includes.admin.header')
-
-    <!-- Left side column. contains the logo and sidebar -->
-    @include('includes.admin.sidebar')
-
-    <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>
-                    @yield('page_title')
-                    <small>@yield('page_description')</small>
-                </h1>
-                <ol class="breadcrumb">
-                    @yield('breadcrumb')
-                </ol>
-            </section>
-
-            <!-- Main content -->
-            <section class="content container-fluid">
-
-                <!--------------------------
-                  | Your Page Content Here |
-                  -------------------------->
-                @yield('content')
-
-            </section>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-
-        <!-- Main Footer -->
-        @include('includes.admin.footer')
-    </div>
-    <!-- ./wrapper -->
-
-    <!-- REQUIRED JS SCRIPTS -->
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- jQuery 3 -->
-    <script src="{{ url('bower_components/jquery/dist/jquery.min.js') }}"></script>
+    {{--<script src="{{ url('bower_components/jquery/dist/jquery.min.js') }}"></script>--}}
+    <script src="{{ url('js/website/jquery-2.1.4.min.js') }}"></script>
+    <!-- cart -->
+    <script src="{{ url('js/website/simpleCart.min.js') }}"></script>
     <!-- Bootstrap 3.3.7 -->
-    <script src="{{ url('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ url('bower_components/admin-lte/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ url('js/website/bootstrap-3.1.1.min.js') }}"></script>
+    <!-- //for bootstrap working -->
+    <script src="{{ url('js/website/jquery.easing.min.js') }}"></script>
 
+    @yield('custom_css')
+</head>
+<body>
 
-    <script src="{{ url('bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ url('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+<!-- Header -->
+@include('includes.websites.header')
 
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-         Both of these plugins are recommended to enhance the
-         user experience. -->
-    @yield('custom_js')
-    </body>
+@yield('content')
+
+<!-- Langkah -->
+@include('includes.websites.langkah')
+
+<!-- Footer -->
+@include('includes.websites.footer')
+
+@yield('modal')
+
+@yield('custom_js')
+</body>
 </html>

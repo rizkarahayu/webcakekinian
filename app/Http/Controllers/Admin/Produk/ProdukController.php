@@ -10,4 +10,7 @@ class ProdukController extends Controller
     public function index(){
         return view('admin.produk.produk');
     }
+    public function tambah(){
+        return view('admin.produk.produk_tambah');
+    }
 }

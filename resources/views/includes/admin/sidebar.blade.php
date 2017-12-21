@@ -15,15 +15,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
             <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <li class="active"><a href="{{url('/tes')}}"><i class="fa fa-link"></i> <span>Tes</span></a></li>
-=======
-            <li class="active"><a href="{{ url('/test') }}"><i class="fa fa-link"></i> <span>Test</span></a></li>
 
->>>>>>> e2b2cd60687a203b1deaf360b020760943c3a99e
-=======
->>>>>>> b085adb4dcb7fcba9f9e18423931c0cae44b14f3
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
                     <span class="pull-right-container">
