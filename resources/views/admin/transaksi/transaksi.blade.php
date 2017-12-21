@@ -32,7 +32,14 @@
                   <td>Patata</td>
                   <td>Rp 65000</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td style="text-align:center"><input width=50px  type="checkbox" name="my-checkbox" checked></td>
+                  <td style="text-align:center">
+                      @php $status_bayar = 1; @endphp
+                      @if($status_bayar == 0)
+                    <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</label>
+                      @else
+                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i> bayar</label>
+                      @endif
+                  </td>
                   <td style="text-align:center"><button width=50px class="btn btn-primary">Kirim</button></td>
                   <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
                   <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
