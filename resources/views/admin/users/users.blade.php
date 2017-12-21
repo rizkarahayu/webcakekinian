@@ -40,7 +40,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>  <a href="." class="btn btn-warning">
+                  <td>  <a href="{{url('ck-admin/users/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
                   </a>
                       <a class="btn btn-danger" onclick="">

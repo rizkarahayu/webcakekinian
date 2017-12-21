@@ -34,12 +34,13 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>  <a href="." class="btn btn-warning">
+                  <td>  <a href="{{url('ck-admin/customer/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
                   </a>
                       <a class="btn btn-danger" onclick="">
                       <i class="fa fa-trash"></i>
-                    </a></td>
+                    </a>
+                    </td>
                 </tr>
                  </tbody>
               </table>

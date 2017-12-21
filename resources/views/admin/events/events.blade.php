@@ -45,7 +45,8 @@
                   </a>
                       <a class="btn btn-danger" onclick="">
                       <i class="fa fa-trash"></i>
-                    </a></td>
+                      </a>
+                    </td>
                 </tr>
                  </tbody>
               </table>
