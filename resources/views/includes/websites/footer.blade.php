@@ -29,9 +29,9 @@
                 <div class="col-md-4 sign-gd-two">
                     <h4>Store Information</h4>
                     <ul>
-                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : Jl. Raya ITS No. 104 <span>Surabaya, Jawa Timur</span></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Address : Jl. Raya ITS No. 104 <span>Surabaya, Jawa Timur</span></li>
                         <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">cakekinian@gmail.com</a></li>
-                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : (+62)312345678</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>Phone : (+62)312345678</li>
                     </ul>
                 </div>
                 <div class="col-md-4 sign-gd flickr-post">

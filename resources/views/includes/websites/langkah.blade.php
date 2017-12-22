@@ -5,17 +5,17 @@
                 <h3>3 LANGKAH MUDAH BELI CAKE-KINIAN</h3>
             </div>
             <div class="col-md-3 coupons-gd">
-                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <span class="fa fa-user-o" aria-hidden="true"></span>
                 <h4>LOGIN TO YOUR ACCOUNT</h4>
                 <p>Sign up dan login menggunakan username dan password</p>
             </div>
             <div class="col-md-3 coupons-gd">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span class="fa fa-cart-arrow-down" aria-hidden="true"></span>
                 <h4>PILIH CAKE DAN ADD TO CART</h4>
                 <p>Pilih cake favorit dan penuhi keranjang Anda</p>
             </div>
             <div class="col-md-3 coupons-gd">
-                <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+                <span class="fa fa-money" aria-hidden="true"></span>
                 <h4>LAKUKAN PEMBAYARAN</h4>
                 <p>Lakukan pembayaran via transfer bank atau bayar via Indomart dan tunggu kue sampai di rumah Anda</p>
             </div>

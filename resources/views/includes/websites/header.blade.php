@@ -3,7 +3,6 @@
     <div class="container">
         <ul>
             <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
-            <li><span class="fa fa-cart-arrow-down" aria-hidden="true"></span>Free shipping On all orders</li>
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
         </ul>
     </div>
@@ -83,13 +82,13 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="">Home <span class="sr-only">(current)</span></a></li>
                             <li class="dropdown menu__item">
                                 <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="{{ url('img/website/images/woo1.jpg') }}" alt=" "/></a>
+                                            <a href="mens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -113,31 +112,31 @@
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
                                                 <li><a href="{{url('/toko/fosterlampung')}}">Banana Foster Lampung</a></li>
-                                                <li><a href="womens.html">Bandung Makuta</a></li>
-                                                <li><a href="womens.html">Bogor Rain Cake</a></li>
-                                                <li><a href="womens.html">Bosang Makassar</a></li>
-                                                <li><a href="womens.html">Cirebon Cinnamon</a></li>
-                                                <li><a href="womens.html">Gigieat Cake</a></li>
-                                                <li><a href="womens.html">Lapis Minang Nantigo</a></li>
-                                                <li><a href="womens.html">Malang Struddle</a></li>
-                                                <li><a href="womens.html">Mamahke Jogja</a></li>
+                                                <li><a href="{{url('/toko/bandungmakuta')}}">Bandung Makuta</a></li>
+                                                <li><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></li>
+                                                <li><a href="{{url('/toko/bosangmakassar')}}">Bosang Makassar</a></li>
+                                                <li><a href="{{url('/toko/cireboncinnamon')}}">Cirebon Cinnamon</a></li>
+                                                <li><a href="{{url('/tokog/gigieatcake')}}">Gigieat Cake</a></li>
+                                                <li><a href="{{url('/toko/lapisminangnantigo')}}">Lapis Minang Nantigo</a></li>
+                                                <li><a href="{{url('/toko/malangstruddle')}}">Malang Struddle</a></li>
+                                                <li><a href="{{url('/toko/mamahkejogja')}}">Mamahke Jogja</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Medan Napoleon</a></li>
-                                                <li><a href="womens.html">Milvil Manado</a></li>
-                                                <li><a href="womens.html">Queenpuff</a></li>
-                                                <li><a href="womens.html">Really Cake</a></li>
-                                                <li><a href="womens.html">Savana Cake</a></li>
-                                                <li><a href="womens.html">Solo Pluffy</a></li>
-                                                <li><a href="womens.html">Surabaya Patata</a></li>
-                                                <li><a href="womens.html">Surabaya Snowcake</a></li>
-                                                <li><a href="womens.html">Wingkorolls Semarang</a></li>
+                                                <li><a href="{{url('/toko/medannapoleon')}}">Medan Napoleon</a></li>
+                                                <li><a href="{{url('/toko/milvilmanado')}}">Milvil Manado</a></li>
+                                                <li><a href="{{url('/toko/queenpuff')}}">Queenpuff</a></li>
+                                                <li><a href="{{url('/toko/reallycake')}}">Really Cake</a></li>
+                                                <li><a href="{{url('/toko/savanacake')}}">Savana Cake</a></li>
+                                                <li><a href="{{url('/toko/solopluffy')}}">Solo Pluffy</a></li>
+                                                <li><a href="{{url('/toko/surabayapatata')}}">Surabaya Patata</a></li>
+                                                <li><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></li>
+                                                <li><a href="{{url('/toko/wingkorolls')}}">Wingkorolls Semarang</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                            <a href="womens.html"><img src="{{ url('img/website/images/woo.jpg') }}" alt=" "/></a>
+                                            <a href="womens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
