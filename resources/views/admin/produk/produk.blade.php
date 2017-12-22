@@ -67,6 +67,11 @@
                 <div class="box box-info">
             <form class="form-horizontal">
               <div class="box-body">
+                  <div class="form-group">
+                  <div class="image text-center" >
+                        &nbsp;<img src="{{ url('img\admin\banana\1.jpg') }}" class="img-circle" style="max-width:280px">
+                    </div>
+                  </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Produk</label>
 
@@ -108,16 +113,7 @@
                   <div class="col-sm-10">
                    <textarea class="form-control" rows="4" disabled placeholder="Red Velvet adalah varian rasa yang paling digemari."></textarea>
                   </div>
-                </div>
-                   <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
-
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="">
-                  </div>
-                </div>
-                
-                               
+                </div>     
                           </div>
                         </form>
                       </div>

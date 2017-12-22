@@ -66,6 +66,11 @@
                 <div class="box box-info">
             <form class="form-horizontal">
               <div class="box-body">
+                  <div class="form-group">
+                  <div class="image text-center">
+                        <img src="{{ url('img\admin\logo\banana_foster.jpg') }}" style="max-width:200px">
+                    </div>
+                  </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Toko</label>
 

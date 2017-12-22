@@ -73,44 +73,44 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Pembeli</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label" ><i class="fa fa-id-card"> &nbsp;</i>Nama Pembeli</label>
 
                   <div class="col-sm-10">
                     <input type="email" class="form-control" id="inputEmail3" disabled placeholder="Beni">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">No Telepon</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-tty"> &nbsp;</i>No Telepon</label>
 
                   <div class="col-sm-10">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i>Alamat</label>
 
                   <div class="col-sm-10">
                    <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Kecamatan</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i> Kecamatan</label>
                   <div class="col-sm-4">
                     <input type="" class="form-control" id="" disabled placeholder="Sukolilo">
                   </div>
-                  <label for="inputEmail3" class="col-sm-2 control-label">Kabupaten</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i> Kabupaten</label>
                   <div class="col-sm-4">
                     <input type="" class="form-control" id="" disabled placeholder="Surabaya">
                   </div>
                 </div>
                  <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Provinsi</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Provinsi</label>
                   <div class="col-sm-10">
                     <input type="password" class="form-control" disabled id="inputPassword3" placeholder="Jawa Timur">
                   </div>
                 </div>
                  <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Kode Pos</label>
 
                   <div class="col-sm-10">
                     <input type="password" class="form-control" disabled id="inputPassword3" placeholder="61111">

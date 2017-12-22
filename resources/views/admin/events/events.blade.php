@@ -72,31 +72,31 @@
                   <div class="form-group">
                   <div class=".col-sm-4 .col-sm-pull-4">
                     <div class="image text-center">
-                        <img src="{{ url('img/logo.PNG') }}" style="max-width:200px">
+                        <img src="{{ url('img\admin\event\1.jpg') }}" style="max-width:250px">
                     </div>
                   </div>
                   </div>
                  <div class="form-group">
-                     <label for="inputPassword3" class="col-sm-2 control-label">Nama Event</label>
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
                   <div class="col-md-4">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                  <div class="form-group">
-                     <label for="inputPassword3" class="col-sm-2 control-label">Tanggal Mulai</label>
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-check-o"> &nbsp;</i>Tanggal Mulai</label>
                   <div class="col-md-4">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                 <div class="form-group">
-                     <label for="inputPassword3" class="col-sm-2 control-label">Tanggal Selesai</label>
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-times-o"> &nbsp;</i>Tanggal Selesai</label>
                   <div class="col-md-4">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Deskripsi Events</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Deskripsi Events</label>
                   <div class="col-sm-9">
                    <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
                   </div>
