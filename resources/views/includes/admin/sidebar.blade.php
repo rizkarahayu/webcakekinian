@@ -38,7 +38,6 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/ck-admin/transaksi') }}"><i class="fa fa-history"></i>Transaksi</a></li>
-                    <li><a href="{{ url('/ck-admin/detailtransaksi') }}"><i class="fa fa-eye"></i>Detail Transaksi</a></li> 
                 </ul>
             </li>
             <li class="treeview">

@@ -28,7 +28,7 @@
                 </thead>
                 <tbody></tbody>
                 <tr>
-                  <td>Beni</td>
+                  <td>&nbsp; &nbsp;Beni</td>
                   <td>Patata</td>
                   <td>Rp 65000</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
@@ -40,7 +40,7 @@
                     <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>bayar</label>
                       @endif
                   </td>
-                  <td style="text-align:center"><a href="{{url('ck-admin/detailtransaksi')}}">
+                  <td style="text-align:center"><a href="{{url('ck-admin/transaksi/detail/1')}}">
                   <button class='btn btn-info'>Detail Transaksi</button>
                    </a></td>
                   <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
@@ -73,47 +73,47 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Nama Pembeli</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Pembeli</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Beni">
+                    <input type="email" class="form-control" id="inputEmail3" disabled placeholder="Beni">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">No Telepon</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="082285698889">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
 
                   <div class="col-sm-10">
-                   <textarea class="form-control" rows="4" placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
+                   <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Kecamatan</label>
                   <div class="col-sm-4">
-                    <input type="" class="form-control" id="" placeholder="Sukolilo">
+                    <input type="" class="form-control" id="" disabled placeholder="Sukolilo">
                   </div>
                   <label for="inputEmail3" class="col-sm-2 control-label">Kabupaten</label>
                   <div class="col-sm-4">
-                    <input type="" class="form-control" id="" placeholder="Surabaya">
+                    <input type="" class="form-control" id="" disabled placeholder="Surabaya">
                   </div>
                 </div>
                  <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Provinsi</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Jawa Timur">
+                    <input type="password" class="form-control" disabled id="inputPassword3" placeholder="Jawa Timur">
                   </div>
                 </div>
                  <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="61111">
+                    <input type="password" class="form-control" disabled id="inputPassword3" placeholder="61111">
                   </div>
                 </div>  
                           </div>

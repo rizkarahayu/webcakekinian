@@ -3,7 +3,8 @@
 @section('title', 'Data Transaksi')
 @section('page_title', 'Transaksi Penjualan')
 @section('content')
-    <div class="row">@section('title', 'Data Transaksi')
+    <div class="row">
+@section('title', 'Data Transaksi')
 @section('page_title', 'Data Transaksi')
 @section('content')
       <div class="row">
@@ -11,9 +12,9 @@
           <div class="box box-info">
             <div class="box-header with-border">
               <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">No Transaksi</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">No Transaks</label>
                   <div class="col-sm-4">
-                    <input type="" class="form-control" id="" placeholder="716883691">
+                    <input type="" class="form-control" id="" disabled placeholder= {{ $id_transaksi }} >
                   </div>
                   <label for="inputEmail3" class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-4">
@@ -21,7 +22,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                  <input type="text" class="form-control" disabled data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                 </div>
                   </div>
                 </div>
@@ -63,7 +64,7 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Diskon</label>
                   <div class="col-sm-4">
                      <div class="input-group">
-                  <input type="text" class="form-control">
+                  <input type="text" disabled class="form-control">
                 </div>
                   </div>
                 </div>
@@ -74,7 +75,7 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Total</label>
                   <div class="col-sm-4">
                      <div class="input-group">
-                  <input type="text" class="form-control">
+                  <input disabled type="text" class="form-control">
                 </div>
                   </div>
                 </div>
@@ -92,17 +93,11 @@
                <div class="col-lg-6">
                   <div class="input-group">
                         <span class="input-group-addon">
-                          <input type="radio">
+                          <input type="radio" name="metode_transfer">&nbsp; Transfer
                         </span>
-                    <input type="text" class="form-control" value="Transfer">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="input-group">
                         <span class="input-group-addon">
-                          <input type="radio">
+                          <input type="radio" name="metode_transfer">&nbsp; Indomart
                         </span>
-                    <input type="text" class="form-control" value="Indomart">
                   </div>
                 </div>
               </div>
@@ -112,10 +107,14 @@
               <div class="row">
                 <div class="col-lg-12">
                 <div class="form-group">
-                  <textarea class="form-control" rows="4" placeholder="Enter ..."></textarea>
+                  <textarea class="form-control" disabled rows="4" placeholder="Enter ..."></textarea>
                 </div>
               </div>
                 </div>
+                  <div class="row">
+                  <div class="col-md-12"><a href="{{url('ck-admin/transaksi')}}">
+                  <button class='btn btn-info'>Back</button></a></div>
+        </div>
               </div>
             </div>
           </div>

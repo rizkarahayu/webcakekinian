@@ -10,7 +10,7 @@ class TransaksiController extends Controller
      public function transaksi(){
         return view('admin.transaksi.transaksi');
     }
-      public function detailtransaksi(){
-        return view('admin.detailtransaksi.detailtransaksi');
+      public function detailtransaksi($id_transaksi){
+        return view('admin.detailtransaksi.detailtransaksi', compact('id_transaksi'));
     }
 }
