@@ -87,7 +87,7 @@
 							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -96,8 +96,6 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>
-										<del>$69.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -110,7 +108,7 @@
 							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -119,8 +117,6 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>
-										<del>$69.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -133,7 +129,7 @@
 							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -142,8 +138,6 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>
-										<del>$69.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -161,7 +155,7 @@
 						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 								</div>
 							</div>
 							<span class="product-new-top">New</span>				
@@ -169,8 +163,6 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-							<span class="item_price">$45.99</span>
-							<del>$69.71</del>
 						</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
@@ -184,7 +176,7 @@
 						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 								</div>
 							</div>
 							<span class="product-new-top">New</span>				
@@ -192,8 +184,6 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-							<span class="item_price">$45.99</span>
-							<del>$69.71</del>
 						</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
@@ -206,7 +196,7 @@
 						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 								</div>
 							</div>
 							<span class="product-new-top">New</span>				
@@ -214,8 +204,6 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-							<span class="item_price">$45.99</span>
-							<del>$69.71</del>
 						</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
@@ -228,7 +216,7 @@
 						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 								</div>
 							</div>
 							<span class="product-new-top">New</span>				
@@ -236,8 +224,6 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-							<span class="item_price">$45.99</span>
-							<del>$69.71</del>
 						</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
@@ -250,7 +236,7 @@
 									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -259,8 +245,6 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$45.99</span>
-										<del>$69.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -273,7 +257,7 @@
 									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -282,8 +266,6 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-										<del>$150.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -296,7 +278,7 @@
 									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}g" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
@@ -305,8 +287,6 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-										<del>$150.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -319,17 +299,15 @@
 									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
+									<h4><a href="{{url('/produk/caramelized')}}">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$119.99</span>
-										<del>$120.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>

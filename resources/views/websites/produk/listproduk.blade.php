@@ -58,13 +58,9 @@
 					<div class="color-quality">
 						<div class="color-quality-right">
 							<h5>Jumlah :</h5>
-							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-								<option value="null">1 Qty</option>
-								<option value="null">2 Qty</option> 
-								<option value="null">3 Qty</option>					
-								<option value="null">4 Qty</option>	
-                                <option value="null">5 Qty</option>	
-							</select>
+                            <form>
+							     <input type="number" value="Name" onfocus="this.value = '';" required="">
+                            </form>
 						</div>
 					</div>
                     <div>
@@ -80,12 +76,12 @@
 				<div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 						<ul id="myTab" class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
+							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Deskripsi</a></li>
 							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews(1)</a></li>
 						</ul>
 						<div id="myTabContent" class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
-								<h5>Product Brief Description</h5>
+								<h5>Deskripsi Produk</h5>
 								<p>{{ $list['deskripsi_produk']}}
 									<span>{{ $list['deskripsi_produk']}}</span></p>
 							</div>
