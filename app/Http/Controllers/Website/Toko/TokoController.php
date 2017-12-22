@@ -7,9 +7,6 @@ use App\Http\Controllers\Controller;
 
 class TokoController extends Controller
 {
-    public function toko(){
-        return view('websites.toko.toko');
-    }
      public function listtoko($id_toko){
          $data = [];
          $data['nama_toko'] = 'Banana Foster Lampung';

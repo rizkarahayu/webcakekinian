@@ -143,7 +143,7 @@
                                                 <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
-                                        <span class="product-new-top">1+1 Offer</span>
+                                        <span class="product-new-top">new</span>
 
                                     </div>
                                     <div class="item-info-product ">
