@@ -82,7 +82,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="active menu__item menu__item--current"><a class="menu__link" href="">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a></li>
                             <li class="dropdown menu__item">
                                 <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
@@ -92,13 +92,8 @@
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Clothing</a></li>
-                                                <li><a href="mens.html">Wallets</a></li>
-                                                <li><a href="mens.html">Footwear</a></li>
-                                                <li><a href="mens.html">Watches</a></li>
-                                                <li><a href="mens.html">Accessories</a></li>
-                                                <li><a href="mens.html">Bags</a></li>
-                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                                <li><a href="mens.html">Tentang Kekinian</a></li>
+                                                <li><a href="mens.html">Contact Us</a></li>
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>
