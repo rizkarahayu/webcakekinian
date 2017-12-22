@@ -12,6 +12,8 @@ class TokoController extends Controller
          $data['nama_toko'] = 'Banana Foster Lampung';
          $data['nama_produk'] = 'Peanut Foster Lampung';
          $data['deskripsi_toko'] = 'Super Delicious Banana Foster Lampung';
+         $data['harga'] = 'Rp68.000,00';
+         $data['harga_diskon'] = 'Rp65.000,00'; 
         return view('websites.toko.listtoko', compact('data'));
     }
 }

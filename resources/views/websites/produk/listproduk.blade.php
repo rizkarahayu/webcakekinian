@@ -28,11 +28,9 @@
 							});
 						</script>
 					<!-- //FlexSlider-->
-					<ul>
-						<li data-thumb="{{ url('img/website/images/logo_mini2.PNG') }}">
+						<div data-thumb="{{ url('img/website/images/logo_mini2.PNG') }}">
 							<div class="thumb-image"> <img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" data-imagezoom="true" class="img-responsive"> </div>
-						</li>
-					</ul>
+						</div>
 					<div class="clearfix"></div>
 				</div>	
 			</div>
@@ -56,6 +54,7 @@
 					</div>
                     <br>
 					<div class="color-quality">
+                        <br>
 						<div class="color-quality-right">
 							<h5>Jumlah :</h5>
                             <form>
@@ -81,7 +80,7 @@
 						</ul>
 						<div id="myTabContent" class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
-								<h5>Deskripsi Produk</h5>
+								<h4>Deskripsi Produk</h4>
 								<p>{{ $list['deskripsi_produk']}}
 									<span>{{ $list['deskripsi_produk']}}</span></p>
 							</div>

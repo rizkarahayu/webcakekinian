@@ -26,21 +26,14 @@
                         <option value="AX">Bandung Makuta</option>
                         <option value="AX">Bogor Rain Cake</option>
                         <option value="AX">Bosang Makassar</option>
-                        <option value="AX">Cirebon Cinnamon</option>
-                        <option value="AX">Gigieat Cake</option>
-                        <option value="AX">Lapis Minang Nantigo</option>
-                        <option value="AX">Surabaya Snow Cake</option>
-                        <option value="AX">Malang Struddle</option>
                         <option value="AX">Mamahke Jogja</option>
+                        <option value="AX">Lapis Minang Nantigo</option>
+                        <option value="AX">Malang Struddle</option>
                         <option value="AX">Medan Napoleon</option>
-                        <option value="AX">Milvil Manado</option>
                         <option value="AX">Queenpuff</option>
-                        <option value="AX">Really Cake</option>
-                        <option value="AX">Savana Cake</option>
                         <option value="AX">Solo Pluffy</option>
                         <option value="AX">Surabaya Patata</option>
                         <option value="AX">Surabaya Snowcake</option>
-                        <option value="AX">Wingkorolls Semarang</option>
                     </select>
                 </div>
                 <div class="sear-sub">
@@ -88,11 +81,11 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>
+                                            <a href="mens.html"><img src="{{ url('img/website/images/logo_mini.PNG') }}" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Tentang Kekinian</a></li>
+                                                <li><a href="mens.html">Tentang Cake-kinian</a></li>
                                                 <li><a href="mens.html">Contact Us</a></li>
                                             </ul>
                                         </div>
@@ -110,24 +103,18 @@
                                                 <li><a href="{{url('/toko/bandungmakuta')}}">Bandung Makuta</a></li>
                                                 <li><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></li>
                                                 <li><a href="{{url('/toko/bosangmakassar')}}">Bosang Makassar</a></li>
-                                                <li><a href="{{url('/toko/cireboncinnamon')}}">Cirebon Cinnamon</a></li>
-                                                <li><a href="{{url('/tokog/gigieatcake')}}">Gigieat Cake</a></li>
+                                                <li><a href="{{url('/toko/mamahke')}}">Mamahke Jogja</a></li>
                                                 <li><a href="{{url('/toko/lapisminangnantigo')}}">Lapis Minang Nantigo</a></li>
-                                                <li><a href="{{url('/toko/malangstruddle')}}">Malang Struddle</a></li>
-                                                <li><a href="{{url('/toko/mamahkejogja')}}">Mamahke Jogja</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
+                                                <li><a href="{{url('/toko/malangstruddle')}}">Malang Struddle</a></li>
                                                 <li><a href="{{url('/toko/medannapoleon')}}">Medan Napoleon</a></li>
-                                                <li><a href="{{url('/toko/milvilmanado')}}">Milvil Manado</a></li>
                                                 <li><a href="{{url('/toko/queenpuff')}}">Queenpuff</a></li>
-                                                <li><a href="{{url('/toko/reallycake')}}">Really Cake</a></li>
-                                                <li><a href="{{url('/toko/savanacake')}}">Savana Cake</a></li>
                                                 <li><a href="{{url('/toko/solopluffy')}}">Solo Pluffy</a></li>
                                                 <li><a href="{{url('/toko/surabayapatata')}}">Surabaya Patata</a></li>
                                                 <li><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></li>
-                                                <li><a href="{{url('/toko/wingkorolls')}}">Wingkorolls Semarang</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">

@@ -113,276 +113,216 @@
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a1.png')}}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo10.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo10.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Air Tshirt Black</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Surabaya Patata</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo1.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo1.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">new</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Next Blue Blazer</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$99.99</span>
-                                            <del>$109.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Lampung Banana Foster</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo2.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo2.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Air Tshirt Black </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$119.99</span>
-                                            <del>$120.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Bosang Makassar </a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo3.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo3.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Maroon Puma Tshirt</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$79.99</span>
-                                            <del>$120.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Bandung Makuta</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo4.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo4.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">Combo Pack</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Multicoloured TShirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$129.99</span>
-                                            <del>$150.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Queen Puff</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo5.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo5.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Air Tshirt Black </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$129.99</span>
-                                            <del>$150.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Lapis Minang Nantigo</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo6.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo6.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Dresses</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$129.99</span>
-                                            <del>$150.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Malang Struddle</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo7.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo7.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Wedding Blazers</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$129.99</span>
-                                            <del>$150.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Medan Napoleon</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/g1.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/g1.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo8.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo8.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Dresses</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Surabaya Snowcake</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/g2.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/g2.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo9.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo9.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html"> Shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}"> Solo Pluffy</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/g3.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/g3.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo11.png') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo11.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Mamahke Jogja</a></h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 product-men yes-marg">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/mw2.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/mw2.png') }}" alt="" class="pro-image-back">
+                                        <img src="{{ url('img/website/images/logo/logo12.jpg') }}" alt="" class="pro-image-front">
+                                        <img src="{{ url('img/website/images/logo/logo12.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">T shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Bogor Rain Cake</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -396,19 +336,14 @@
                                         <img src="{{ url('img/website/images/w1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Wedges</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Wedges</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -419,19 +354,14 @@
                                         <img src="{{ url('img/website/images/w2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Sandals</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Sandals</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -442,19 +372,14 @@
                                         <img src="{{ url('img/website/images/mw1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Casual Shoes</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Casual Shoes</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -465,19 +390,14 @@
                                         <img src="{{ url('img/website/images/mw3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Sport Shoes</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Sport Shoes</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -488,19 +408,14 @@
                                         <img src="{{ url('img/website/images/ep2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Watches</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Watches</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -511,19 +426,14 @@
                                         <img src="{{ url('img/website/images/ep3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Watches</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Watches</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -538,19 +448,14 @@
                                         <img src="{{ url('img/website/images/g1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Dresses</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Dresses</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -561,19 +466,14 @@
                                         <img src="{{ url('img/website/images/g2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html"> Shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}"> Shirts</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -584,19 +484,14 @@
                                         <img src="{{ url('img/website/images/g3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Shirts</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -607,19 +502,14 @@
                                         <img src="{{ url('img/website/images/mw2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">T shirts</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">T shirts</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -630,19 +520,14 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Air Tshirt Black Domyos</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Air Tshirt Black Domyos</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -653,19 +538,14 @@
                                         <img src="{{ url('img/website/images/w3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
+                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.html">Hand Bags</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$45.99</span>
-                                            <del>$69.71</del>
-                                        </div>
-                                        <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
+                                        <h4><a href="{{url('/toko/patata')}}">Hand Bags</a></h4>
                                     </div>
                                 </div>
                             </div>

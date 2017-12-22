@@ -96,6 +96,8 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -117,6 +119,8 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -138,6 +142,8 @@
 						<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 						</div>
@@ -163,7 +169,9 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-						</div>
+				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
+							<del>{{ $data['harga'] }}</del>
+    					</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
 				</div>
@@ -184,6 +192,30 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
+				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
+							<del>{{ $data['harga'] }}</del>
+                        </div>
+						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 product-men">
+				<div class="men-pro-item simpleCart_shelfItem">
+					<div class="men-thumb-item">
+						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
+						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
+							<div class="men-cart-pro">
+								<div class="inner-men-cart-pro">
+									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
+								</div>
+							</div>
+							<span class="product-new-top">New</span>				
+					</div>
+					<div class="item-info-product ">
+						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
+						<div class="info-product-price">
+				        <span class="item_price">{{ $data['harga_diskon'] }}</span>
+                            <del>{{ $data['harga'] }}</del>
 						</div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
@@ -204,27 +236,9 @@
 					<div class="item-info-product ">
 						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 						<div class="info-product-price">
-						</div>
-						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 product-men">
-				<div class="men-pro-item simpleCart_shelfItem">
-					<div class="men-thumb-item">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-							<div class="men-cart-pro">
-								<div class="inner-men-cart-pro">
-									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-								</div>
-							</div>
-							<span class="product-new-top">New</span>				
-					</div>
-					<div class="item-info-product ">
-						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-						<div class="info-product-price">
-						</div>
+				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
+							<del>{{ $data['harga'] }}</del>
+  					   </div>
 						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 					</div>
 				</div>
@@ -245,6 +259,8 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -266,6 +282,8 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -287,6 +305,8 @@
 								<div class="item-info-product ">
 									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
@@ -308,6 +328,8 @@
 								<div class="item-info-product ">
 									<h4><a href="{{url('/produk/caramelized')}}">{{ $data['nama_produk'] }}</a></h4>
 									<div class="info-product-price">
+										<span class="item_price">{{ $data['harga_diskon'] }}</span>
+										<del>{{ $data['harga'] }}</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
