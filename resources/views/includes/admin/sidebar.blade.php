@@ -6,7 +6,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="image text-center">
-                <img src="{{ url('img/logo.png') }}" class="img-circle" alt="User Image" style="max-width:120px">
+                <img src="{{ url('img/logo.PNG') }}" class="img-circle" alt="User Image" style="max-width:120px">
             </div>
         </div>
  
@@ -14,43 +14,44 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
-            <li class="active"><a href="."><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="."><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Data Master</span>
+                <a href="#"><i class="fa fa-database"></i> <span>Data Master</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/ck-admin/users') }}">Users</a></li>
-                    <li><a href="{{ url('/ck-admin/customer') }}">Customer</a></li> 
-                    <li><a href="{{ url('/ck-admin/toko') }}">Toko</a></li>
-                    <li><a href="{{ url('/ck-admin/produk') }}">Produk</a></li>
-                    <li><a href="{{ url('/ck-admin/events') }}">Events</a></li>
-                    
-
+                    <li><a href="{{ url('/ck-admin/users') }}"><i class="fa fa-user-circle"></i>Users</a></li>
+                    <li><a href="{{ url('/ck-admin/customer') }}"><i class="fa fa-user-plus"></i>Customers</a></li>
+                    <li><a href="{{ url('/ck-admin/toko') }}"><i class="fa fa-institution"></i>Toko</a></li>
+                    <li><a href="{{ url('/ck-admin/users') }}"><i class="fa fa-shopping-bag"></i>Produk</a></li>
+                    <li><a href="{{ url('/ck-admin/events') }}"><i class="fa fa-gift"></i>Events</a></li>
                 </ul>
             </li>
              <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Data Transaksi</span>
+                <a href="#"><i class="fa fa-handshake-o"></i> <span>Data Transaksi</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/ck-admin/transaksi') }}">Transaksi</a></li>
-                    <li><a href="{{ url('/ck-admin/detailtransaksi') }}">Detail Transaksi</a></li> 
+                    <li><a href="{{ url('/ck-admin/transaksi') }}"><i class="fa fa-history"></i>Transaksi</a></li>
+                    <li><a href="{{ url('/ck-admin/detailtransaksi') }}"><i class="fa fa-eye"></i>Detail Transaksi</a></li> 
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Laporan</span>
+                <a href="#"><i class="fa fa-newspaper-o"></i> <span>Laporan</span>
+
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/ck-admin/laporanbln') }}">Laporan Perbulan</a></li>
+
+                    <li><a href="{{ url('/ck-admin/laporanbln') }}"><i class="fa fa-area-chart"></i>Laporan Per Bulan</a></li>
+
                 </ul>
             </li>
         </ul>

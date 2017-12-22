@@ -13,7 +13,7 @@
               <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">No Transaksi</label>
                   <div class="col-sm-4">
-                    <input type="" class="form-control" id="" placeholder="No Transaksi">
+                    <input type="" class="form-control" id="" placeholder="716883691">
                   </div>
                   <label for="inputEmail3" class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-4">
@@ -29,7 +29,7 @@
 
             <form class="form-horizontal">
               <div class="box-body">
-<table id="example2" class="table table-bordered table-hover">
+                <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th>Nama Produk</th>
