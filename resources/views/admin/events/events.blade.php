@@ -4,6 +4,11 @@
 @section('page_title', 'Data Events')
 @section('page_description', 'adalah data yang berisi tentang events.')
 
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-gift"></i> Data Master</a></li>
+    <li class="active">Events</li>
+    
+@endsection
 
 @section('content')
     <div class="row">
@@ -26,7 +31,6 @@
                 <tr>
                 <th>Nama Event</th>
                   <th>Nama Toko</th>
-                  <th>Tempat</th>
                   <th>Tanggal</th>
                   <th>Detail</th>
                   <th>Aksi</th>
@@ -37,7 +41,6 @@
                 <tr>
                   <td>Blablabla</td>
                   <td>Patata</td>
-                  <td>Taman Bungkul-Surabaya</td>
                   <td>29/10/2017</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>  <a href="." class="btn btn-warning">
@@ -65,51 +68,40 @@
                 <div class="box box-info">
             <form class="form-horizontal">
               <div class="box-body">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label"><center>Nama Events</center></label>
-
-                  <div class="col-sm-10">
+                <div class="row">
+                  <div class="form-group">
+                  <div class=".col-sm-4 .col-sm-pull-4">
+                    <div class="image text-center">
+                        <img src="{{ url('img\admin\event\1.jpg') }}" style="max-width:250px">
+                    </div>
+                  </div>
+                  </div>
+                 <div class="form-group">
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
+                  <div class="col-md-4">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
+                  </div>
+                </div>
+                 <div class="form-group">
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-check-o"> &nbsp;</i>Tanggal Mulai</label>
+                  <div class="col-md-4">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">No Telepon</label>
-
-                  <div class="col-sm-10">
+                     <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-times-o"> &nbsp;</i>Tanggal Selesai</label>
+                  <div class="col-md-4">
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
                   </div>
                 </div>
+                </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
-
-                  <div class="col-sm-10">
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Deskripsi Events</label>
+                  <div class="col-sm-9">
                    <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Kecamatan</label>
-                  <div class="col-sm-4">
-                    <input type="" class="form-control" id="" disabled placeholder="Sukolilo">
-                  </div>
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Kabupaten</label>
-                  <div class="col-sm-4">
-                    <input type="" class="form-control" id="" disable placeholder="Surabaya">
-                  </div>
                 </div>
-                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Provinsi</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disable placeholder="Jawa Timur">
-                  </div>
-                </div>
-                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
-
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disable placeholder="61111">
-                  </div>
-                </div>  
-                          </div>
                         </form>
                       </div>
                       </fieldset>

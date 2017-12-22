@@ -4,6 +4,11 @@
 @section('page_title', 'Data Produk')
 @section('page_description', 'adalah data yang berisi tentang produk.')
 
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-shopping-bag"></i> Data Master</a></li>
+    <li class="active">Produk</li>
+    
+@endsection
 
 @section('content')
     <div class="row">
@@ -25,11 +30,9 @@
                 <thead>
                 <tr>
                    <th>Nama Produk</th>
-                  <th>Nama Toko</th>
-                  <th>Stok</th>
+                    <th>Nama Toko</th>
                   <th>Harga</th>
-                  <th>Deskripsi</th>
-                  <th>Gambar</th>
+                  <th>Details</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -39,10 +42,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>  <a href="{{url('ck-admin/toko/edit')}}" class="btn btn-warning">
+                  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                  <td>  <a href="{{url('ck-admin/produk/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
                   </a>
                       <a class="btn btn-danger" onclick="">
@@ -51,6 +52,78 @@
                 </tr>
                  </tbody>
               </table>
+                    <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                  <div class="row">
+                  <div class="col-md-12 col-md-offset-0">
+                  <form action='' method='POST' class="form-horizontal" role="form">
+                    <fieldset>
+                    <center><legend>Details Produk</legend></center>
+                <div class="box box-info">
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                  <div class="image text-center" >
+                        &nbsp;<img src="{{ url('img\admin\banana\1.jpg') }}" class="img-circle" style="max-width:280px">
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Produk</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="1">
+                  </div>
+                </div>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-birthday-cake"> &nbsp;</i>Nama Produk</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Red Velvet Savana Cake">
+                  </div>
+                </div>
+                   <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Savana Cake">
+                  </div>
+                </div>
+                   <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-hourglass-2"> &nbsp;</i>Stok</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="232">
+                  </div>
+                </div>
+                                    <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Rp. 65.000">
+                  </div>
+                </div>
+                  <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-newspaper-o"> &nbsp;</i>Deskripsi</label>
+
+                  <div class="col-sm-10">
+                   <textarea class="form-control" rows="4" disabled placeholder="Red Velvet adalah varian rasa yang paling digemari."></textarea>
+                  </div>
+                </div>     
+                          </div>
+                        </form>
+                      </div>
+                      </fieldset>
+                     </form>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                 </div>
                 </div>
             </div>
         </div>
