@@ -16,6 +16,7 @@ Route::prefix('ck-admin')->group(function () {
     Route::get('/produk', 'Admin\Produk\ProdukController@index');
     Route::get('/produk/tambah', 'Admin\Produk\ProdukController@tambah');
     Route::get('/produk/edit', 'Admin\Produk\ProdukController@edit');    
+    
     Route::get('/events', 'Admin\Events\EventsController@index');
     Route::get('/events/tambah', 'Admin\Events\EventsController@tambah');
 });

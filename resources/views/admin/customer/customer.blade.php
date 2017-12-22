@@ -5,6 +5,12 @@
 @section('page_description', 'adalah data yang berisi tentang customer.')
 
 
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-user-plus"></i> Data Master</a></li>
+    <li class="active">Customers</li>
+    
+@endsection
+
 @section('content')
     <div class="row">
 @section('title','Data Customer')

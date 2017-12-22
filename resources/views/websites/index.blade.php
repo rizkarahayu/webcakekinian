@@ -106,9 +106,7 @@
             <div class="sap_tabs">
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <ul class="resp-tabs-list">
-                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Latest Designs</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Special Offers</span></li>
-                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>PILIH CAKE FAVORITMU</span></li>
                     </ul>
                     <div class="resp-tabs-container">
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
@@ -119,7 +117,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -142,7 +140,7 @@
                                         <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">1+1 Offer</span>
@@ -165,7 +163,7 @@
                                         <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -188,7 +186,7 @@
                                         <img src="{{ url('img/website/images/a3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -211,7 +209,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">Combo Pack</span>
@@ -234,7 +232,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -257,7 +255,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -280,7 +278,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -303,7 +301,7 @@
                                         <img src="{{ url('img/website/images/g1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -326,7 +324,7 @@
                                         <img src="{{ url('img/website/images/g2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -349,7 +347,7 @@
                                         <img src="{{ url('img/website/images/g3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -372,7 +370,7 @@
                                         <img src="{{ url('img/website/images/mw2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -398,7 +396,7 @@
                                         <img src="{{ url('img/website/images/w1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -421,7 +419,7 @@
                                         <img src="{{ url('img/website/images/w2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -444,7 +442,7 @@
                                         <img src="{{ url('img/website/images/mw1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -467,7 +465,7 @@
                                         <img src="{{ url('img/website/images/mw3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -490,7 +488,7 @@
                                         <img src="{{ url('img/website/images/ep2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -513,7 +511,7 @@
                                         <img src="{{ url('img/website/images/ep3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -540,7 +538,7 @@
                                         <img src="{{ url('img/website/images/g1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -563,7 +561,7 @@
                                         <img src="{{ url('img/website/images/g2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -586,7 +584,7 @@
                                         <img src="{{ url('img/website/images/g3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -609,7 +607,7 @@
                                         <img src="{{ url('img/website/images/mw2.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -632,7 +630,7 @@
                                         <img src="{{ url('img/website/images/a1.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
@@ -655,7 +653,7 @@
                                         <img src="{{ url('img/website/images/w3.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                <a href="single.html" class="link-product-add-cart">Lihat Detail</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>

@@ -4,6 +4,11 @@
 @section('page_title', 'Data User')
 @section('page_description', 'adalah data yang berisi tentang user.')
 
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-user-circle"></i> Data Master</a></li>
+    <li class="active">Users</li>
+    
+@endsection
 
 @section('content')
     <div class="row">

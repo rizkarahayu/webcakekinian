@@ -10,15 +10,12 @@ class TokoController extends Controller
     public function toko(){
         return view('websites.toko.toko');
     }
-     public function fosterlampung(){
-        return view('websites.toko.fosterlampung');
-    }
-    
-    
-     public function listProduk($id_toko){
-         $nama = 'Beny';
-         
-        return view('websites.toko.produk', compact('id_toko', 'nama'));
+     public function listtoko($id_toko){
+         $data = [];
+         $data['nama_toko'] = 'Banana Foster Lampung';
+         $data['nama_produk'] = 'Peanut Foster Lampung';
+         $data['deskripsi_toko'] = 'Super Delicious Banana Foster Lampung';
+        return view('websites.toko.listtoko', compact('data'));
     }
 }
 

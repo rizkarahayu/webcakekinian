@@ -4,6 +4,11 @@
 @section('page_title', 'Data Events')
 @section('page_description', 'adalah data yang berisi tentang events.')
 
+@section('breadcrumb')
+    <li><a href="#"><i class="fa fa-gift"></i> Data Master</a></li>
+    <li class="active">Events</li>
+    
+@endsection
 
 @section('content')
     <div class="row">

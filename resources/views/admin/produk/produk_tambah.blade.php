@@ -22,42 +22,44 @@
                   <form class="form-horizontal" action="" autocomplete="off" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Nama Produk</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-birthday-cake"> &nbsp;</i>Nama Produk</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Masukkan Nama Produk" style="text-transform:capitalize" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Nama Toko</label>
+                           <div class="form-group">
+                            <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="nama_toko" id="nama_toko" placeholder="Masukkan Nama Toko" style="text-transform:capitalize" required>
+                                <select class="form-control">
+                                  <option nama="toko" value="1">WingkoRolls</option>
+                                  <option nama="toko" value="2">Savana Cake</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Stok</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-hourglass-2"> &nbsp;</i>Stok</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="stok" id="stok" placeholder="Masukkan Nomor Stok" style="text-transform:capitalize" required>
+                                <input type="text" class="form-control" name="stok" id="stok" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Harga</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
                             <div class="col-sm-4">
                                 <textarea type="text" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize" required></textarea>
                             </div>
                         </div>
                          <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-newspaper-o"> &nbsp;</i>Deskripsi</label>
                             <div class="col-sm-4">
                                 <textarea type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize" required></textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Gambar</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
                             <div class="col-sm-4">
-                                <input type="file" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize" required>
+                                <input type="file" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize" required>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="box-footer">
                         <button data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</button>
