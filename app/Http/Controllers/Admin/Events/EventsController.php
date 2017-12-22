@@ -13,4 +13,7 @@ class EventsController extends Controller
       public function tambah(){
         return view('admin.events.events_tambah');
     }
+    public function edit(){
+        return view('admin.events.events_edit');
+    }
 }

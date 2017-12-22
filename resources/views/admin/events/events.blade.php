@@ -31,7 +31,6 @@
                 <tr>
                 <th>Nama Event</th>
                   <th>Nama Toko</th>
-                  <th>Tanggal</th>
                   <th>Detail</th>
                   <th>Aksi</th>
                 </tr>
@@ -41,9 +40,8 @@
                 <tr>
                   <td>Blablabla</td>
                   <td>Patata</td>
-                  <td>29/10/2017</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="." class="btn btn-warning">
+                  <td>  <a href="{{url('ck-admin/events/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
                   </a>
                       <a class="btn btn-danger" onclick="">
