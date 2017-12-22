@@ -57,7 +57,7 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
                             <div class="col-sm-4">
-                                <input type="file" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize" required>
+                                <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize" required>
                             </div>
                         </div>
                     </div>

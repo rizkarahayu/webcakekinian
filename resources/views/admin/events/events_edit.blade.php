@@ -2,14 +2,14 @@
 
 @section('title', 'Data Events')
 @section('page_title', 'Data Events')
-@section('page_description', 'adalah data yang berisi tentang events.')
+@section('page_description', 'Halaman ini adalah untuk mengedit data events.')
 
 
 @section('content')
     <div class="row">
-@section('title', 'Data Events')
-@section('page_title', 'Data Events')
-@section('page_description', 'adalah data yang berisi tentang events.')
+@section('title','halaman test')
+@section('page_title','halaman test')
+@section('page_description','Halaman ini adalah untuk mengedit data events.')
 @section('content')
 <div class="row">
         <div class="col-xs-12">
@@ -18,10 +18,10 @@
                    
                     
                 </div>
-                <div class="box-body">
+           <div class="box-body">
                   <form class="form-horizontal" action="" autocomplete="off" enctype="multipart/form-data">
                     <div class="modal-body">
-                         <div class="form-group">
+                        <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama_event" id="nama_event" placeholder="Masukkan Nama Event" style="text-transform:capitalize" required>
