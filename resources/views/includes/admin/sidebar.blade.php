@@ -28,8 +28,6 @@
                     <li><a href="{{ url('/ck-admin/toko') }}"><i class="fa fa-institution"></i>Toko</a></li>
                     <li><a href="{{ url('/ck-admin/produk') }}"><i class="fa fa-shopping-bag"></i>Produk</a></li>
                     <li><a href="{{ url('/ck-admin/events') }}"><i class="fa fa-gift"></i>Events</a></li>
-                    
-
                 </ul>
             </li>
              <li class="treeview">
@@ -45,12 +43,15 @@
             </li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-newspaper-o"></i> <span>Laporan</span>
+
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
+
                     <li><a href="{{ url('/ck-admin/laporanbln') }}"><i class="fa fa-area-chart"></i>Laporan Per Bulan</a></li>
+
                 </ul>
             </li>
         </ul>
