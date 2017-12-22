@@ -10,4 +10,7 @@ class CustomerController extends Controller
     public function index(){
         return view('admin.customer.customer');
     }
+    public function edit(){
+        return view('admin.customer.customer_edit');
+    }
 }

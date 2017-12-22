@@ -45,7 +45,8 @@
                   </a>
                       <a class="btn btn-danger" onclick="">
                       <i class="fa fa-trash"></i>
-                    </a></td>
+                      </a>
+                    </td>
                 </tr>
                  </tbody>
               </table>
@@ -90,7 +91,7 @@
                   <div class="col-sm-4">
                     <input type="" class="form-control" id="" disabled placeholder="Sukolilo">
                   </div>
-                  <label for="inputEmail3" class="col-sm-2 control-label">Kabupaten</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kabupaten</label>
                   <div class="col-sm-4">
                     <input type="" class="form-control" id="" disable placeholder="Surabaya">
                   </div>

@@ -13,4 +13,7 @@ class UserController extends Controller
       public function tambah(){
         return view('admin.users.users_tambah');
     }
+     public function edit(){
+        return view('admin.users.users_edit');
+    }
 }
