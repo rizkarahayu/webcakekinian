@@ -4,6 +4,13 @@
 @section('page_title', 'Produk')
 
 @section('content')
+<!-- banner -->
+<div class="page-head">
+	<div class="container">
+		<h3>CONTACT</h3>
+    </div>
+</div>
+<!-- //banner -->
 <!-- contact -->
 	<div class="contact">
 		<div class="container">

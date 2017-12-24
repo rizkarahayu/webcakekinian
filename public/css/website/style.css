@@ -1704,7 +1704,7 @@ padding-top:110px;
     padding-top: 85px;
 }
 .page-head h3 {
-    color: whitesmoke;
+    color: black;
     text-align: center;
     text-transform: uppercase;
     font-size: 48px;
@@ -1779,13 +1779,13 @@ h3.tittle {
     padding-top: 45px;
 }
 .contact-grid2{
-	background: url(../../img/website/images/new2.jpg) no-repeat center;
+	background: url(../../img/website/images/darkcaketact.jpg) no-repeat center;
 }
 .contact-grid1{
-	background: url(../../img/website/images/new3.jpg) no-repeat center;
+	background: url(../../img/website/images/darkcaketact.jpg) no-repeat center;
 }
 .contact-grid3{
-	background: url(../../img/website/images/new4.jpg) no-repeat center;
+	background: url(../../img/website/images/darkcaketact.jpg) no-repeat center;
 }
 .contact-grid h4 {
     color: #D83192;
