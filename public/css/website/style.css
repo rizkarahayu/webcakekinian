@@ -1694,7 +1694,7 @@ padding-top:110px;
 /*-- //coupons --*/
 /*-- contact --*/
 .page-head {
-    background: url(../../img/website/images/ba2.jpg) no-repeat center;
+    background: url(../../img/website/images/headpro.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -1704,7 +1704,7 @@ padding-top:110px;
     padding-top: 85px;
 }
 .page-head h3 {
-    color: #D83192;
+    color: whitesmoke;
     text-align: center;
     text-transform: uppercase;
     font-size: 48px;
