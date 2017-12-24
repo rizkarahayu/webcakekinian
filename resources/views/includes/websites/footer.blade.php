@@ -35,7 +35,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 sign-gd flickr-post">
-                    <h4>Flickr Posts</h4>
+                    <h4>RSS Feed</h4>
                     <ul>
                         <li><a href="single.html"><img src="{{ url('img/website/images/b15.jpg') }}" alt=" " class="img-responsive" /></a></li>
                         <li><a href="single.html"><img src="{{ url('img/website/images/b16.jpg') }}" alt=" " class="img-responsive" /></a></li>
