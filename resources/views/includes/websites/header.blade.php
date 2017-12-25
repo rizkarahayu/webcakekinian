@@ -79,7 +79,7 @@
                             <li class="dropdown menu__item">
                                 <a href="{{url('/about')}}" class="menu__link">About Us</a></li>
                             <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Toko <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-3 multi-gd-img">

@@ -156,7 +156,7 @@
 		<div class="checkout-left">	
 				
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-					<a href="{{url('/')}}"><span class="fa fa-long-arrow-left" aria-hidden="true"></span> Kembali</a>
+                    <a href="{{url('/')}}"><span class="fa fa-long-arrow-left" aria-hidden="true"></span><b> Kembali</b></a>
 				</div>
 				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
 					<h4>Keranjang Belanja</h4>
@@ -166,7 +166,7 @@
 						<li>Sandals <i>-</i> <span>$45.99</span></li>
 						<li>Wedges <i>-</i> <span>$45.99</span></li>
 						<li>Total <i>-</i> <span>$183.96</span></li>
-                        <li><div class="checkout-right-basket"><a href="{{url('#')}}"> Payment</a></div></li>
+                        <li><div class="checkout-right-basket"><a href="{{url('/checkout/payment')}}"><b>Payment</b><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a></div></li>
                         <li></br></li>
                         <li></br></li>
 					</ul>
