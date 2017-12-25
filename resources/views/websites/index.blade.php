@@ -135,14 +135,14 @@
                                         <img src="{{ url('img/website/images/logo/logo1.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/foster')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">new</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Lampung Banana Foster</a></h4>
+                                        <h4><a href="{{url('/toko/foster')}}">Lampung Banana Foster</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -153,14 +153,14 @@
                                         <img src="{{ url('img/website/images/logo/logo2.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/bosang')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Bosang Makassar </a></h4>
+                                        <h4><a href="{{url('/toko/bosang')}}">Bosang Makassar </a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -171,14 +171,14 @@
                                         <img src="{{ url('img/website/images/logo/logo3.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/makuta')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Bandung Makuta</a></h4>
+                                        <h4><a href="{{url('/toko/makuta')}}">Bandung Makuta</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -189,14 +189,14 @@
                                         <img src="{{ url('img/website/images/logo/logo4.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/queenpuff')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">Combo Pack</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Queen Puff</a></h4>
+                                        <h4><a href="{{url('/toko/queenpuff')}}">Queen Puff</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -207,14 +207,14 @@
                                         <img src="{{ url('img/website/images/logo/logo5.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/lapisminang')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Lapis Minang Nantigo</a></h4>
+                                        <h4><a href="{{url('/toko/lapisminang')}}">Lapis Minang Nantigo</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -225,14 +225,14 @@
                                         <img src="{{ url('img/website/images/logo/logo6.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/struddle')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Malang Struddle</a></h4>
+                                        <h4><a href="{{url('/toko/struddle')}}">Malang Struddle</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -243,14 +243,14 @@
                                         <img src="{{ url('img/website/images/logo/logo7.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/napoleon')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Medan Napoleon</a></h4>
+                                        <h4><a href="{{url('/toko/napoleon')}}">Medan Napoleon</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -261,14 +261,14 @@
                                         <img src="{{ url('img/website/images/logo/logo8.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/snowcake')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Surabaya Snowcake</a></h4>
+                                        <h4><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -279,14 +279,14 @@
                                         <img src="{{ url('img/website/images/logo/logo9.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/pluffy')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}"> Solo Pluffy</a></h4>
+                                        <h4><a href="{{url('/toko/pluffy')}}"> Solo Pluffy</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -297,14 +297,14 @@
                                         <img src="{{ url('img/website/images/logo/logo11.png') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/mamahke')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Mamahke Jogja</a></h4>
+                                        <h4><a href="{{url('/toko/mamahke')}}">Mamahke Jogja</a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -315,14 +315,14 @@
                                         <img src="{{ url('img/website/images/logo/logo12.jpg') }}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                <a href="{{url('/toko/raincake')}}" class="link-product-add-cart">Kunjungi Toko</a>
                                             </div>
                                         </div>
                                         <span class="product-new-top">New</span>
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Bogor Rain Cake</a></h4>
+                                        <h4><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></h4>
                                     </div>
                                 </div>
                             </div>
