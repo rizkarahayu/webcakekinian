@@ -22,14 +22,14 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="mens.html">About Us</a></li>
-                        <li><a href="womens.html">Toko</a></li>
+                        <li><a href="womens.html">Store</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4 sign-gd-two">
                     <h4>Store Information</h4>
                     <ul>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Address : Jl. Raya ITS No. 104 <span>Surabaya, Jawa Timur</span></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Alamat : Jl. Raya ITS No. 104 <span>Surabaya, Jawa Timur</span></li>
                         <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">cakekinian@gmail.com</a></li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i>Phone : (+62)312345678</li>
                     </ul>

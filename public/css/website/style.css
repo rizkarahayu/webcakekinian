@@ -393,6 +393,12 @@ a.menu__link {
     left: -5px;
 }
 
+.payment {
+    margin-bottom: 50px;
+    margin-right: 80px;
+    margin-top: 80px;
+    margin-left: 80px;
+}
 .box_1 p {
 	margin: 0;
     color: #999;
@@ -2833,10 +2839,12 @@ td.invert-image a img {
     float: right;
     width: 25%;
     border: 1px solid #ccc;
+    margin-right: 100px;
+    margin-bottom: 10px;
 }
 .checkout-right-basket{
 	float: left;
-    margin: 8em 0 0 0em;
+    margin: 2em 0 0 0em;
 }
 .checkout-left-basket ul li span {
     float: right;
@@ -4852,6 +4860,7 @@ td.invert-image a img {
 .timetable_sub th {
     font-size: 13px;
 }
+
 }
 @media (max-width: 320px){
 	.header ul li {
