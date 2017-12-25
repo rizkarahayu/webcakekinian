@@ -50,6 +50,7 @@
                 <ul class="treeview-menu">
 
                     <li><a href="{{ url('/ck-admin/laporanbln') }}"><i class="fa fa-area-chart"></i>Laporan Per Bulan</a></li>
+                    <li><a href="{{ url('/ck-admin/laporanproduk') }}"><i class="fa fa-bar-chart"></i>Laporan Produk</a></li>
 
                 </ul>
             </li>
