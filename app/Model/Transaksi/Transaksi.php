@@ -2,6 +2,7 @@
 
 namespace App\Model\Transaksi;
 
+use App\Model\Master\Customer;
 use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
@@ -26,9 +27,9 @@ class Transaksi extends Model
     ];
 
     public function detail_transaksi() {
-        return $this->hasMany(detail_transaksi::class, 'transaksi_id', 'id');
+        return $this->hasMany(DetailTransaksi::class, 'transaksi_id', 'id');
     }
     public function customer() {
-        return $this->hasOne(customer::class, 'users_id', 'id');
+        return $this->hasOne(Customer::class, 'users_id', 'id');
     }
 }
