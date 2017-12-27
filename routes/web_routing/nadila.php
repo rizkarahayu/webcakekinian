@@ -1,6 +1,6 @@
 <?php
 
-Route::prefix('ck-admin')->group(function () {
+Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::get('/users', 'Admin\Users\UserController@index');
     Route::get('/users/tambah', 'Admin\Users\UserController@tambah');  
     Route::get('/users/edit', 'Admin\Users\UserController@edit'); 

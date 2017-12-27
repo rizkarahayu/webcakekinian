@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Master\RoleUsers;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -15,7 +16,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'username',
+        'alamat',
+        'no_telp',
+        'role_id'
     ];
 
     /**
@@ -26,4 +33,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected static $validation_rules = [
+        'name'      => 'required',
+        'email'     => 'required|email',
+        'password'  => 'required',
+        'username'  => 'required',
+        'role_id'   => 'required'
+    ];
+
+    public function users() {
+        return $this->belongsTo(RoleUsers::class, 'users_id', 'users_id');
+    }
 }

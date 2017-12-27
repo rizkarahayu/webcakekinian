@@ -4,6 +4,28 @@
         <ul>
             <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
+            @guest
+                <li>
+                    <span class="fa fa-sign-in" aria-hidden="true"></span>
+                    <a href="{{ route('login') }}">Login</a> &nbsp; | &nbsp;
+                    <span class="fa fa-signing" aria-hidden="true"></span>
+                    <a href="{{ route('register') }}">Register</a>
+                </li>
+            @else
+                <li>
+                    <span class="fa fa-user" aria-hidden="true"></span>
+                    <a href="{{ url('ck-admin') }}">
+                        Goto Admin Dashboard
+                    </a> &nbsp; | &nbsp;
+                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            @endguest
         </ul>
     </div>
 </div>
@@ -12,7 +34,7 @@
 <div class="header-bot">
     <div class="container">
         <div class="col-md-3 header-left">
-            <h1><a href="index.html"><img src="{{ url('img/logo_mini.PNG') }}"></a></h1>
+            <h1><a href="{{ url('/') }}"><img src="{{ url('img/logo_mini.PNG') }}"></a></h1>
         </div>
         <div class="col-md-6 header-middle">
             <form>
@@ -116,7 +138,7 @@
         </div>
         <div class="top_nav_right">
             <div class="cart box_1">
-                <a href="{{url('/checkout')}}">
+                <a href="{{url('/cart')}}">
                     <h3> <div class="total">
                             <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                             <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
