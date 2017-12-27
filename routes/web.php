@@ -17,7 +17,7 @@ Route::prefix('')->group(function () {
     Route::get('/user', 'Website\HomeController@index');
 });
 
-Route::prefix('ck-admin')->group(function () {
+Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::get('/', 'Admin\DashboardController@index');
 });
 
@@ -25,3 +25,6 @@ include_once "web_routing/beny.php";
 include_once "web_routing/nadila.php";
 include_once "web_routing/reza.php";
 include_once "web_routing/rizka.php";
+Auth::routes();
+
+Route::get('/home', 'Website\HomeController@index')->name('home');

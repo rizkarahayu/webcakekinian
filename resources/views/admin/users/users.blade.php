@@ -37,19 +37,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                
-                <tr>
-                  <td>Nadila Wirdatul Hidayah</td>
-                  <td>nadila</td>
-                  <td>nadilawh0@gmail.com</td>
-                  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/users/edit')}}" class="btn btn-warning">
-                      <i class="fa fa-pencil"></i>
-                  </a>
-                      <a class="btn btn-danger" onclick="">
-                      <i class="fa fa-trash"></i>
-                    </a></td>
-                </tr>
+
+                @foreach($users as $user)
+                    <tr>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->username }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                        <td>  <a href="{{url('ck-admin/users/edit')}}" class="btn btn-warning">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a class="btn btn-danger" onclick="">
+                                <i class="fa fa-trash"></i>
+                            </a></td>
+                    </tr>
+                @endforeach
+
+
                  </tbody>
               </table>
                     <div id="myModal" class="modal fade" role="dialog">

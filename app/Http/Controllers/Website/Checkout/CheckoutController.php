@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 
 class CheckoutController extends Controller
 {
-    public function checkout(){
-        return view('websites.checkout.checkout');
+    public function cart(){
+        return view('websites.checkout.cart');
     }
     public function payment(){
         return view('websites.checkout.payment');
