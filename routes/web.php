@@ -25,3 +25,6 @@ include_once "web_routing/beny.php";
 include_once "web_routing/nadila.php";
 include_once "web_routing/reza.php";
 include_once "web_routing/rizka.php";
+Auth::routes();
+
+Route::get('/home', 'Website\HomeController@index')->name('home');

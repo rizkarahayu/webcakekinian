@@ -4,6 +4,18 @@
         <ul>
             <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
+            @guest
+                <li>
+                    <a href="{{ route('login') }}">Login</a> |
+                    <a href="{{ route('register') }}">Register</a>
+                </li>
+            @else
+                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a></li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            @endguest
         </ul>
     </div>
 </div>
