@@ -34,7 +34,7 @@
 <div class="header-bot">
     <div class="container">
         <div class="col-md-3 header-left">
-            <h1><a href="index.html"><img src="{{ url('img/logo_mini.PNG') }}"></a></h1>
+            <h1><a href="{{ url('/') }}"><img src="{{ url('img/logo_mini.PNG') }}"></a></h1>
         </div>
         <div class="col-md-6 header-middle">
             <form>
