@@ -2,6 +2,7 @@
 
 namespace App\Model\Transaksi;
 
+use App\Model\Master\Produk;
 use Illuminate\Database\Eloquent\Model;
 
 class DetailTransaksi extends Model
@@ -22,9 +23,9 @@ class DetailTransaksi extends Model
     ];
 
     public function transaksi() {
-        return $this->belongsTo(transaksi::class, 'transaksi_id', 'transaksi_id');
+        return $this->belongsTo(Transaksi::class, 'transaksi_id', 'transaksi_id');
     }
      public function produk() {
-        return $this->hasOne(produk::class, 'produk_id', 'id');
+        return $this->hasOne(Produk::class, 'produk_id', 'id');
     }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Model\Transaksi;
 
+use App\Model\Master\Produk;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
@@ -20,9 +22,9 @@ class Cart extends Model
     ];
 
     public function users() {
-        return $this->hasOne(users::class, 'users_id', 'id');
+        return $this->hasOne(User::class, 'users_id', 'id');
     }
     public function produk() {
-        return $this->hasOne(produk::class, 'produk_id', 'id');
+        return $this->hasOne(Produk::class, 'produk_id', 'id');
     }
 }

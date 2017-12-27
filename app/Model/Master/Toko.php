@@ -26,6 +26,6 @@ class Toko extends Model
     }
     
     public function events() {
-        return $this->hasMany(Event::class, 'toko_id', 'id')
+        return $this->hasMany(Event::class, 'toko_id', 'id');
     }
 }
