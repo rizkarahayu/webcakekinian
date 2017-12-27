@@ -648,8 +648,20 @@
                 type: 'default', //Types: default, vertical, accordion
                 width: 'auto', //auto or any width like 600px
                 fit: true   // 100% fit in a container
+                fit: true   // 100% fit in a container
             });
         });
 
+    </script>
+    <script>
+         $(document).ready(function () {
+             $.ajax({
+                method: 'GET',
+                url: 'http://103.66.199.105:10028/',
+                success: function(res){
+                    console.log(res);
+                }
+            });
+        });
     </script>
 @endsection
