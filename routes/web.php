@@ -17,7 +17,7 @@ Route::prefix('')->group(function () {
     Route::get('/user', 'Website\HomeController@index');
 });
 
-Route::prefix('ck-admin')->group(function () {
+Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::get('/', 'Admin\DashboardController@index');
 });
 

@@ -1,9 +1,9 @@
 <?php
 
-Route::prefix('')->group(function () {
+Route::prefix('')->middleware('auth')->group(function () {
     Route::get('/test', 'Website\Test\TestController@test');
 });
 
-Route::prefix('ck-admin')->group(function () {
+Route::prefix('ck-admin')->middleware('auth')->group(function () {
 
 });
