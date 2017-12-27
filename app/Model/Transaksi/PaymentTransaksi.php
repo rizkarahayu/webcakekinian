@@ -25,6 +25,6 @@ class PaymentTransaksi extends Model
     }
     
     public function metode_payment() {
-        return $this->hasMany(PaymentMethod::class, 'metode_payment_id', 'id');
+        return $this->belongsTo(PaymentMethod::class, 'metode_payment_id', 'id');
     }
 }
