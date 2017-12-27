@@ -35,12 +35,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                
+                @foreach($customers as $customer)
                 <tr>
-                  <td>nadila</td>
-                  <td>Jl. Prajurit Syakur no. 48</td>
-                  <td>089763753</td>
-                  <td>nadilawh0@gmail.com</td>
+                  <td>{{$customer->user->username}}</td>
+                  <td>{{$customer->tgl_lahir}}</td>
+                  <td>{{$customer->jklm}}</td>
+                  <td>{{$customer->no_rek}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>  <a href="{{url('ck-admin/customer/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
@@ -50,6 +50,7 @@
                     </a>
                     </td>
                 </tr>
+                    @endforeach
                  </tbody>
               </table>
                      <div id="myModal" class="modal fade" role="dialog">
