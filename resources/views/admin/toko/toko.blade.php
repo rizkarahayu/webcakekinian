@@ -28,7 +28,7 @@
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>Nama</th>
+                  <th>Nama</th>
                   <th>Nama Kota</th>
                   <th>NPWP</th>
                   <th>Details</th>
@@ -37,10 +37,11 @@
                 </thead>
                 <tbody>
                 
+                    @foreach($toko as $tokos)
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $tokos->nama}}</td>
+                  <td>{{ $tokos->siup}}</td>
+                  <td>{{ $tokos->npwp}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>  <a href="{{url('ck-admin/toko/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
@@ -49,6 +50,7 @@
                       <i class="fa fa-trash"></i>
                     </a></td>
                 </tr>
+                    @endforeach
                  </tbody>
               </table>
                      <div id="myModal" class="modal fade" role="dialog">
