@@ -3,8 +3,11 @@
 Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::get('/users', 'Admin\Users\UserController@index');
     Route::get('/users/tambah', 'Admin\Users\UserController@tambah');  
-    Route::get('/users/edit', 'Admin\Users\UserController@edit'); 
-    
+    Route::get('/users/edit/{id}', 'Admin\Users\UserController@edit');
+    Route::post('/users/create', 'Admin\Users\UserController@store');
+    Route::post('/users/update/{id}', 'Admin\Users\UserController@update');
+    Route::get('/users/delete/{id}', 'Admin\Users\UserController@delete');
+
     Route::get('/customer', 'Admin\Customer\CustomerController@index');
     Route::get('/customer/edit', 'Admin\Customer\CustomerController@edit');
     

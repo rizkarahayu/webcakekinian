@@ -15,6 +15,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <meta name=“csrf-token” content="{{ csrf_token() }}" class="o"/>
+
     <!-- //for-mobile-apps -->
     {{--    <link rel="stylesheet" href="{{ url('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" href="{{ url('css/website/bootstrap.css') }}">
