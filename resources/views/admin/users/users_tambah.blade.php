@@ -85,7 +85,7 @@
                         
                     </div>
                     <div class="box-footer">
-                       <button data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</button>
+                       <a href="{{ url('/ck-admin/users') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                         <input type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
                     </div><!-- /.box-footer -->
                 </form>
