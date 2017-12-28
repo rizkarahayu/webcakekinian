@@ -26,6 +26,17 @@
                     
                 </div>
                 <div class="box-body">
+
+                    @if(Session::has('message'))
+                        <div class="alert alert-success alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
@@ -44,10 +55,10 @@
                         <td>{{ $user->username }}</td>
                         <td>{{ $user->email }}</td>
                         <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                        <td>  <a href="{{url('ck-admin/users/edit')}}" class="btn btn-warning">
+                        <td>  <a href="{{url('ck-admin/users/edit/' . $user->id)}}" class="btn btn-warning">
                                 <i class="fa fa-pencil"></i>
                             </a>
-                            <a class="btn btn-danger" onclick="">
+                            <a href="{{url('ck-admin/users/delete/' . $user->id)}}" class="btn btn-danger" onclick="">
                                 <i class="fa fa-trash"></i>
                             </a></td>
                     </tr>

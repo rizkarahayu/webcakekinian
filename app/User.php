@@ -34,7 +34,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected static $validation_rules = [
+    public static $validation_rules = [
         'name'      => 'required',
         'email'     => 'required|email',
         'password'  => 'required',
