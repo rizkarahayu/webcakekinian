@@ -101,6 +101,9 @@
                   </div>
                 </div>
                 </div>
+                <a href="{{ url('/ck-admin/events') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
+                        
+                
                         </form>
                       </div>
                       </fieldset>

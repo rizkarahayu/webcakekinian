@@ -114,7 +114,9 @@
                   <div class="col-sm-10">
                    <textarea class="form-control" rows="4" disabled placeholder="Red Velvet adalah varian rasa yang paling digemari."></textarea>
                   </div>
-                </div>     
+                </div>
+
+                  <a href="{{ url('/ck-admin/produk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                           </div>
                         </form>
                       </div>

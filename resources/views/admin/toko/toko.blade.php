@@ -129,6 +129,8 @@
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="27857151641">
                   </div>
                 </div>
+
+                  <a href="{{ url('/ck-admin/toko') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                                
                           </div>
                         </form>

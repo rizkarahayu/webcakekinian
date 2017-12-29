@@ -138,6 +138,8 @@
                     <input type="password" class="form-control" id="inputPassword3" disabled placeholder="140-393-89282">
                   </div>
                 </div>
+
+                  <a href="{{ url('/ck-admin/customer') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
               
                           </div>
                         </form>
