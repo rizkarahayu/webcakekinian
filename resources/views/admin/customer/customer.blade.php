@@ -31,7 +31,8 @@
                     <th>Nomor Telepon</th>
                     <th>Email</th>
                     <th>Detail</th>
-                  <th>Aksi</th>
+                    <th>Block</th>
+                    <th>Unblock</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,12 +43,10 @@
                   <td>{{$customer->jklm}}</td>
                   <td>{{$customer->no_rek}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/customer/edit')}}" class="btn btn-warning">
-                      <i class="fa fa-pencil"></i>
-                  </a>
-                      <a class="btn btn-danger" onclick="">
-                      <i class="fa fa-trash"></i>
-                    </a>
+                  <td> <a data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-lock"></span></a>
+                  <td> <a data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-user"></span></a>
+              
+                  
                     </td>
                 </tr>
                     @endforeach

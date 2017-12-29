@@ -19,7 +19,7 @@
                     
                 </div>
                 <div class="box-body">
-                  <form class="form-horizontal" action="" autocomplete="off" enctype="multipart/form-data">
+                  <form class="form-horizontal" method="post" action="{{ url('/ck-admin/toko/update/' .$toko->id ) }}" autocomplete="off" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-industry"> &nbsp;</i>Nama Toko</label>

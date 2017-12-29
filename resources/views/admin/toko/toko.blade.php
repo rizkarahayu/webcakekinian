@@ -37,17 +37,17 @@
                 </thead>
                 <tbody>
                 
-                    @foreach($toko as $tokos)
+                    @foreach($toko as $toko)
                 <tr>
-                  <td>{{ $tokos->nama}}</td>
-                  <td>{{ $tokos->siup}}</td>
-                  <td>{{ $tokos->npwp}}</td>
+                  <td>{{ $toko->nama}}</td>
+                  <td>{{ $toko->siup}}</td>
+                  <td>{{ $toko->npwp}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/toko/edit')}}" class="btn btn-warning">
-                      <i class="fa fa-pencil"></i>
+                  <td>   <a href="{{url('ck-admin/toko/edit/' . $toko->id)}}" class="btn btn-warning">
+                         <i class="fa fa-pencil"></i>
                   </a>
-                      <a class="btn btn-danger" onclick="">
-                      <i class="fa fa-trash"></i>
+                    <a href="{{url('ck-admin/toko/delete/' . $toko->id)}}" class="btn btn-danger" onclick="">
+                    <i class="fa fa-trash"></i>
                     </a></td>
                 </tr>
                     @endforeach

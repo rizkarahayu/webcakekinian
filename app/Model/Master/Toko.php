@@ -14,7 +14,7 @@ class Toko extends Model
         'no_rek',
     ];
 
-    protected static $validation_rules = [
+    public static $validation_rules = [
         'nama'      => 'required',
         'siup'      => 'required',
         'npwp'      => 'required',

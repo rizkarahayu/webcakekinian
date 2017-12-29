@@ -13,7 +13,11 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     
     Route::get('/toko', 'Admin\Toko\TokoController@index');
     Route::get('/toko/tambah', 'Admin\Toko\TokoController@tambah');
-    Route::get('/toko/edit', 'Admin\Toko\TokoController@edit');
+    Route::get('/toko/edit/{id}', 'Admin\Toko\TokoController@edit');
+    Route::post('/toko/create', 'Admin\Toko\TokoController@store');
+    Route::post('/toko/update/{id}', 'Admin\Toko\TokoController@update');
+    Route::get('/toko/delete/{id}', 'Admin\Toko\TokoController@delete');
+
     
     Route::get('/produk', 'Admin\Produk\ProdukController@index');
     Route::get('/produk/tambah', 'Admin\Produk\ProdukController@tambah');
