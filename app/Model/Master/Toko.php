@@ -16,7 +16,7 @@ class Toko extends Model
         'nama_bank'
     ];
 
-    protected static $validation_rules = [
+    public static $validation_rules = [
         'nama'      => 'required',
         'kota'      => 'required',
         'siup'      => 'required',

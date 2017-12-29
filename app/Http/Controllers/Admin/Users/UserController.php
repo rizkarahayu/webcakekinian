@@ -48,12 +48,12 @@ class UserController extends Controller
 
         $users = new User();
         $users->name        = $form['name'];
-        $users->email        = $form['email'];
-        $users->password        = bcrypt($form['password']);
-        $users->username        = $form['username'];
-        $users->alamat        = $form['alamat'];
-        $users->no_telp        = $form['no_telp'];
-        $users->role_id        = $form['role_id'];
+        $users->email       = $form['email'];
+        $users->password    = bcrypt($form['password']);
+        $users->username    = $form['username'];
+        $users->alamat      = $form['alamat'];
+        $users->no_telp     = $form['no_telp'];
+        $users->role_id     = $form['role_id'];
         $users->created_at        = $form['created_at'];
         $users->updated_at        = $form['updated_at'];
         $users->save();

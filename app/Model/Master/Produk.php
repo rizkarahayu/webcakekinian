@@ -7,6 +7,7 @@ use App\Model\Master\Toko;
 
 class Produk extends Model
 {
+
     protected $table    = 'produk';
     protected $fillable = [
         'nama',

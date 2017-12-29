@@ -19,18 +19,28 @@
                     
                 </div>
                 <div class="box-body">
-                  <form class="form-horizontal" action="" autocomplete="off" enctype="multipart/form-data">
-                    <div class="modal-body">
+                    @if(Session::has('message'))
+                        <div class="alert alert-danger alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                  <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/produk/create') }}" autocomplete="off" enctype="multipart/form-data">
+                      {{ csrf_field() }}
+                      <div class="modal-body">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-birthday-cake"> &nbsp;</i>Nama Produk</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Masukkan Nama Produk" style="text-transform:capitalize" required>
+                                <input type="text" class="form-control" name="nama" id="nama_produk" placeholder="Masukkan Nama Produk" style="text-transform:capitalize" required>
                             </div>
                         </div>
                            <div class="form-group">
                             <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                             <div class="col-sm-4">
-                                <select class="form-control" name="toko">
+                                <select class="form-control" name="toko_id">
                                   <option  value="1">Patata</option>
                                   <option  value="2">Savana Cake</option>
                                   <option  value="3">Savana Cake</option>
@@ -72,8 +82,9 @@
                         </div>
                     </div>
                     <div class="box-footer">
-                        <button data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</button>
-                        <button type="button" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+
+                        <a href="{{ url('/ck-admin/produk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
+                       <button type="submit" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
                     </div><!-- /.box-footer -->
                 </form>
     </div>

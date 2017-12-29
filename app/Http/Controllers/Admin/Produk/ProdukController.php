@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\Produk;
 
 use App\Model\Master\Produk;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class ProdukController extends Controller
 {
@@ -22,8 +24,8 @@ class ProdukController extends Controller
     public function store(Request $request){
         $form = $request->input();
 
-        $rules    = Produk::$validation_rules;
-        $validate = Validator::make($form, $rules);
+        $rules      = Produk::$validation_rules;
+        $validate   = Validator::make($form, $rules);
 
         if ($validate->fails()) {
             $request->session()->flash('message', 'Validation Error');
@@ -34,14 +36,14 @@ class ProdukController extends Controller
         $form['updated_at']     = Carbon::now()->toDateTimeString();
 
         $produk = new Produk();
-        $produk->nama_produk    = $form['nama_produk'];
-        $produk->toko           = $form['toko'];
+        $produk->nama           = $form['nama'];
+        $produk->toko_id        = $form['toko_id'];
         $produk->stok           = $form['stok'];
         $produk->harga          = $form['harga'];
         $produk->deskripsi      = $form['deskripsi'];
         $produk->gambar         = $form['gambar'];
-        $produk->created_at        = $form['created_at'];
-        $produk->updated_at        = $form['updated_at'];
+        $produk->created_at     = $form['created_at'];
+        $produk->updated_at     = $form['updated_at'];
         $produk->save();
 
         if ($produk) {
@@ -58,5 +60,4 @@ class ProdukController extends Controller
 
 
 
-    }
 }
