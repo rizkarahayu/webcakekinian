@@ -36,10 +36,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                
+                    @foreach($events as $event)
                 <tr>
-                  <td>Blablabla</td>
-                  <td>Patata</td>
+                  <td>{{ $event->nama}}</td>
+                  <td>{{ $event->toko->nama}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>  <a href="{{url('ck-admin/events/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
@@ -49,6 +49,7 @@
                       </a>
                     </td>
                 </tr>
+                    @endforeach
                  </tbody>
               </table>
              <div id="myModal" class="modal fade" role="dialog">

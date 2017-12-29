@@ -56,21 +56,32 @@
                     <button class="btn btn-primary">Cetak</button>
                 </div>
                 </div>
-                <div class="col-sm-6">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Donut Chart</h3>
+                <div class="row">
+                <div class="col-md-6">
+                  <!-- DONUT CHART -->
+                  <div class="box box-danger">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Donut Chart</h3>
 
-                  <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                      <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                    <div class="box-body">
+                      <canvas id="pieChart" style="height:250px"></canvas>
+                    </div>
+                    <!-- /.box-body -->
                   </div>
+                  <!-- /.box -->
+
                 </div>
-                <div class="box-body">
-                  <canvas id="pieChart" style="height:250px"></canvas>
-                </div>
-                <!-- /.box-body -->
-              </div>
+        <!-- /.col (LEFT) -->
+       
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
             </div>
             <!-- /.box-body -->
           </div>
@@ -164,11 +175,18 @@
 @endsection 
         
 @section('custom_js')
-<script>
+     <script>
   $(function () {
-    
-    var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
-    
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
     var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
     var pieChart = new Chart(pieChartCanvas);
     var PieData = [
@@ -233,11 +251,12 @@
       //String - A legend template
       legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
     };
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions);
   });
 </script> 
 @endsection
-
-
+        
 
         

@@ -37,11 +37,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                
+                @foreach($produk as $produks)
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $produks->nama}}</td>
+                  <td>{{ $produks->toko->nama}}</td>
+                  <td>{{ $produks->harga}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>  <a href="{{url('ck-admin/produk/edit')}}" class="btn btn-warning">
                       <i class="fa fa-pencil"></i>
@@ -50,6 +50,7 @@
                       <i class="fa fa-trash"></i>
                     </a></td>
                 </tr>
+                     @endforeach
                  </tbody>
               </table>
                     <div id="myModal" class="modal fade" role="dialog">
