@@ -17,8 +17,9 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     
     Route::get('/produk', 'Admin\Produk\ProdukController@index');
     Route::get('/produk/tambah', 'Admin\Produk\ProdukController@tambah');
-    Route::get('/produk/edit', 'Admin\Produk\ProdukController@edit');    
-    
+    Route::get('/produk/edit', 'Admin\Produk\ProdukController@edit');
+    Route::get('/produk/create/','Admin\Produk\ProdukController@store');
+
     Route::get('/events', 'Admin\Events\EventsController@index');
     Route::get('/events/tambah', 'Admin\Events\EventsController@tambah');
     Route::get('/events/edit', 'Admin\Events\EventsController@edit'); 

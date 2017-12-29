@@ -30,9 +30,19 @@
                            <div class="form-group">
                             <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                             <div class="col-sm-4">
-                                <select class="form-control">
-                                  <option nama="toko" value="1">WingkoRolls</option>
-                                  <option nama="toko" value="2">Savana Cake</option>
+                                <select class="form-control" name="toko">
+                                  <option  value="1">Patata</option>
+                                  <option  value="2">Savana Cake</option>
+                                  <option  value="3">Savana Cake</option>
+                                  <option  value="4">Savana Cake</option>
+                                  <option  value="5">Savana Cake</option>
+                                  <option  value="6">Savana Cake</option>
+                                  <option  value="7">Savana Cake</option>
+                                  <option  value="8">Savana Cake</option>
+                                  <option  value="9">Savana Cake</option>
+                                  <option  value="10">Savana Cake</option>
+                                  <option  value="11">Savana Cake</option>
+                                  <option  value="12">Savana Cake</option>
                                 </select>
                             </div>
                         </div>

@@ -15,6 +15,7 @@ class Produk extends Model
         'stock',
         'harga',
         'deskripsi',
+        'gambar',
     ];
 
     protected static $validation_rules = [
@@ -24,6 +25,7 @@ class Produk extends Model
         'stock'         => 'required',
         'harga'         => 'required',
         'deskripsi'     => 'required',
+        'gambar'     => 'required',
     ];
 
     public function toko() {
