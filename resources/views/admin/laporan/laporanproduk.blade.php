@@ -56,7 +56,7 @@
                     <button class="btn btn-primary">Cetak</button>
                 </div>
                 </div>
-                <div class="row">
+               
                 <div class="col-md-6">
                   <!-- DONUT CHART -->
                   <div class="box box-danger">
@@ -77,15 +77,9 @@
                   <!-- /.box -->
 
                 </div>
-        <!-- /.col (LEFT) -->
-       
-        <!-- /.col (RIGHT) -->
-      </div>
-      <!-- /.row -->
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+              </div>
+
         </div>
         <!-- /.col -->
       </div>
