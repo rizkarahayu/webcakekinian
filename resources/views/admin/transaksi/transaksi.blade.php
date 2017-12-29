@@ -26,11 +26,12 @@
                   <th style="text-align:center">Status Kedatangan</th>
                 </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    @foreach($transaksi as $trans)
                 <tr>
-                  <td>&nbsp; &nbsp;Beni</td>
-                  <td>Patata</td>
-                  <td>Rp 65000</td>
+                  <td>{{$trans->customer->user->username}}</td>
+                  <td>{{$trans->toko->nama}}</td>
+                  <td>{{$trans->total}}</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td style="text-align:center">
                       @php $status_bayar = 1; @endphp
@@ -53,6 +54,8 @@
                       @endif
                   </td>
                 </tr>
+                    @endforeach
+                    </tbody>
             </table>
              <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog modal-lg">
