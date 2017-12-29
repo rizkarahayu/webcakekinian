@@ -44,9 +44,9 @@
                   <td>{{$customer->no_rek}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td> <a data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-lock"></span></a>
+                  <td> <a data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-user"></span></a>
               
-                  </a> <i class="fa fa-unlock"></i>
-                    </a>
+                  
                     </td>
                 </tr>
                     @endforeach

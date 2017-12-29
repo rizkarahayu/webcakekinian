@@ -19,7 +19,17 @@
                     
                 </div>
                 <div class="box-body">
-                  <form class="form-horizontal" action="" autocomplete="off" enctype="multipart/form-data">
+                @if(Session::has('message'))
+                        <div class="alert alert-danger alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                  <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/toko/create') }}" autocomplete="off" enctype="multipart/form-data">
+                  {{ csrf_field() }}
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-industry"> &nbsp;</i>Nama Toko</label>
@@ -54,14 +64,14 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-credit-card"> &nbsp;</i>Nomor Rekening</label>
                             <div class="col-sm-4">
-                                <textarea type="text" class="form-control" name="norek" id="norek" placeholder="Masukkan Nomor Rekening" style="text-transform:capitalize" required></textarea>
+                                <textarea type="text" class="form-control" name="no_rek" id="no_rek" placeholder="Masukkan Nomor Rekening" style="text-transform:capitalize" required></textarea>
                             </div>
                         </div>
                         
                     </div>
                     <div class="box-footer">
                         <a href="{{ url('/ck-admin/toko') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
-                       <button type="button" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+                        <input type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
                     </div><!-- /.box-footer -->
                 </form>
     </div>
