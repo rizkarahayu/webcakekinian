@@ -3,11 +3,13 @@
 namespace App\Model\Master;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Model\Master\Toko;
 
 class Event extends Model
 {
     protected $table = 'events';
     protected $fillable = [
+      'nama',
       'toko_id',
       'nama',
       'tanggal_mulai',
@@ -17,6 +19,7 @@ class Event extends Model
     ];
     
     protected static $validation_rules = [
+      'nama'         => 'required',
       'toko_id'         => 'required',
       'nama'            => 'required',
       'tanggal_mulai'   => 'required',
@@ -26,7 +29,7 @@ class Event extends Model
     ];
     
     public function toko(){
-        return $this->belongsTo(Toko::class, 'toko_id','toko_id');
+        return $this->belongsTo(Toko::class, 'toko_id');
     }
     
 }
