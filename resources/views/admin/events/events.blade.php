@@ -41,13 +41,12 @@
                   <td>{{ $event->nama}}</td>
                   <td>{{ $event->toko->nama}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/events/edit')}}" class="btn btn-warning">
-                      <i class="fa fa-pencil"></i>
-                  </a>
-                      <a class="btn btn-danger" onclick="">
-                      <i class="fa fa-trash"></i>
-                      </a>
-                    </td>
+                    <td>   <a href="{{url('ck-admin/events/edit/' . $event->id)}}" class="btn btn-warning">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                        <a href="{{url('ck-admin/events/delete/' . $event->id)}}" class="btn btn-danger" onclick="">
+                            <i class="fa fa-trash"></i>
+                        </a></td>
                 </tr>
                     @endforeach
                  </tbody>

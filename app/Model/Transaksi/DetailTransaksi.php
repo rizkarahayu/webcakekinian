@@ -13,6 +13,7 @@ class DetailTransaksi extends Model
         'produk_id',
         'qty',
         'subtotal',
+        'deskripsi_pemesanan',
     ];
 
     protected static $validation_rules = [
@@ -20,6 +21,7 @@ class DetailTransaksi extends Model
         'produk_id'                 => 'required',
         'qty'                       => 'required',
         'subtotal       '           => 'required',
+        'deskripsi_pemesanan'       => 'required',
     ];
 
     public function transaksi() {

@@ -7,23 +7,26 @@ use App\Model\Master\Toko;
 
 class Produk extends Model
 {
+
     protected $table    = 'produk';
     protected $fillable = [
-        'nama',
+
         'toko_id',
         'nama',
         'stock',
         'harga',
         'deskripsi',
+        'gambar'
     ];
 
-    protected static $validation_rules = [
-        'nama'          => 'required',
+    public static $validation_rules = [
+
         'toko_id'       => 'required',
         'nama'          => 'required',
         'stock'         => 'required',
         'harga'         => 'required',
         'deskripsi'     => 'required',
+        'gambar'     => 'required',
     ];
 
     public function toko() {

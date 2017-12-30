@@ -50,6 +50,18 @@
                     <option>2022</option>
                   </select>
                 </div>
+<<<<<<< HEAD
+                    <button class="btn btn-primary">Tampilkan</button>
+                    <button class="btn btn-primary">Cetak</button>
+                </div>
+                </div>
+               
+                <div class="col-md-6">
+                  <!-- DONUT CHART -->
+                  <div class="box box-danger">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Donut Chart</h3>
+=======
                 <button class="btn btn-primary">Tampilkan</button>
                 <button class="btn btn-primary">Cetak</button>
               </div>
@@ -60,6 +72,7 @@
                 <div class="box box-danger">
                   <div class="box-header with-border">
                     <h3 class="box-title">Donut Chart</h3>
+>>>>>>> c4d47320033c021c9d3628c867d97a9c8aa1f394
 
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -72,6 +85,11 @@
                   </div>
                   <!-- /.box-body -->
                 </div>
+<<<<<<< HEAD
+            </div>
+              </div>
+
+=======
                 <!-- /.box -->
 
               </div>
@@ -82,6 +100,7 @@
             <!-- /.row -->
           </div>
           <!-- /.box-body -->
+>>>>>>> c4d47320033c021c9d3628c867d97a9c8aa1f394
         </div>
         <!-- /.box -->
       </div>

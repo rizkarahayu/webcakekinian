@@ -26,6 +26,15 @@
                     
                 </div>
                 <div class="box-body">
+                    @if(Session::has('message'))
+                        <div class="alert alert-success alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
@@ -43,12 +52,12 @@
                   <td>{{ $produks->toko->nama}}</td>
                   <td>{{ $produks->harga}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/produk/edit')}}" class="btn btn-warning">
-                      <i class="fa fa-pencil"></i>
+                  <td>  <a href="{{url('ck-admin/produk/edit/' . $produks->id)}}" class="btn btn-warning">
+                          <i class="fa fa-pencil"></i>
                   </a>
-                      <a class="btn btn-danger" onclick="">
-                      <i class="fa fa-trash"></i>
-                    </a></td>
+                      <a href="{{url('ck-admin/produk/delete/' . $produks->id)}}" class="btn btn-danger" onclick="">
+                          <i class="fa fa-trash"></i>
+                     </a></td>
                 </tr>
                      @endforeach
                  </tbody>
