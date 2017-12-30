@@ -41,6 +41,9 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+// Register Base repo Provider
+$app->register(\App\Providers\BaseRepoProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
