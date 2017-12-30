@@ -10,17 +10,17 @@ class Produk extends Model
 
     protected $table    = 'produk';
     protected $fillable = [
-        'nama',
+
         'toko_id',
         'nama',
         'stock',
         'harga',
         'deskripsi',
-        'gambar',
+        'gambar'
     ];
 
-    protected static $validation_rules = [
-        'nama'          => 'required',
+    public static $validation_rules = [
+
         'toko_id'       => 'required',
         'nama'          => 'required',
         'stock'         => 'required',

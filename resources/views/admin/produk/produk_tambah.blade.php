@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-birthday-cake"> &nbsp;</i>Nama Produk</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="nama" id="nama_produk" placeholder="Masukkan Nama Produk" style="text-transform:capitalize" required>
+                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukkan Nama Produk" style="text-transform:capitalize">
                             </div>
                         </div>
                            <div class="form-group">
@@ -42,42 +42,42 @@
                             <div class="col-sm-4">
                                 <select class="form-control" name="toko_id">
                                   <option  value="1">Patata</option>
-                                  <option  value="2">Savana Cake</option>
-                                  <option  value="3">Savana Cake</option>
-                                  <option  value="4">Savana Cake</option>
-                                  <option  value="5">Savana Cake</option>
-                                  <option  value="6">Savana Cake</option>
-                                  <option  value="7">Savana Cake</option>
-                                  <option  value="8">Savana Cake</option>
-                                  <option  value="9">Savana Cake</option>
-                                  <option  value="10">Savana Cake</option>
-                                  <option  value="11">Savana Cake</option>
-                                  <option  value="12">Savana Cake</option>
+                                  <option  value="2">Lampung Banana Fooster</option>
+                                  <option  value="3">Bosang Makasar</option>
+                                  <option  value="4">Bandung Makuta</option>
+                                  <option  value="5">Queen Puff</option>
+                                  <option  value="6">Lapis Minang Nantigo</option>
+                                  <option  value="7">Malang Struddle</option>
+                                  <option  value="8">Medan Napoleon</option>
+                                  <option  value="9">Surabaya Snowcake</option>
+                                  <option  value="10">Solo Pluffy</option>
+                                  <option  value="11">Mamahke Jogja</option>
+                                  <option  value="12">Bogor Rain Cake</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-hourglass-2"> &nbsp;</i>Stok</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="stok" id="stok" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" required>
+                                <input type="text" class="form-control" name="stock" id="stock" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
                             <div class="col-sm-4">
-                                <textarea type="text" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize" required></textarea>
+                                <textarea type="text" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize"></textarea>
                             </div>
                         </div>
                          <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-newspaper-o"> &nbsp;</i>Deskripsi</label>
                             <div class="col-sm-4">
-                                <textarea type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize" required></textarea>
+                                <textarea type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
                             <div class="col-sm-4">
-                                <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize" required>
+                                <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize">
                             </div>
                         </div>
                     </div>

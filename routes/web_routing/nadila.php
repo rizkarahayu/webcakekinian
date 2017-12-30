@@ -21,10 +21,15 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     
     Route::get('/produk', 'Admin\Produk\ProdukController@index');
     Route::get('/produk/tambah', 'Admin\Produk\ProdukController@tambah');
-    Route::get('/produk/edit', 'Admin\Produk\ProdukController@edit');
-    Route::get('/produk/create/','Admin\Produk\ProdukController@store');
+    Route::get('/produk/edit/{id}', 'Admin\Produk\ProdukController@edit');
+    Route::post('/produk/create/','Admin\Produk\ProdukController@store');
+    Route::post('/produk/update/{id}', 'Admin\Produk\ProdukController@update');
+    Route::get('/produk/delete/{id}', 'Admin\Produk\ProdukController@delete');
 
     Route::get('/events', 'Admin\Events\EventsController@index');
     Route::get('/events/tambah', 'Admin\Events\EventsController@tambah');
-    Route::get('/events/edit', 'Admin\Events\EventsController@edit'); 
+    Route::get('/events/edit/{id}', 'Admin\Events\EventsController@edit');
+    Route::post('/events/create/','Admin\Events\EventsController@store');
+    Route::post('/events/update/{id}', 'Admin\Events\EventsController@update');
+    Route::get('/events/delete/{id}', 'Admin\Events\EventsController@delete');
 });
