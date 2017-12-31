@@ -17,7 +17,6 @@
                 <thead>
                 <tr>
                   <th style="text-align:center">Nama Customer</th>
-                  <th style="text-align:center">Nama Toko</th>
                   <th style="text-align:center">Total</th>
                   <th style="text-align:center">Detail Pengiriman</th>
                   <th style="text-align:center">Status Bayar</th>
@@ -30,7 +29,6 @@
                     @foreach($transaksi as $trans)
                 <tr>
                   <td>{{$trans->customer->user->username}}</td>
-                  <td>{{$trans->toko->nama}}</td>
                   <td>{{$trans->total}}</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td style="text-align:center">

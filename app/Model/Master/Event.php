@@ -18,7 +18,7 @@ class Event extends Model
       'gambar',
     ];
     
-    protected static $validation_rules = [
+    public static $validation_rules = [
       'nama'         => 'required',
       'toko_id'         => 'required',
       'nama'            => 'required',

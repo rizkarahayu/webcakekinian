@@ -114,10 +114,27 @@
     <script src="{{ url('bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ url('plugins/bootstrap-switch-master/dist/js/bootstrap-switch.min.js')}}"></script>
-<script src="{{url('plugins/chartjs/Chart.min.js')}}"></script>
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-         Both of these plugins are recommended to enhance the
-         user experience. -->
+    <script src="{{url('plugins/chartjs/Chart.min.js')}}"></script>
+
+    {{--Sweetalert--}}
+    <script src="{{ url('js/sweetalert/sweetalert2.all.js') }}"></script>
+
+    <script>
+        var url = window.location;
+        console.log(url);
+
+        // for sidebar menu entirely but not cover treeview
+        $('ul.sidebar-menu a').filter(function() {
+            return this.href == url;
+        }).parent().addClass('active');
+
+        // for treeview
+        $('ul.treeview-menu a').filter(function() {
+            return this.href == url;
+        }).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
+
     @yield('custom_js')
+    @include('vendor.sweetalert.view')
     </body>
 </html>

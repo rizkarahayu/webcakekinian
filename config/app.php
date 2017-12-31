@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Sweetalert
+        \Softon\SweetAlert\SweetAlertServiceProvider::class
+
     ],
 
     /*
@@ -226,6 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Swal
+        'SWAL'  => \Softon\SweetAlert\Facades\SWAL::class,
     ],
 
 ];

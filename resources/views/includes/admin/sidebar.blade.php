@@ -14,7 +14,7 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN</li>
-            <li class="active"><a href="."><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+            <li><a href="."><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
             <li class="treeview">
                 <a href="#"><i class="fa fa-database"></i> <span>Data Master</span>
@@ -53,6 +53,15 @@
                     <li><a href="{{ url('/ck-admin/laporanproduk') }}"><i class="fa fa-bar-chart"></i>Laporan Produk</a></li>
 
                 </ul>
+            </li>
+            <li >
+                <a href="{{ url('/ck-admin/messages') }}">
+                    <i class="fa fa-comment"></i>
+                    <span>Messages</span>
+                    <span class="pull-right-container">
+                        <span class="label label-danger pull-right">5</span>
+                    </span>
+                </a>
             </li>
         </ul>
         <!-- /.sidebar-menu -->

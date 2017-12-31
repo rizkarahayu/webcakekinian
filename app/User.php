@@ -42,7 +42,7 @@ class User extends Authenticatable
         'role_id'   => 'required'
     ];
 
-    public function users() {
-        return $this->belongsTo(RoleUsers::class, 'users_id', 'users_id');
+    public function role_users() {
+        return $this->belongsTo(RoleUsers::class, 'role_id');
     }
 }

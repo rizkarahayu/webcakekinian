@@ -4,6 +4,6 @@ Route::prefix('')->middleware('auth')->group(function () {
     Route::get('/test', 'Website\Test\TestController@test');
 });
 
-Route::prefix('ck-admin')->middleware('auth')->group(function () {
-
+Route::prefix('ck-admin/api/')->middleware('auth')->group(function () {
+    Route::get('/users/{id}', 'API\ApiUserController@getById');
 });

@@ -13,13 +13,23 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     
     Route::get('/toko', 'Admin\Toko\TokoController@index');
     Route::get('/toko/tambah', 'Admin\Toko\TokoController@tambah');
-    Route::get('/toko/edit', 'Admin\Toko\TokoController@edit');
+    Route::get('/toko/edit/{id}', 'Admin\Toko\TokoController@edit');
+    Route::post('/toko/create', 'Admin\Toko\TokoController@store');
+    Route::post('/toko/update/{id}', 'Admin\Toko\TokoController@update');
+    Route::get('/toko/delete/{id}', 'Admin\Toko\TokoController@delete');
+
     
     Route::get('/produk', 'Admin\Produk\ProdukController@index');
     Route::get('/produk/tambah', 'Admin\Produk\ProdukController@tambah');
-    Route::get('/produk/edit', 'Admin\Produk\ProdukController@edit');    
-    
+    Route::get('/produk/edit/{id}', 'Admin\Produk\ProdukController@edit');
+    Route::post('/produk/create/','Admin\Produk\ProdukController@store');
+    Route::post('/produk/update/{id}', 'Admin\Produk\ProdukController@update');
+    Route::get('/produk/delete/{id}', 'Admin\Produk\ProdukController@delete');
+
     Route::get('/events', 'Admin\Events\EventsController@index');
     Route::get('/events/tambah', 'Admin\Events\EventsController@tambah');
-    Route::get('/events/edit', 'Admin\Events\EventsController@edit'); 
+    Route::get('/events/edit/{id}', 'Admin\Events\EventsController@edit');
+    Route::post('/events/create/','Admin\Events\EventsController@store');
+    Route::post('/events/update/{id}', 'Admin\Events\EventsController@update');
+    Route::get('/events/delete/{id}', 'Admin\Events\EventsController@delete');
 });
