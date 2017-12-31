@@ -3,98 +3,87 @@
 namespace App\Http\Controllers\Admin\Toko;
 
 use App\Model\Master\Toko;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use App\GeneralFunction;
+
 
 class TokoController extends Controller
 {
      public function index(){
-         $toko = Toko::all();
+        $toko  = app('toko')->get();
         return view('admin.toko.toko', compact('toko'));
     }
     public function tambah(){
         return view('admin.toko.toko_tambah');
     }
     public function edit($id){
-        $toko   = Toko::find($id);
+        $toko   = app('toko')->getById($id);
+       
+        return view('admin.toko.toko_edit', compact(['toko']));
 
-        return view('admin.toko.toko_edit', compact('toko'));
     }
 
     public function store(Request $request){
-        $form   = $request->input();
+        $form_user   = $request->input();
+        $form_toko   = $request->input();
+        $rules_user  = User::$validation_rules;
+        $rules_toko  = Toko::$validation_rules;
 
-        $rules      = Toko::$validation_rules;
-        $validate   = Validator::make($form, $rules);
-
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        if (app('users')->isEmailExists($form_user['email'])){
+            $request->session()->flash('message', GeneralFunction::$EMAIL_EXIST_MESSAGE);
             return redirect('/ck-admin/toko/tambah');
         }
 
-        $form['created_at']     = Carbon::now()->toDateTimeString();
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
+        if ($form_user['password'] != $form_user['password_konfirmasi']) {
+            $request->session()->flash('message', GeneralFunction::$PASSWORD_CONFIRM_NOTVALID_MESSAGE);
+            return redirect('/ck-admin/toko/tambah');
+        }
+        unset($form_user['password_konfirmasi'], $form_user['kota'], $form_user['siup'], $form_user['npwp'], $form_user['no_rek'], $form_user['nama_bank']);
+        unset($form_toko['username'], $form_toko['email'], $form_toko['password'], $form_toko['alamat'], $form_toko['no_telp']);
 
-        $toko = new Toko();
-        $toko->nama        = $form['nama'];
-        $toko->siup        = $form['siup'];
-        $toko->npwp        = $form['npwp'];
-        $toko->no_rek      = $form['no_rek'];
-        $toko->kota        = $form['kota'];
-        $toko->save();
+        $form_user['role_id']   = 2;
+        $form_user['status_active'] = 1;
+        $form_user['gambar']    = 'image.jpg';
 
-        if ($toko) {
-            $request->session()->flash('message', 'Success saving data !');
+        $create_user    = app('users')->create($form_user, $rules_user);
+        $form_toko['users_id']  = $create_user['data']['id'];
+        $create_toko    = app('toko')->create($form_toko, $rules_toko);
+
+        $request->session()->flash('message', $create_toko['message']);
+
+        if (!$create_toko)
+            return redirect('/ck-admin/toko/tambah');
+        else 
             return redirect('/ck-admin/toko/');
-        } else {
-            $request->session()->flash('message', 'Failed saving data !');
-            return redirect('/ck-admin/toko/tambah');
-        }
-
     }
+
+
 
     public function update(Request $request, $id) {
         $form   = $request->input();
+        $rules  = Toko::$validation_rules;
 
-        $rules      = Toko::$validation_rules;
         unset($rules['password']);
-        $validate   = Validator::make($form, $rules);
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        $update = app('toko')->update($form, $rules, $id);
+        $request->session()->flash('message', $update['message']);
+
+        if (!$update)
             return redirect('/ck-admin/toko/edit/' . $id);
-        }
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
 
-        $toko = Toko::find($id);
-        $toko->name        = $form['name'];
-        $toko->siup        = $form['siup'];
-        $toko->npwp        = $form['npwp'];
-        $toko->no_rek        = $form['no_rek'];
-        $toko->save();
-
-        if ($toko) {
-            $request->session()->flash('message', 'Success editing data !');
-            return redirect('/ck-admin/toko/');
-        } else {
-            $request->session()->flash('message', 'Failed editing data !');
-            return redirect('/ck-admin/toko/edit/' . $id);
-        }
-
+        return redirect('/ck-admin/toko/');
     }
+
 
     public function delete(Request $request, $id) {
-        $toko   = Toko::find($id);
-        $toko->delete();
+        $delete = app('toko')->delete($id);
+        $request->session()->flash('message', $delete['message']);
 
-        if ($toko) {
-            $request->session()->flash('message', 'Success deleting data !');
-            return redirect('/ck-admin/toko/');
-        } else {
-            $request->session()->flash('message', 'Failed deleting data !');
-            return redirect('/ck-admin/toko/');
-        }
+        return redirect('/ck-admin/toko/');
     }
+
 }
