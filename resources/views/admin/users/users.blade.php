@@ -32,44 +32,41 @@
                     @endif
 
                     <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                 <th>No.</th>
-                 <th>Nama</th>
-                 <th>Username</th>
-                 <th>Email</th>
-                 <th>Detail</th>
-                 <th>#</th>
-                </tr>
-                </thead>
-                <tbody>
+                        <thead>
+                            <tr>
+                                 <th>No.</th>
+                                 <th>Nama</th>
+                                 <th>Username</th>
+                                 <th>Email</th>
+                                 <th>Detail</th>
+                                 <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                @if (count($users) > 0)
-                    @foreach($users as $i => $user)
-                        <tr>
-                            <td>{{ ++$i }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->username }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                            <td>  <a href="{{url('ck-admin/users/edit/' . $user->id)}}" class="btn btn-warning">
-                                    <i class="fa fa-pencil"></i>
-                                </a>
-                                <a href="{{url('ck-admin/users/delete/' . $user->id)}}" class="btn btn-danger" onclick="">
-                                    <i class="fa fa-trash"></i>
-                                </a></td>
-                        </tr>
-                    @endforeach
-                @else
-                    <tr>
-                        <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
-                    </tr>
-                @endif
-
-
-                 </tbody>
-              </table>
-
+                        @if (count($users) > 0)
+                            @foreach($users as $i => $user)
+                                <tr>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->username }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                                    <td>  <a href="{{url('ck-admin/users/edit/' . $user->id)}}" class="btn btn-warning">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a href="{{url('ck-admin/users/delete/' . $user->id)}}" class="btn btn-danger" onclick="">
+                                            <i class="fa fa-trash"></i>
+                                        </a></td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
+                            </tr>
+                        @endif
+                         </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -128,7 +125,6 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Email</label>
-
                                                     <div class="col-sm-10">
                                                         <input type="password" class="form-control" id="inputPassword3" disabled placeholder="nadilawh0@gmail.com">
                                                     </div>

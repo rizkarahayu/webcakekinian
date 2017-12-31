@@ -60,19 +60,19 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-calendar-check-o"> &nbsp;</i>Tanggal Mulai</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="tanggal_mulai" id="tanggal_mulai" placeholder="Masukkan Nama Toko" style="text-transform:capitalize" >
+                                <input type="date" class="form-control" name="tanggal_mulai" id="tanggal_mulai" placeholder="Masukkan Tanggal Mulai" style="text-transform:capitalize" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-calendar-times-o"> &nbsp;</i>Tanggal Selesai</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="tanggal_selesai" id="tanggal_selesai" placeholder="Masukkan Nama Toko" style="text-transform:capitalize" >
+                                <input type="date" class="form-control" name="tanggal_selesai" id="tanggal_selesai" placeholder="Masukkan Tanggal Selesai" style="text-transform:capitalize" >
                             </div>
                         </div>
                          <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Deskripsi Events</label>
                   <div class="col-sm-9">
-                   <textarea class="form-control" rows="4" name="deskripsi" id="deskripsi" placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
+                   <textarea class="form-control" rows="4" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi"></textarea>
                   </div>
                 </div>
                         <div class="form-group">

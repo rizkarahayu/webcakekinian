@@ -40,7 +40,7 @@
                     @foreach($toko as $toko)
                 <tr>
                   <td>{{ $toko->nama}}</td>
-                  <td>{{ $toko->siup}}</td>
+                  <td>{{ $toko->kota}}</td>
                   <td>{{ $toko->npwp}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>   <a href="{{url('ck-admin/toko/edit/' . $toko->id)}}" class="btn btn-warning">
@@ -77,56 +77,56 @@
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Toko</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="1">
+                    <input type="number" class="form-control" id="inputPassword3" disabled placeholder="Masukkan ID Toko">
                   </div>
                 </div>
                   <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Toko</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Savana Cake">
+                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Nama Toko">
                   </div>
                 </div>
                    <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-user-circle-o"> &nbsp;</i>SIUP</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="97987">
+                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan SIUP">
                   </div>
                 </div>
                    <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>NPWP</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="64564">
+                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan NPWP">
                   </div>
                 </div>
                                     <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Kota</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Banyuwangi">
+                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Banyuwangi">
                   </div>
                 </div>
                   <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i>Alamat</label>
 
                   <div class="col-sm-10">
-                   <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Banyuwangi"></textarea>
+                   <textarea class="form-control" rows="4" disabled placeholder="Masukkan Alamat"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Bank</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="BRI">
+                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Bank Yang Digunakan">
                   </div>
                 </div>
                <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Nomor Rekening </label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="27857151641">
+                    <input type="number" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Rekening Yang Digunakan">
                   </div>
                 </div>
 

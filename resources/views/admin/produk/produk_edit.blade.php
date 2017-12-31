@@ -57,15 +57,15 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-hourglass-2"> &nbsp;</i>Stok</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="stock" id="stock" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" value="{{ $produk->stock }}" required>
+                                <input type="number" class="form-control" name="stock" id="stock" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" value="{{ $produk->stock }}" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
-                            <div class="col-sm-4">
-                                <textarea type="text" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga Produk" style="text-transform:capitalize"  required>{{ $produk->harga }}</textarea>
-                            </div>
-                        </div>
+                          <div class="form-group">
+                              <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Stok</label>
+                              <div class="col-sm-4">
+                                  <input type="number" class="form-control" name="harga" id="harga" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" value="{{ $produk->stock }}" required>
+                              </div>
+                          </div>
                          <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-newspaper-o"> &nbsp;</i>Deskripsi</label>
                             <div class="col-sm-4">
