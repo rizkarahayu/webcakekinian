@@ -119,6 +119,21 @@
     {{--Sweetalert--}}
     <script src="{{ url('js/sweetalert/sweetalert2.all.js') }}"></script>
 
+    <script>
+        var url = window.location;
+        console.log(url);
+
+        // for sidebar menu entirely but not cover treeview
+        $('ul.sidebar-menu a').filter(function() {
+            return this.href == url;
+        }).parent().addClass('active');
+
+        // for treeview
+        $('ul.treeview-menu a').filter(function() {
+            return this.href == url;
+        }).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
+
     @yield('custom_js')
     @include('vendor.sweetalert.view')
     </body>
