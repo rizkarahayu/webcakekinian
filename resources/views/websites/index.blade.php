@@ -41,64 +41,6 @@
     <!-- //banner -->
     <!-- content -->
 
-    <!-- content-bottom -->
-
-    <div class="content-bottom">
-        <div class="col-md-7 content-lgrid">
-            <div class="col-sm-6 content-img-left text-center">
-                <div class="content-grid-effect slow-zoom vertical">
-                    <div class="img-box"><img src="{{ url('img/website/images/p1.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-                    <div class="info-box">
-                        <div class="info-content simpleCart_shelfItem">
-                            <h4>Lemon Cheese Cake</h4>
-                            <span class="separator"></span>
-                            <p><span class="item_price">Rp65.000</span></p>
-                            <span class="separator"></span>
-                            <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 content-img-right">
-                <h3>Special Offers dan Diskon 50% Discount On <span>BANDUNG MAKUTA</span></h3>
-            </div>
-
-            <div class="col-sm-6 content-img-right">
-                <h3>Buy 3 get free merchandise <span> Surabaya</span> <span>Patata</span></h3>
-            </div>
-            <div class="col-sm-6 content-img-left text-center">
-                <div class="content-grid-effect slow-zoom vertical">
-                    <div class="img-box img-responsive zoom-img"></div>
-                    <div class="info-box">
-                        <div class="info-content simpleCart_shelfItem">
-                            <h4>Red Velvet</h4>
-                            <span class="separator"></span>
-                            <p><span class="item_price">Rp68.000</span></p>
-                            <span class="separator"></span>
-                            <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="col-md-5 content-rgrid text-center">
-            <div class="content-grid-effect slow-zoom vertical">
-                <div class="img-box"><img src="{{ url('img/website/images/p2.jpg')}}" alt="image" class="img-responsive zoom-img"></div>
-                <div class="info-box">
-                    <div class="info-content simpleCart_shelfItem">
-                        <h4>Mamahke Red Velvet</h4>
-                        <span class="separator"></span>
-                        <p><span class="item_price">Rp68.000</span></p>
-                        <span class="separator"></span>
-                        <a class="item_add hvr-outline-out button2" href="#">add to cart </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <!-- //content-bottom -->
     <!-- product-nav -->
 
     <div class="product-easy">
@@ -571,15 +513,23 @@
                     <div class="login-grids">
                         <div class="login">
                             <div class="login-bottom">
-                                <h3>Sign up for free</h3>
+                                <h3>Daftar Sekarang</h3>
                                 <form>
+                                     <div class="sign-up">
+                                        <h4>Nama :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama';}" required="">
+                                    </div>
+                                    <div class="sign-up">
+                                        <h4>Username :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+                                    </div>
                                     <div class="sign-up">
                                         <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
                                     </div>
                                     <div class="sign-up">
                                         <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        <input type="password" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 
                                     </div>
                                     <div class="sign-up">
@@ -587,37 +537,42 @@
                                         <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 
                                     </div>
-                                    <div class="sign-up">
-                                        <input type="submit" value="REGISTER NOW" >
-                                    </div>
-
                                 </form>
                             </div>
                             <div class="login-right">
-                                <h3>Sign in with your account</h3>
                                 <form>
-                                    <div class="sign-in">
-                                        <h4>Email :</h4>
-                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                    <div class="sign-up">
+                                        <h4>Tanggal Lahir :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tanggal Lahir';}" required="">
                                     </div>
                                     <div class="sign-in">
-                                        <h4>Password :</h4>
-                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                        <a href="#">Forgot password?</a>
+                                        <h4>Alamat :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Alamat';}" required="">
+                                    </div>
+                                    <div class="sign-in">
+                                        <h4>No. Telp :</h4>
+                                        <input type="text" value="Type Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '(+62)123456789';}" required="">
+                                    </div>
+                                    <div class="sign-in">
+                                        <h4>Nama Bank :</h4>
+                                        <input type="text" value="Type Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama Bank';}" required="">
+                                    </div>
+                                    <div class="sign-in">
+                                        <h4>No. Rekening :</h4>
+                                        <input type="text" value="Type Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'No Rekening';}" required="">
                                     </div>
                                     <div class="single-bottom">
                                         <input type="checkbox"  id="brand" value="">
                                         <label for="brand"><span></span>Remember Me.</label>
                                     </div>
                                     <div class="sign-in">
-                                        <!--<input type="submit" value="SIGNIN" >-->
-                                        <a href="{{ url('/ck-admin') }}" class="log-button">SIGN IN</a>
+                                        <input type="submit" value="REGISTER NOW" >
                                     </div>
                                 </form>
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+                        <p>Dengan mendaftar, Anda setuju dengan <a href="#">Terms and Conditions</a> and <a href="#">Kebijakan Privasi</a></p>
                     </div>
                 </div>
             </div>

@@ -45,8 +45,7 @@ class UserController extends Controller
         }
         unset($form['password_konfirmasi']);
 
-        $create         = app('users')->create($form, $rules);
-//        $sendToEmail    = app('users')->sendToEmail($form);
+        $create = app('users')->create($form, $rules);
 
         $request->session()->flash('message', $create['message']);
 
