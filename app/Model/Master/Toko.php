@@ -13,7 +13,8 @@ class Toko extends Model
         'siup',
         'npwp',
         'no_rek',
-        'nama_bank'
+        'nama_bank',
+        'users_id',
     ];
 
     public static $validation_rules = [
@@ -22,7 +23,8 @@ class Toko extends Model
         'siup'      => 'required',
         'npwp'      => 'required',
         'no_rek'    => 'required',
-        'nama_bank'      => 'required',
+        'nama_bank' => 'required',
+        'users_id'  => 'required',
     ];
 
     public function produk() {

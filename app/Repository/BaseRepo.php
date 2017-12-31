@@ -65,6 +65,7 @@ class BaseRepo extends GeneralFunction
 
         if ($action) {
             $this->data_return = [
+                'data'      => $action,
                 'status'    => parent::$SUCCESS_STATUS,
                 'message'   => parent::$SUCCESS_SAVING_MESSAGE
             ];

@@ -39,7 +39,7 @@
                              <th>Username</th>
                              <th>Email</th>
                              <th>Detail</th>
-                             <th>#</th>
+                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
