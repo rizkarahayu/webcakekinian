@@ -47,6 +47,8 @@ class BaseRepo extends GeneralFunction
         $input['created_at']    = Carbon::now()->toDateTimeString();
         $input['updated_at']    = Carbon::now()->toDateTimeString();
 
+        unset($input['_token']);
+
         $action      = $this->model->insert($input);
 
         if ($action) {
@@ -64,7 +66,7 @@ class BaseRepo extends GeneralFunction
         return $this->data_return;
     }
 
-    public function update($input, $rules, $id_name = 'id', $id) {
+    public function update($input, $rules, $id, $id_name = 'id') {
         $validate    = Validator::make($input, $rules);
 
         if ($validate->fails()) {
@@ -75,6 +77,8 @@ class BaseRepo extends GeneralFunction
         }
 
         $input['updated_at']    = Carbon::now()->toDateTimeString();
+
+        unset($input['_token']);
 
         $action     = $this->model->where($id_name, $id)->update($input);
 

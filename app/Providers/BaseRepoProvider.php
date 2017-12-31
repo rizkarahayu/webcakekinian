@@ -47,11 +47,11 @@ class BaseRepoProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('user', function () {
+        $this->app->bind('users', function () {
             return new UserRepo(new User());
         });
 
-        $this->app->bind('role_user', function () {
+        $this->app->bind('role_users', function () {
             return new RoleUserRepo(new RoleUsers());
         });
 

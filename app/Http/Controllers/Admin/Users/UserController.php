@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Users;
 
+use App\GeneralFunction;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -11,106 +12,69 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     public function index(){
-        $users = User::all();
+        $users  = app('users')->get();
 
         return view('admin.users.users', compact('users'));
     }
 
-    public function tambah(){
-        return view('admin.users.users_tambah');
+    public function tambah(){;
+        $roles  = app('role_users')->get();
+
+        return view('admin.users.users_tambah', compact('roles'));
     }
 
     public function edit($id){
-        $user   = User::find($id);
+        $user   = app('users')->getById($id);
+        $roles  = app('role_users')->get();
 
-        return view('admin.users.users_edit', compact('user'));
+        return view('admin.users.users_edit', compact(['user', 'roles']));
     }
 
     public function store(Request $request) {
         $form   = $request->input();
+        $rules  = User::$validation_rules;
 
-        $rules      = User::$validation_rules;
-        $validate   = Validator::make($form, $rules);
-
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        if (app('users')->isEmailExists($form['email'])){
+            $request->session()->flash('message', GeneralFunction::$EMAIL_EXIST_MESSAGE);
             return redirect('/ck-admin/users/tambah');
         }
-
-        $form['created_at']     = Carbon::now()->toDateTimeString();
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
-//            return response()->json($form);
 
         if ($form['password'] != $form['password_konfirmasi']) {
-            $request->session()->flash('message', 'Password konfirmasi not valid');
+            $request->session()->flash('message', GeneralFunction::$PASSWORD_CONFIRM_NOTVALID_MESSAGE);
             return redirect('/ck-admin/users/tambah');
         }
+        unset($form['password_konfirmasi']);
 
-        $users = new User();
-        $users->name        = $form['name'];
-        $users->email       = $form['email'];
-        $users->password    = bcrypt($form['password']);
-        $users->username    = $form['username'];
-        $users->alamat      = $form['alamat'];
-        $users->no_telp     = $form['no_telp'];
-        $users->role_id     = $form['role_id'];
-        $users->created_at        = $form['created_at'];
-        $users->updated_at        = $form['updated_at'];
-        $users->save();
+        $create         = app('users')->create($form, $rules);
+//        $sendToEmail    = app('users')->sendToEmail($form);
 
-        if ($users) {
-            $request->session()->flash('message', 'Success saving data !');
-            return redirect('/ck-admin/users/');
-        } else {
-            $request->session()->flash('message', 'Failed saving data !');
+        $request->session()->flash('message', $create['message']);
+
+        if (!$create)
             return redirect('/ck-admin/users/tambah');
-        }
 
+        return redirect('/ck-admin/users/');
     }
 
     public function update(Request $request, $id) {
         $form   = $request->input();
+        $rules  = User::$validation_rules;
 
-        $rules      = User::$validation_rules;
         unset($rules['password']);
-        $validate   = Validator::make($form, $rules);
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        $update = app('users')->update($form, $rules, $id);
+        $request->session()->flash('message', $update['message']);
+
+        if (!$update)
             return redirect('/ck-admin/users/edit/' . $id);
-        }
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
 
-        $users = User::find($id);
-        $users->name        = $form['name'];
-        $users->email        = $form['email'];
-        $users->username        = $form['username'];
-        $users->alamat        = $form['alamat'];
-        $users->no_telp        = $form['no_telp'];
-        $users->role_id        = $form['role_id'];
-        $users->updated_at        = $form['updated_at'];
-        $users->save();
-
-        if ($users) {
-            $request->session()->flash('message', 'Success editing data !');
-            return redirect('/ck-admin/users/');
-        } else {
-            $request->session()->flash('message', 'Failed editing data !');
-            return redirect('/ck-admin/users/edit/' . $id);
-        }
-
+        return redirect('/ck-admin/users/');
     }
 
     public function delete(Request $request, $id) {
-        $user   = User::find($id);
-        $user->delete();
+        $delete = app('users')->delete($id);
+        $request->session()->flash('message', $delete['message']);
 
-        if ($user) {
-            $request->session()->flash('message', 'Success deleting data !');
-            return redirect('/ck-admin/users/');
-        } else {
-            $request->session()->flash('message', 'Failed deleting data !');
-            return redirect('/ck-admin/users/');
-        }
+        return redirect('/ck-admin/users/');
     }
 }

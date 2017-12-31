@@ -17,4 +17,14 @@ class UserRepo extends BaseRepo
     {
         $this->model = $user;
     }
+
+    public function isEmailExists($email) {
+        $user   = $this->model->where('email', $email)->first();
+        if ($user)
+            return true;
+    }
+
+    public function sendToEmail($input) {
+
+    }
 }

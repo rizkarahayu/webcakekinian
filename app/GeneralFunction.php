@@ -20,11 +20,14 @@ class GeneralFunction
     public static $NOT_FOUND_CODE       = 404;
     public static $INTERNAL_ERROR_CODE  = 500;
 
-    public static $FAILED_VALIDATE_MESSAGE  = 'Validation failed !';
-    public static $SUCCESS_SAVING_MESSAGE   = 'Success saving data !';
-    public static $FAILED_SAVING_MESSAGE    = 'Failed saving data !';
-    public static $SUCCESS_EDITING_MESSAGE  = 'Success editing data !';
-    public static $FAILED_EDITING_MESSAGE   = 'Failed editing data !';
-    public static $SUCCESS_DELETING_MESSAGE = 'Success deleting data !';
-    public static $FAILED_DELETING_MESSAGE  = 'Failed deleting data !';
+    public static $EMPTY_DATA_MESSAGE                   = 'No data Found !';
+    public static $FAILED_VALIDATE_MESSAGE              = 'Validation failed !';
+    public static $PASSWORD_CONFIRM_NOTVALID_MESSAGE    = 'Confirmation Password is not Valid !';
+    public static $EMAIL_EXIST_MESSAGE                  = 'Email is already exists !';
+    public static $SUCCESS_SAVING_MESSAGE               = 'Success saving data !';
+    public static $FAILED_SAVING_MESSAGE                = 'Failed saving data !';
+    public static $SUCCESS_EDITING_MESSAGE              = 'Success editing data !';
+    public static $FAILED_EDITING_MESSAGE               = 'Failed editing data !';
+    public static $SUCCESS_DELETING_MESSAGE             = 'Success deleting data !';
+    public static $FAILED_DELETING_MESSAGE              = 'Failed deleting data !';
 }
