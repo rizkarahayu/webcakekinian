@@ -10,7 +10,8 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
 
     Route::get('/customer', 'Admin\Customer\CustomerController@index');
     Route::get('/customer/edit', 'Admin\Customer\CustomerController@edit');
-    
+    Route::get('/customer/block/{id}', 'Admin\Customer\CustomerController@block');
+
     Route::get('/toko', 'Admin\Toko\TokoController@index');
     Route::get('/toko/tambah', 'Admin\Toko\TokoController@tambah');
     Route::get('/toko/edit/{id}', 'Admin\Toko\TokoController@edit');

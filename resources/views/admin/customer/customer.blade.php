@@ -48,7 +48,7 @@
                                         <td>
 
                                             @if ($customer->user->status_active == 1)
-                                                <a data-dismiss="modal" class="btn btn-danger"><span class="glyphicon glyphicon-lock"></span> Block</a>
+                                                <a href="{{ url('/ck-admin/customer/') }}" class="btn btn-danger"><span class="glyphicon glyphicon-lock"></span> Block</a>
                                             @else
                                                 <a data-dismiss="modal" class="btn btn-success"><span class="fa fa-check"></span> Unblock</a>
                                             @endif
