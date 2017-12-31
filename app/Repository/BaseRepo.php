@@ -22,16 +22,28 @@ class BaseRepo extends GeneralFunction
         return $this->model->orderBy('id', 'asc')->get();
     }
 
-    public function getById($id) {
-        return $this->model->find($id);
-    }
-
     public function getWhere($where = []) {
         return $this->model->where($where)->get();
     }
 
+    public function getWith($with = []) {
+        return $this->model->with($with)->get();
+    }
+
     public function getWhereWith($where = [], $with = []) {
         return $this->model->where($where)->with($with)->get();
+    }
+
+    public function getById($id) {
+        return $this->model->find($id);
+    }
+
+    public function getWithById($with = [], $id) {
+        return $this->model->with($with)->where('id', $id)->first();
+    }
+
+    public function getWhereWithById($where = [], $with = [], $id) {
+        return $this->model->with($with)->where($where)->where('id', $id)->first();
     }
 
     public function create($input, $rules) {
