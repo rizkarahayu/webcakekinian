@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 
 class AboutController extends Controller
 {
+    $toko  = app('toko')->get();
     public function about(){
-        return view('websites.about.about');
+        $toko  = app('toko')->get();
+        return view('websites.about.about', compact('toko'));
     }
 }

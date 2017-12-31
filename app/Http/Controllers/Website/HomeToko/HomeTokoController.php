@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Website\Produk;
+namespace App\Http\Controllers\Website\HomeToko;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ProdukController extends Controller
+class HomeTokoController extends Controller
 {
-      public function listproduk($nama_produk){
+     public function hometoko(){
          $toko  = app('toko')->get();
-          
          $list = [];
          $list['id_produk'] = '10';
          $list['nama_produk'] = 'Caramelized Foster Lampung';
@@ -17,6 +16,6 @@ class ProdukController extends Controller
          $list['harga'] = 'Rp68.000,00';
          $list['harga_diskon'] = 'Rp65.000,00'; 
          $list['review'] = "Pengiriman sangat cepat";
-        return view('websites.produk.listproduk', compact('list', 'toko'));
+         return view('websites.hometoko.hometoko', compact('list','toko'));
     }
 }
