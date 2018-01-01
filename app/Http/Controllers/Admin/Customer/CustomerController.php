@@ -12,7 +12,13 @@ class CustomerController extends Controller
         $customers= Customer::all();
         return view('admin.customer.customer', compact('customers'));
     }
+
     public function edit(){
         return view('admin.customer.customer_edit');
+    }
+
+    public function changeStatus(Request $request, $status, $id){
+        $customer   = app('customer')->changeStatus($status, $id);
+        return $customer;
     }
 }

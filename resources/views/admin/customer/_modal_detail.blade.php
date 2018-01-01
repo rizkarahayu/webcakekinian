@@ -14,77 +14,68 @@
                                     <form class="form-horizontal">
                                         <div class="box-body">
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Customer</label>
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="1">
+                                                    <input type="text" class="form-control" id="name" disabled placeholder="Nadila Wirdatul Hidayah">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-user-circle-o"> &nbsp;</i>Username</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="nadilawh">
+                                                    <input type="text" class="form-control" id="username" disabled placeholder="nadilawh">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Email</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Nadila Wirdatul Hidayah">
+                                                    <input type="text" class="form-control" id="email" disabled placeholder="nadilawh@gmail.com">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-mars"></i><i class="fa fa-venus"> &nbsp;</i>Jenis Kelamin</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Perempuan">
+                                                    <input type="text" class="form-control" id="jklm" disabled placeholder="Perempuan">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i>Alamat</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i>Alamat</label>
 
                                                 <div class="col-sm-10">
-                                                    <textarea class="form-control" rows="4" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
+                                                    <textarea class="form-control" rows="4" id="alamat" disabled placeholder="Jalan Gebang Lor No.32, Sukolilo-Surabaya. Rumah Kost Bapak H.Aji"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-tty"> &nbsp;</i>No Telepon</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-tty"> &nbsp;</i>No Telepon</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="082285698889">
+                                                    <input type="text" class="form-control" id="no_telp" disabled placeholder="082285698889">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Email</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-calendar"> &nbsp;</i>Tanggal Lahir</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="nadilawh@gmail.com">
+                                                    <input type="text" class="form-control" id="tgl_lahir" disabled placeholder="22 Maret 1998">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar"> &nbsp;</i>Tanggal Lahir</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Bank</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="22 Maret 1998">
+                                                    <input type="text" class="form-control" id="nama_bank" disabled placeholder="Mandiri">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Bank</label>
+                                                <label for="inputtext3" class="col-sm-2 control-label"><i class="fa fa-credit-card"> &nbsp;</i>Nomor Rekening</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="Mandiri">
+                                                    <input type="text" class="form-control" id="no_rek" disabled placeholder="140-393-89282">
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-credit-card"> &nbsp;</i>Nomor Rekening</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="password" class="form-control" id="inputPassword3" disabled placeholder="140-393-89282">
-                                                </div>
-                                            </div>
-
-                                            <a href="{{ url('/ck-admin/customer') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
 
                                         </div>
                                     </form>

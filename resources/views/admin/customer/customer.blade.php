@@ -16,45 +16,63 @@
                 <div class="box-header">
                 </div>
                 <div class="box-body">
+
+                    @if(Session::has('message'))
+                        <div class="alert alert-success alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
                            <th>No.</th>
-                           <th>Username</th>
+                           <th>Nama</th>
+                            <th>Email</th>
                             <th>Alamat</th>
                             <th>Nomor Telepon</th>
-                            <th>Email</th>
                             <th>Detail</th>
                             <th>Status Aktif</th>
                             <th>#</th>
                         </tr>
                         </thead>
                         <tbody>
-                            @foreach($customers as $i => $customer)
-                                <tr>
-                                      <td>{{++$i}}</td>
-                                      <td>{{$customer->user->username}}</td>
-                                      <td>{{$customer->tgl_lahir}}</td>
-                                      <td>{{$customer->jklm}}</td>
-                                      <td>{{$customer->no_rek}}</td>
-                                      <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                                      <td>
-                                          @if ($customer->user->status_active == 1)
-                                              <label class="label label-success"><span class="fa fa-check"></span> Aktif</label>
-                                          @else
-                                              <label class="label label-danger"><span class="fa fa-lock"></span> Blocked</label>
-                                          @endif
-                                      </td>
-                                        <td>
+                            @if (count($customers) > 0)
+                                @foreach($customers as $i => $customer)
+                                    <tr>
+                                          <td>{{ ++$i }}</td>
+                                          <td>{{ $customer->users->name }}</td>
+                                          <td>{{ $customer->users->email }}</td>
+                                          <td>{{ $customer->users->alamat }}</td>
+                                          <td>{{ $customer->users->no_telp }}</td>
+                                          <td><button type="button" class="btn btn-info" onclick="getDetailCustomer({{ $customer->id }})" data-toggle="modal" data-target="#myModal">Details</button></td>
+                                          <td>
+                                              @if ($customer->users->status_active == 1)
+                                                  <label class="label label-success"><span class="fa fa-check"></span> Aktif</label>
+                                              @else
+                                                  <label class="label label-danger"><span class="fa fa-lock"></span> Blocked</label>
+                                              @endif
+                                          </td>
+                                            <td>
 
-                                            @if ($customer->user->status_active == 1)
-                                                <a href="{{ url('/ck-admin/customer/') }}" class="btn btn-danger"><span class="glyphicon glyphicon-lock"></span> Block</a>
-                                            @else
-                                                <a data-dismiss="modal" class="btn btn-success"><span class="fa fa-check"></span> Unblock</a>
-                                            @endif
-                                        </td>
+                                                @if ($customer->users->status_active == 1)
+                                                    <a onclick="actionChangeStatus(event, 'block', '{{ $customer->id }}');" class="btn btn-danger"><span class="glyphicon glyphicon-lock"></span> Block</a>
+                                                @else
+                                                    <a onclick="actionChangeStatus(event, 'unblock', '{{ $customer->id }}');" class="btn btn-success"><span class="fa fa-unlock-alt"></span> Unblock</a>
+                                                @endif
+                                            </td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <tr>
+                                    <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
                                 </tr>
-                            @endforeach
+                            @endif
+
                          </tbody>
                       </table>
                 </div>
@@ -66,6 +84,10 @@
 
 @section('modal')
     @include('admin.customer._modal_detail')
+@endsection
+
+@section('custom_js')
+    @include('admin.customer._js')
 @endsection
 
 

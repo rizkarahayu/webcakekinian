@@ -35,7 +35,7 @@ class Customer extends Model
         'no_rek'    => 'required',
     ];
 
-    public function user() {
+    public function users() {
         return $this->belongsTo(User::class, 'users_id');
     }
      public function transaksi() {

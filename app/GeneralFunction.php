@@ -30,4 +30,6 @@ class GeneralFunction
     public static $FAILED_EDITING_MESSAGE               = 'Failed editing data !';
     public static $SUCCESS_DELETING_MESSAGE             = 'Success deleting data !';
     public static $FAILED_DELETING_MESSAGE              = 'Failed deleting data !';
+    public static $SUCCESS_STATUS_CHANGE_CUSTOMER_MESSAGE   = 'Success change status users !';
+    public static $FAILED__STATUS_CHANGE_CUSTOMER_MESSAGE   = 'Failed change status users !';
 }
