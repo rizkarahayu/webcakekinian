@@ -71,6 +71,7 @@ class BaseRepo extends GeneralFunction
             ];
         } else {
             $this->data_return = [
+                'data'      => $action,
                 'status'    => parent::$FAILED_STATUS,
                 'message'   => parent::$FAILED_SAVING_MESSAGE
             ];

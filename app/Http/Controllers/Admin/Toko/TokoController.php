@@ -43,25 +43,30 @@ class TokoController extends Controller
             return redirect('/ck-admin/toko/tambah');
         }
         unset($form_user['password_konfirmasi'], $form_user['kota'], $form_user['siup'], $form_user['npwp'], $form_user['no_rek'], $form_user['nama_bank']);
-        unset($form_toko['username'], $form_toko['email'], $form_toko['password'], $form_toko['alamat'], $form_toko['no_telp']);
+        unset($form_toko['password_konfirmasi'], $form_toko['name'], $form_toko['username'], $form_toko['email'], $form_toko['password'], $form_toko['alamat'], $form_toko['no_telp']);
 
         $form_user['role_id']   = 2;
         $form_user['status_active'] = 1;
         $form_user['gambar']    = 'image.jpg';
 
         $create_user    = app('users')->create($form_user, $rules_user);
-        $form_toko['users_id']  = $create_user['data']['id'];
-        $create_toko    = app('toko')->create($form_toko, $rules_toko);
+        $create_toko    = [];
+        if ($create_user) {
+            $form_toko['users_id']  = $create_user['data']['id'];
+            $form_toko['nama']      = $form_user['name'];
 
-        $request->session()->flash('message', $create_toko['message']);
-
-        if (!$create_toko)
+            $create_toko    = app('toko')->create($form_toko, $rules_toko);
+            $request->session()->flash('message', $create_toko['message']);
+            
+            if (!$create_toko)
+                return redirect('/ck-admin/toko/tambah');
+            else
+                return redirect('/ck-admin/toko/');
+        } else {
+            $request->session()->flash('message', $create_user['message']);
             return redirect('/ck-admin/toko/tambah');
-        else 
-            return redirect('/ck-admin/toko/');
+        }
     }
-
-
 
     public function update(Request $request, $id) {
         $form   = $request->input();
