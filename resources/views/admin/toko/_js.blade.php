@@ -43,10 +43,10 @@
             ).then(function () {
                 $.ajax({
                     type    : 'GET',
-                    url     : '/ck-admin/users/delete/' + id,
+                    url     : '/ck-admin/toko/delete/' + id,
                     data    : {},
                     success : function (res) {
-                        window.location.href = '/ck-admin/users';
+                        window.location.href = '/ck-admin/toko';
                     }
 
                 });

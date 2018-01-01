@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Model\Master\RoleUsers;
+use App\Model\Master\Toko;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -41,10 +42,15 @@ class User extends Authenticatable
         'email'     => 'required|email',
         'password'  => 'required',
         'username'  => 'required',
-        'role_id'   => 'required'
+        'role_id'   => 'required',
+//        'gambar'    => 'image|mimes:jpg,png|max:4096'
     ];
 
     public function role_users() {
         return $this->belongsTo(RoleUsers::class, 'role_id');
+    }
+
+    public function toko() {
+        return $this->hasMany(Toko::class, 'users_id');
     }
 }

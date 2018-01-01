@@ -2,6 +2,7 @@
 
 namespace App\Model\Master;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Toko extends Model
@@ -33,5 +34,9 @@ class Toko extends Model
     
     public function events() {
         return $this->hasMany(Event::class, 'toko_id', 'id');
+    }
+
+    public function users() {
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
 }

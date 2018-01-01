@@ -41,12 +41,15 @@
                                   <td>{{ $toko->kota }}</td>
                                   <td>{{ $toko->npwp }}</td>
                                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                                  <td>   <a href="{{url('ck-admin/toko/edit/' . $toko->id)}}" class="btn btn-warning">
+                                  <td>
+                                      <a href="{{url('ck-admin/toko/edit/' . $toko->id)}}" class="btn btn-warning">
                                          <i class="fa fa-pencil"></i>
-                                  </a>
-                                    <a href="{{url('ck-admin/toko/delete/' . $toko->id)}}" class="btn btn-danger" onclick="">
-                                    <i class="fa fa-trash"></i>
-                                    </a></td>
+                                      </a>
+
+                                      <button class="btn btn-danger" onclick="actionDelete(event, '{{ $toko->id }}');">
+                                          <i class="fa fa-trash"></i>
+                                      </button>
+                                  </td>
                                 </tr>
                             @endforeach
                          </tbody>

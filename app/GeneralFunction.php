@@ -22,8 +22,10 @@ class GeneralFunction
 
     public static $EMPTY_DATA_MESSAGE                   = 'No data Found !';
     public static $FAILED_VALIDATE_MESSAGE              = 'Validation failed !';
+    public static $IMAGE_NOT_VALID_MESSAGE              = 'Image extensions not valid !';
     public static $PASSWORD_CONFIRM_NOTVALID_MESSAGE    = 'Confirmation Password is not Valid !';
     public static $EMAIL_EXIST_MESSAGE                  = 'Email is already exists !';
+
     public static $SUCCESS_SAVING_MESSAGE               = 'Success saving data !';
     public static $FAILED_SAVING_MESSAGE                = 'Failed saving data !';
     public static $SUCCESS_EDITING_MESSAGE              = 'Success editing data !';

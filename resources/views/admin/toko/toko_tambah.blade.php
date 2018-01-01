@@ -30,7 +30,7 @@
                     @endif
                     <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/toko/create') }}" autocomplete="off" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="modal-body">
+                        <div class="box-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama</label>
                                 <div class="col-sm-5">
@@ -81,32 +81,32 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-cc-amex"> &nbsp;</i>SIUP</label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <input type="text" class="form-control" name="siup" id="siup" placeholder="Masukkan Nomor SIUP"  required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-credit-card-alt"> &nbsp;</i>NPWP</label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <input type="text" class="form-control" name="npwp" id="npwp" placeholder="Masukkan Nomor NPWP"  required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Bank</label>
-                                <div class="col-sm-4">
-                                    <textarea class="form-control" name="nama_bank" id="nama_bank" placeholder="Masukkan Nomor Rekening"  required></textarea>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="nama_bank" id="nama_bank" placeholder="Masukkan Nomor Rekening"  required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-credit-card"> &nbsp;</i>Nomor Rekening</label>
-                                <div class="col-sm-4">
-                                    <textarea class="form-control" name="no_rek" id="no_rek" placeholder="Masukkan Nomor Rekening"  required></textarea>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="no_rek" id="no_rek" placeholder="Masukkan Nomor Rekening"  required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-image"> &nbsp;</i>Foto Profil</label>
-                                <div class="col-sm-4">
-                                    <input type="file" class="" name="gambar" id="no_rek" required>
+                                <div class="col-sm-5">
+                                    <input type="file" class="" name="gambar" id="gambar" required>
                                 </div>
                             </div>
                         </div>
