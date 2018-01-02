@@ -5,14 +5,15 @@
         }
     });
 
-    function getDetailUser(id) {
+    function getDetail(id) {
         $.ajax({
             type    : 'GET',
-            url     : '/ck-admin/api/users/' + id,
+            url     : '/ck-admin/api/toko/' + id,
             data    : {},
             success : function (res) {
                 console.log(res);
 
+                $('#gambar').src(res.gambar);
                 $('#name').val(res.name);
                 $('#username').val(res.username);
                 $('#alamat').val(res.alamat);
@@ -54,4 +55,22 @@
         }
     });
     }
+</script>
+
+<!-- Page script -->
+<script>
+    $(function () {
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Datemask dd/mm/yyyy
+            $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+            //Datemask2 mm/dd/yyyy
+            $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+            //Money Euro
+            $('[data-mask]').inputmask()
+
+        })
+    })
 </script>

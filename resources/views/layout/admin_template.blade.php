@@ -18,6 +18,7 @@
               page. However, you can choose any other skin. Make sure you
               apply the skin class to the body tag so the changes take effect. -->
         <link rel="stylesheet" href="{{ url('bower_components/admin-lte/dist/css/skins/skin-purple.min.css') }}">
+        <link rel="stylesheet" href="{{ url('bower_components/select2/dist/css/select2.min.css') }}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -116,6 +117,15 @@
     <script src="{{ url('plugins/bootstrap-switch-master/dist/js/bootstrap-switch.min.js')}}"></script>
     <script src="{{url('plugins/chartjs/Chart.min.js')}}"></script>
 
+    <script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.js') }}"></script>
+    <script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
+    <script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
+    {{--<script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.numeric.extensions.js') }}"></script>--}}
+    {{--<script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.phone.extensions.js') }}"></script>--}}
+    {{--<script src="{{ url('bower_components/admin-lte/plugins/input-mask/jquery.inputmask.regex.extensions.js') }}"></script>--}}
+
+    <script src="{{ url('bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+
     {{--Sweetalert--}}
     <script src="{{ url('js/sweetalert/sweetalert2.all.js') }}"></script>
 
@@ -132,6 +142,24 @@
         $('ul.treeview-menu a').filter(function() {
             return this.href == url;
         }).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+
+
+        // Image Preview
+        function imagePreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#gambar_preview').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#gambar").change(function() {
+            imagePreview(this);
+        });
     </script>
 
     @yield('custom_js')

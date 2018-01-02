@@ -64,7 +64,14 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-building"> &nbsp;</i>Nama Kota</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="kota" id="kota" placeholder="Masukkan Nama Kota"  required>
+                                    <select class="form-control select2" name="kota" id="kota" style="width: 100%;">
+                                        <option selected="selected">Pilih Kota -></option>
+                                        @if (count($kota) > 0)
+                                            @for($i = 0; $i < count($kota); $i++)
+                                                <option value="{{ $kota[$i] }}">{{ $kota[$i] }}</option>
+                                            @endfor
+                                        @endif
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -76,7 +83,12 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-tty"> &nbsp;</i>No. Telepon</label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="no_telp" id="no_telp"required placeholder="Masukkan Nomor Telepon Anda" >
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <input type="text" class="form-control" name="no_telp" id="no_telp" required data-inputmask='"mask": "+62999-9999-9999"' data-mask>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -94,7 +106,14 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Bank</label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="nama_bank" id="nama_bank" placeholder="Masukkan Nomor Rekening"  required>
+                                    <select class="form-control select2" name="nama_bank" id="nama_bank" style="width: 100%;">
+                                        <option selected="selected">Pilih Bank -></option>
+                                        @if (count($bank) > 0)
+                                            @for($i = 0, $value = $bank['data']; $i < count($bank['data']); $i++)
+                                                <option value="{{ $value[$i]['name'] }}">{{ $value[$i]['name'] }}</option>
+                                            @endfor
+                                        @endif
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -110,6 +129,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="col-sm-4">
+                                <img src="{{ url('img/noimage.jpg') }}" id="gambar_preview" width="100%">
+                            </div>
+                        </div>
 
                         <div class="box-footer">
                             <a href="{{ url('/ck-admin/toko') }}" data-dismiss="modal" class="btn btn-default flat"><span class="fa fa-chevron-left"></span> Back</a>
@@ -122,4 +147,8 @@
             </div>
         </div>
 </div>
+@endsection
+
+@section('custom_js')
+    @include('admin.toko._js')
 @endsection

@@ -21,6 +21,15 @@
                     
                 </div>
                 <div class="box-body">
+                    @if(Session::has('message'))
+                        <div class="alert alert-success alert-dismissable flat" style="margin-left: 0px;">
+                            <i class="fa fa-check"></i>
+                            {{ Session::get('message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr>
@@ -33,25 +42,32 @@
                             </tr>
                         </thead>
                         <tbody>
-
-                            @foreach($toko as $i => $toko)
+                        @if (count($toko) > 0)
+                            @foreach($toko as $i => $tk)
                                 <tr>
-                                  <td>{{ ++$i }}</td>
-                                  <td>{{ $toko->nama }}</td>
-                                  <td>{{ $toko->kota }}</td>
-                                  <td>{{ $toko->npwp }}</td>
-                                  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                                  <td>
-                                      <a href="{{url('ck-admin/toko/edit/' . $toko->id)}}" class="btn btn-warning">
-                                         <i class="fa fa-pencil"></i>
-                                      </a>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $tk->nama }}</td>
+                                    <td>{{ $tk->kota }}</td>
+                                    <td>{{ $tk->npwp }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetail({{ $tk->id }})">Details</button>
+                                    </td>
+                                    <td>
+                                        <a href="{{url('ck-admin/toko/edit/' . $tk->id)}}" class="btn btn-warning">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
 
-                                      <button class="btn btn-danger" onclick="actionDelete(event, '{{ $toko->id }}');">
-                                          <i class="fa fa-trash"></i>
-                                      </button>
-                                  </td>
+                                        <button class="btn btn-danger" onclick="actionDelete(event, '{{ $tk->id }}');">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             @endforeach
+                        @else
+                            <tr>
+                                <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
+                            </tr>
+                        @endif
                          </tbody>
                     </table>
                 </div>
