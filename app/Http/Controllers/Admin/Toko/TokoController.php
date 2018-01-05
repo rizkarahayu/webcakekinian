@@ -26,12 +26,12 @@ class TokoController extends Controller
         return view('admin.toko.toko_tambah', compact(['kota', 'bank']));
     }
     public function edit($id){
+
         $toko   = app('toko')->getWithById(['users'], $id);
         $json   = file_get_contents(url('data/list_kota.json'));
         $kota   = json_decode($json, true);
         $json1   = file_get_contents(url('data/bank.json'));
         $bank   = json_decode($json1, true);
-       
         return view('admin.toko.toko_edit', compact(['toko', 'kota', 'bank']));
 
     }

@@ -34,17 +34,19 @@
                     <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                   <th>No.</th>
-                   <th>Nama Produk</th>
-                    <th>Nama Toko</th>
+                  <th>No.</th>
+                  <th>Nama Produk</th>
+                  <th>Nama Toko</th>
                   <th>Harga</th>
                   <th>Details</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($produk as $produks)
+                @if (count($produk) > 0)
+                    @foreach($produk as $i => $produks)
                 <tr>
+                  <td>{{ ++$i }}</td>
                   <td>{{ $produks->nama}}</td>
                   <td>{{ $produks->toko->nama}}</td>
                   <td>{{ $produks->harga}}</td>
@@ -57,9 +59,15 @@
                      </a></td>
                 </tr>
                      @endforeach
+                @else
+                    <tr>
+                        <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
+                    </tr>
+                @endif
                  </tbody>
               </table>
             </div>
         </div>
     </div>
+
 @endsection

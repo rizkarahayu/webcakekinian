@@ -11,100 +11,52 @@ use Illuminate\Support\Facades\Validator;
 class ProdukController extends Controller
 {
     public function index(){
-        $produk = Produk::all();
+        $produk  = app('produk')->get();
         return view('admin.produk.produk', compact('produk'));
     }
     public function tambah(){
-        return view('admin.produk.produk_tambah');
+        $tokos  = app('tokos')->get();
+        return view('admin.produk.produk_tambah', compact('tokos'));
     }
+
     public function edit($id){
-        $produk   = Produk::find($id);
+        $produk   = app('produk')->getById($id);
+        $tokos  = app('toko')->get();
 
-        return view('admin.produk.produk_edit', compact('produk'));
+        return view('admin.produk.produk_edit', compact(['produk', 'tokos']));
     }
 
-    public function store(Request $request){
-        $form = $request->input();
+    public function store(Request $request) {
+        $form   = $request->input();
+        $rules  = Produk::$validation_rules;
 
-        $rules    = Produk::$validation_rules;
-        $validate = Validator::make($form, $rules);
+        $create = app('produk')->create($form, $rules);
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        $request->session()->flash('message', $create['message']);
+
+        if (!$create)
             return redirect('/ck-admin/produk/tambah');
-        }
 
-        $form['created_at']     = Carbon::now()->toDateTimeString();
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
-
-        $produk = new Produk();
-        $produk->nama           = $form['nama'];
-        $produk->toko_id        = $form['toko_id'];
-        $produk->stock          = $form['stock'];
-        $produk->harga          = $form['harga'];
-        $produk->deskripsi      = $form['deskripsi'];
-        $produk->created_at     = $form['created_at'];
-        $produk->updated_at     = $form['updated_at'];
-        $produk->gambar         = $form['gambar'];
-        $produk->save();
-
-        if ($produk) {
-            $request->session()->flash('message', 'Success saving data !');
-            return redirect('/ck-admin/produk/');
-        } else {
-            $request->session()->flash('message', 'Failed saving data !');
-            return redirect('/ck-admin/produk/tambah');
-        }
-
+        return redirect('/ck-admin/produk/');
     }
 
     public function update(Request $request, $id) {
         $form   = $request->input();
+        $rules  = Produk::$validation_rules;
 
-        $rules      = Produk::$validation_rules;
-        unset($rules['password']);
-        $validate   = Validator::make($form, $rules);
+        $update = app('produk')->update($form, $rules, $id);
+        $request->session()->flash('message', $update['message']);
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
+        if (!$update)
             return redirect('/ck-admin/produk/edit/' . $id);
-        }
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
 
-        $produk = Produk::find($id);
-        $produk->nama           = $form['nama'];
-        $produk->toko_id        = $form['toko_id'];
-        $produk->stock           = $form['stock'];
-        $produk->harga          = $form['harga'];
-        $produk->deskripsi      = $form['deskripsi'];
-        $produk->created_at     = $form['created_at'];
-        $produk->updated_at     = $form['updated_at'];
-        $produk->gambar         = $form['gambar'];
-        $produk->save();
-
-        if ($produk) {
-            $request->session()->flash('message', 'Success editing data !');
-            return redirect('/ck-admin/produk/');
-        } else {
-            $request->session()->flash('message', 'Failed editing data !');
-            return redirect('/ck-admin/produk/edit/' . $id);
-        }
-
+        return redirect('/ck-admin/produk/');
     }
 
     public function delete(Request $request, $id) {
-        $produk   = Produk::find($id);
-        $produk->delete();
+        $delete = app('produk')->delete($id);
+        $request->session()->flash('message', $delete['message']);
 
-        if ($produk) {
-            $request->session()->flash('message', 'Success deleting data !');
-            return redirect('/ck-admin/produk/');
-        } else {
-            $request->session()->flash('message', 'Failed deleting data !');
-            return redirect('/ck-admin/produk/');
-        }
+        return redirect('/ck-admin/produk/');
     }
-
-
-
 }
