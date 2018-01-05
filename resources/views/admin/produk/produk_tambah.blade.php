@@ -63,7 +63,7 @@
                             </div>
                         </div>
                           <div class="form-group">
-                              <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Stok</label>
+                              <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
                               <div class="col-sm-4">
                                   <input type="number" class="form-control" name="harga" id="harga" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize">
                               </div>
@@ -74,13 +74,19 @@
                                 <textarea type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize"></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
-                            <div class="col-sm-4">
-                                <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize">
-                            </div>
-                        </div>
-                    </div>
+                          <div class="form-group">
+                              <label for="inputEmail3" class="col-sm-3 control-label"><i class="fa fa-image"> &nbsp;</i>Foto Profil</label>
+                              <div class="col-sm-5">
+                                  <input type="file" class="" name="gambar" id="gambar" required>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-sm-3 control-label"></label>
+                          <div class="col-sm-4">
+                              <img src="{{ url('img/noimage.jpg') }}" id="gambar_preview" width="100%">
+                          </div>
+                      </div>
                     <div class="box-footer">
 
                         <a href="{{ url('/ck-admin/produk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
