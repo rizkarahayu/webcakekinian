@@ -21,7 +21,6 @@ class Event extends Model
     public static $validation_rules = [
       'nama'         => 'required',
       'toko_id'         => 'required',
-      'nama'            => 'required',
       'tanggal_mulai'   => 'required',
       'tanggal_selesai' => 'required',
       'deskripsi'       => 'required',

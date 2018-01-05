@@ -2,102 +2,101 @@
 
 namespace App\Http\Controllers\Admin\Events;
 
-use Illuminate\Http\Request;
-use Carbon\Carbon;
+use App\GeneralFunction;
 use App\Http\Controllers\Controller;
 use App\Model\Master\Event;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+
 
 class EventsController extends Controller
 {
-     public function index(){
-         $events= Event::all();
+    public function index()
+    {
+        $events = app('event')->get();
+
         return view('admin.events.events', compact('events'));
     }
-      public function tambah(){
-        return view('admin.events.events_tambah');
+
+    public function tambah()
+    {
+        $tokos = app('toko')->get();
+
+        return view('admin.events.events_tambah', compact('tokos'));
     }
-    public function edit($id){
-        $events  = Event::find($id);
-        return view('admin.events.events_edit', compact('events'));
+
+    public function edit($id)
+    {
+        $events = app('event')->getById($id);
+        $tokos = app('toko')->get();
+
+        return view('admin.events.events_edit', compact(['events', 'tokos']));
     }
 
-    public function store(Request $request){
-        $form   = $request->input();
 
-        $rules      = Event::$validation_rules;
-        $validate   = Validator::make($form, $rules);
+    public function store(Request $request)
+    {
+        $form = $request->all();
+        $rules = Event::$validation_rules;
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
-            return redirect('/ck-admin/events/tambah');
-        }
+        $create = app('event')->create($form, $rules);
+        if (@$form['gambar'] != '') {
+            $extension  = $request->file('gambar')->getClientOriginalExtension();
 
-        $form['created_at']     = Carbon::now()->toDateTimeString();
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
+            if ($extension == 'jpg' || $extension == 'png'  || $extension == 'jpeg'
+                || $extension == 'svg' || $extension == 'gif' ) {
 
-        $events = new Event();
-        $events->nama               = $form['nama'];
-        $events->toko_id            = $form['toko_id'];
-        $events->tanggal_mulai      = $form['tanggal_mulai'];
-        $events->tanggal_selesai    = $form['tanggal_selesai'];
-        $events->deskripsi          = $form['deskripsi'];
-        $events->gambar             = $form['gambar'];
-        $events->save();
-
-        if ($events) {
-            $request->session()->flash('message', 'Success saving data !');
-            return redirect('/ck-admin/events/');
+                $name   = $form['nama'] . date('-d_m_Y-h_i_s');
+                $request->file('gambar')->move('img/events/', $name . '.' . $extension);
+                $form['gambar']    = $name. '.' . $extension;
+            } else {
+                $request->session()->flash('message', GeneralFunction::$IMAGE_NOT_VALID_MESSAGE);
+                return redirect('/ck-admin/events/edit');
+            }
         } else {
-            $request->session()->flash('message', 'Failed saving data !');
-            return redirect('/ck-admin/events/tambah');
+            unset($form['gambar']);
         }
+        $request->session()->flash('message', $create['message']);
 
+        if (!$create)
+            return redirect('/ck-admin/events/tambah');
+
+        return redirect('/ck-admin/events/');
     }
 
     public function update(Request $request, $id) {
-        $form   = $request->input();
+        $form   = $request->all();
+        $rules  = Event::$validation_rules;
+        return response()->json($form);
 
-        $rules      = Event::$validation_rules;
-        unset($rules['password']);
-        $validate   = Validator::make($form, $rules);
+        $update = app('event')->update($form, $rules, $id);
+        if (@$form['gambar'] != '') {
+            $extension  = $request->file('gambar')->getClientOriginalExtension();
 
-        if ($validate->fails()) {
-            $request->session()->flash('message', 'Validation Error');
-            return redirect('/ck-admin/events/edit/' . $id);
-        }
-        $form['updated_at']     = Carbon::now()->toDateTimeString();
+            if ($extension == 'jpg' || $extension == 'png'  || $extension == 'jpeg'
+                || $extension == 'svg' || $extension == 'gif' ) {
 
-        $events = Event::find($id);
-        $events->nama               = $form['nama'];
-        $events->toko_id            = $form['toko_id'];
-        $events->tanggal_mulai      = $form['tanggal_mulai'];
-        $events->tanggal_selesai    = $form['tanggal_selesai'];
-        $events->deskripsi          = $form['deskripsi'];
-        $events->gambar             = $form['gambar'];
-        $events->save();
-
-        if ($events) {
-            $request->session()->flash('message', 'Success editing data !');
-            return redirect('/ck-admin/events/');
+                $name   = $form['name'] . date('-d_m_Y-h_i_s');
+                $request->file('gambar')->move('img/events/', $name . '.' . $extension);
+                $form['gambar']    = $name. '.' . $extension;
+            } else {
+                $request->session()->flash('message', GeneralFunction::$IMAGE_NOT_VALID_MESSAGE);
+                return redirect('/ck-admin/events/edit');
+            }
         } else {
-            $request->session()->flash('message', 'Failed editing data !');
-            return redirect('/ck-admin/events/edit/' . $id);
+            unset($form['gambar']);
         }
+        $request->session()->flash('message', $update['message']);
 
+        if (!$update)
+            return redirect('/ck-admin/events/edit/' . $id);
+
+        return redirect('/ck-admin/events/');
     }
 
     public function delete(Request $request, $id) {
-        $events   = Event::find($id);
-        $events->delete();
+        $delete = app('event')->delete($id);
+        $request->session()->flash('message', $delete['message']);
 
-        if ($events) {
-            $request->session()->flash('message', 'Success deleting data !');
-            return redirect('/ck-admin/events/');
-        } else {
-            $request->session()->flash('message', 'Failed deleting data !');
-            return redirect('/ck-admin/events/');
-        }
+        return redirect('/ck-admin/events/');
     }
-
 }
