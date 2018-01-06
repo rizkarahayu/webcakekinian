@@ -129,7 +129,7 @@
                     </div>
                     <div class="box-footer">
                         <a href="{{ url('/ck-admin/toko') }}" data-dismiss="modal" class="btn btn-default flat"><span class="fa fa-chevron-left"></span> Back</a>
-                       <button type="submit" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+                        <button type="submit" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
                     </div><!-- /.box-footer -->
                   </form>
                 </div>

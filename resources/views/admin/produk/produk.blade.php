@@ -51,12 +51,15 @@
                   <td>{{ $produks->toko->nama}}</td>
                   <td>{{ $produks->harga}}</td>
                   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
-                  <td>  <a href="{{url('ck-admin/produk/edit/' . $produks->id)}}" class="btn btn-warning">
+                  <td>
+                      <a href="{{url('ck-admin/produk/edit/' . $produks->id)}}" class="btn btn-warning">
                           <i class="fa fa-pencil"></i>
-                  </a>
-                      <a href="{{url('ck-admin/produk/delete/' . $produks->id)}}" class="btn btn-danger" onclick="">
+                      </a>
+
+                      <button class="btn btn-danger" onclick="actionDelete(event, '{{ $produks->id }}');">
                           <i class="fa fa-trash"></i>
-                     </a></td>
+                      </button>
+                  </td>
                 </tr>
                      @endforeach
                 @else
@@ -69,5 +72,14 @@
             </div>
         </div>
     </div>
+</div>
 
+@endsection
+
+@section('modal')
+    @include('admin.produk._modal_detail')
+@endsection
+
+@section('custom_js')
+    @include('admin.produk._js')
 @endsection

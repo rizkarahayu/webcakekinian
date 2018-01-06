@@ -4,19 +4,19 @@
 @section('page_title', 'Data Produk')
 @section('page_description', 'adalah data yang berisi tentang produk.')
 
-
-@section('content')
-    <div class="row">
-@section('title','halaman test')
-@section('page_title','halaman test')
-@section('page_description','Ini adalah halaman test')
 @section('content')
 <div class="row">
         <div class="col-xs-12">
             <div class="box">
-                <div class="box-header">
-                   
-                    
+                <div class="box-header with-border">
+                    <div class="pull-left">
+                        {{--<span class="">Tambah data user</span>--}}
+                    </div>
+                    <div class="pull-right">
+                        <a href="{{ url('ck-admin/produk') }}">
+                            <button class='btn btn-default flat'><span class='fa fa-arrow-left'></span> Back</button>
+                        </a>
+                    </div>
                 </div>
                 <div class="box-body">
                     @if(Session::has('message'))
@@ -41,18 +41,12 @@
                             <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                             <div class="col-sm-4">
                                 <select class="form-control" name="toko_id">
-                                  <option  value="1">Patata</option>
-                                  <option  value="2">Lampung Banana Fooster</option>
-                                  <option  value="3">Bosang Makasar</option>
-                                  <option  value="4">Bandung Makuta</option>
-                                  <option  value="5">Queen Puff</option>
-                                  <option  value="6">Lapis Minang Nantigo</option>
-                                  <option  value="7">Malang Struddle</option>
-                                  <option  value="8">Medan Napoleon</option>
-                                  <option  value="9">Surabaya Snowcake</option>
-                                  <option  value="10">Solo Pluffy</option>
-                                  <option  value="11">Mamahke Jogja</option>
-                                  <option  value="12">Bogor Rain Cake</option>
+                                    <option value="1" disabled="" selected>Pilih Toko -></option>
+                                    @if (count($tokos) > 0)
+                                        @foreach($tokos as $toko)
+                                            <option value="{{ $toko->id }}">{{ $toko->nama }}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                         </div>
@@ -71,7 +65,7 @@
                          <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-newspaper-o"> &nbsp;</i>Deskripsi</label>
                             <div class="col-sm-4">
-                                <textarea type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize"></textarea>
+                                <textarea class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi" style="text-transform:capitalize"></textarea>
                             </div>
                         </div>
                           <div class="form-group">
@@ -89,9 +83,12 @@
                       </div>
                     <div class="box-footer">
 
-                        <a href="{{ url('/ck-admin/produk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
+                        <a href="{{ url('ck-admin/produk') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                        <button type="submit" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
                     </div><!-- /.box-footer -->
                 </form>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
