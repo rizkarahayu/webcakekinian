@@ -9,74 +9,77 @@
                     <div class="col-md-12 col-md-offset-0">
                         <form action='' method='POST' class="form-horizontal" role="form">
                             <fieldset>
-                                <center><legend>Details Toko</legend></center>
+                                <center><legend>Details User</legend></center>
                                 <div class="box box-info">
                                     <form class="form-horizontal">
                                         <div class="box-body">
                                             <div class="form-group">
-                                                <div class="image text-center">
-                                                    <img src="{{ url('img\admin\logo\banana_foster.jpg') }}" style="max-width:200px">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Toko</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="name" disabled placeholder="Savana">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Id Toko</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="number" class="form-control" id="inputPassword3" disabled placeholder="Masukkan ID Toko">
+                                                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Username</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="username" disabled placeholder="Savanacake">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Toko</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Nama Toko">
+                                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Email</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="email" disabled placeholder="savanacake@gmail.com">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-user-circle-o"> &nbsp;</i>SIUP</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan SIUP">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Asal Kota</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" id="kota" disabled placeholder="Banyuwangi">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Alamat</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="alamat" disabled placeholder="Jl. Prajurit Syakur 48">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nomor Telepon</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="no_telp" disabled placeholder="0867865">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>SIUP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="siup" disabled placeholder="8978676">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>NPWP</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan NPWP">
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="npwp" disabled placeholder="08967">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Kota</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Banyuwangi">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Bank</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="nama_bank" disabled placeholder="BNI">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-home"> &nbsp;</i>Alamat</label>
-
-                                                <div class="col-sm-10">
-                                                    <textarea class="form-control" rows="4" disabled placeholder="Masukkan Alamat"></textarea>
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nomor Rekening</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="no_rek" disabled placeholder="8978676">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-tty"> &nbsp;</i>Nama Bank</label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Bank Yang Digunakan">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Gambar Toko</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" id="gambar" disabled placeholder="">
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-envelope-open"> &nbsp;</i>Nomor Rekening </label>
-
-                                                <div class="col-sm-10">
-                                                    <input type="number" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Rekening Yang Digunakan">
-                                                </div>
                                             </div>
-
-                                            <a href="{{ url('/ck-admin/toko') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
-
                                         </div>
                                     </form>
                                 </div>
