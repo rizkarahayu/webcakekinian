@@ -49,7 +49,7 @@ class UserController extends Controller
 
         $request->session()->flash('message', $create['message']);
 
-        if (!$create)
+        if ($create['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/users/tambah');
 
         return redirect('/ck-admin/users/');
@@ -64,7 +64,7 @@ class UserController extends Controller
         $update = app('users')->update($form, $rules, $id);
         $request->session()->flash('message', $update['message']);
 
-        if (!$update)
+        if ($update['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/users/edit/' . $id);
 
         return redirect('/ck-admin/users/');
