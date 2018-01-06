@@ -51,7 +51,9 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetailUser({{ $user->id }})">Details</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetailUser({{ $user->id }})">Details</button>
+                                </td>
                                 <td>
                                     <a href="{{url('ck-admin/users/edit/' . $user->id)}}" class="btn btn-warning">
                                         <i class="fa fa-pencil"></i>

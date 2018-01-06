@@ -6,11 +6,6 @@
 
 
 @section('content')
-    <div class="row">
-@section('title','halaman test')
-@section('page_title','halaman test')
-@section('page_description','Halaman ini adalah untuk mengedit data events.')
-@section('content')
 <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -28,7 +23,7 @@
                             </button>
                         </div>
                     @endif
-                    <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/events/update'.$events->id ) }}" autocomplete="off" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/events/update/'.$events->id ) }}" autocomplete="off" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
@@ -40,18 +35,12 @@
                                 <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                                 <div class="col-sm-4">
                                     <select class="form-control" name="toko_id">
-                                        <option  value="1" @if ($events->toko_id == 1) {{ 'selected' }} @endif>Patata</option>
-                                        <option  value="2" @if ($events->toko_id == 2) {{ 'selected' }} @endif>Lampung Banana Fooster</option>
-                                        <option  value="3" @if ($events->toko_id == 3) {{ 'selected' }} @endif>Bosang Makasar</option>
-                                        <option  value="4" @if ($events->toko_id == 4) {{ 'selected' }} @endif>Bandung Makuta</option>
-                                        <option  value="5" @if ($events->toko_id == 5) {{ 'selected' }} @endif>Queen Puff</option>
-                                        <option  value="6" @if ($events->toko_id == 6) {{ 'selected' }} @endif>Lapis Minang Nantigo</option>
-                                        <option  value="7" @if ($events->toko_id == 7) {{ 'selected' }} @endif>Malang Struddle</option>
-                                        <option  value="8" @if ($events->toko_id == 8) {{ 'selected' }} @endif>Medan Napoleon</option>
-                                        <option  value="9" @if ($events->toko_id == 9) {{ 'selected' }} @endif>Surabaya Snowcake</option>
-                                        <option  value="10" @if ($events->toko_id == 10) {{ 'selected' }} @endif>Solo Pluffy</option>
-                                        <option  value="11" @if ($events->toko_id == 11) {{ 'selected' }} @endif>Mamahke Jogja</option>
-                                        <option  value="12" @if ($events->toko_id == 12) {{ 'selected' }} @endif>Bogor Rain Cake</option>
+                                        <option value="1" disabled="" selected>Pilih Toko -></option>
+                                        @if (count($tokos) > 0)
+                                            @foreach($tokos as $toko)
+                                                <option value="{{ $toko->id }}" @if($events->toko_id == $toko->id) {{ 'selected' }} @endif>{{ $toko->nama }}</option>
+                                            @endforeach
+                                        @endif
                                     </select>
                                 </div>
                             </div>
@@ -81,10 +70,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="col-sm-4">
+                                <img src="{{ asset('img/events' . $events->gambar) }}" id="gambar_preview" width="100%">
+                            </div>
+                        </div>
                         <div class="box-footer">
                             <a href="{{ url('/ck-admin/events') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                             <input type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
                         </div><!-- /.box-footer -->
                     </form>
                 </div>
+            </div>
+        </div>
+</div>
 @endsection

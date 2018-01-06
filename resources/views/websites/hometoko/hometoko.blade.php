@@ -4,73 +4,116 @@
 @section('page_title', 'Produk')
 
 @section('content')
+<!-- single -->
+<div class="single">
+	<div class="container">
+		<div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+			<div class="grid images_3_of_2">
+				<div class="flexslider">
+					<!-- FlexSlider -->
+						<script>
+						// Can also be used with $(document).ready()
+							$(window).load(function() {
+								$('.flexslider').flexslider({
+								animation: "slide",
+								controlNav: "thumbnails"
+								});
+							});
+						</script>
+					<!-- //FlexSlider-->
+						<div data-thumb="{{ url('img/website/images/logo_mini2.PNG') }}">
+							<div class="image"> <img src="{{ url('img/website/images/logo/logo1.jpg') }}" class="img-responsive" width="400px" height="400px"> </div>
+						</div>
+					<div class="clearfix"></div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
+            <h3><b>Halo {{$list['nama_toko']}} !</b></h3>
+            <p><span class="item_price">Selamat datang di halaman Store.</p>
+            <p>Di sini Admin Store bisa melihat total penjualan dan laporan dari Cake-kinian!</p></span>
+					<div class="rating1">
+						<span class="starRating">
+							<input id="rating5" type="radio" name="rating" value="5">
+							<label for="rating5">5</label>
+							<input id="rating4" type="radio" name="rating" value="4">
+							<label for="rating4">4</label>
+							<input id="rating3" type="radio" name="rating" value="3" checked="">
+							<label for="rating3">3</label>
+							<input id="rating2" type="radio" name="rating" value="2">
+							<label for="rating2">2</label>
+							<input id="rating1" type="radio" name="rating" value="1">
+							<label for="rating1">1</label>
+						</span>
+					</div>
+                    <br>
+            <h3>Download Laporan Penjualan Bulan Ini</h3>
+            <span>
+                <button type="button" class="btn btn-default">Download</button>
+            </span>
+		</div>
+				<div class="clearfix"> </div>
+        <div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+						<ul id="myTab" class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Januari</a></li>
+							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Februari</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Maret</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">April</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Mei</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Juni</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Juli</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Agustus</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">September</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Oktober</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">November</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Desember</a></li>
 
-<!-- banner -->
-    <div class="banner-grid">
-        <div id="visual">
-            <div class="slide-visual">
-                <!-- Slide Image Area (1000 x 424) -->
-                <ul class="slide-group">
-                    <li><img class="img-responsive" src="{{ url('img/website/images/ba1.jpg') }}" alt="Dummy Image" /></li>
-                    <li><img class="img-responsive" src="{{ url('img/website/images/ba2.jpg') }}" alt="Dummy Image" /></li>
-                </ul>
-
-                <!-- Slide Description Image Area (316 x 328) -->
-                <div class="script-wrap">
-                    <ul class="script-group">
-                        <li><div class="inner-script"><img class="img-responsive" src="{{ url('img/website/images/baa1.jpg') }}" alt="Dummy Image" /></div></li>
-                        <li><div class="inner-script"><img class="img-responsive" src="{{ url('img/website/images/baa2.jpg') }}" alt="Dummy Image" /></div></li>
-                    </ul>
-                    <div class="slide-controller">
-                        <a href="#" class="btn-prev"><img src="{{ url('img/website/images/btn_prev.png') }}" alt="Prev Slide" /></a>
-                        <a href="#" class="btn-play"><img src="{{ url('img/website/images/btn_play.png') }}" alt="Start Slide" /></a>
-                        <a href="#" class="btn-pause"><img src="{{ url('img/website/images/btn_pause.png') }}" alt="Pause Slide" /></a>
-                        <a href="#" class="btn-next"><img src="{{ url('img/website/images/btn_next.png') }}" alt="Next Slide" /></a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- //banner -->
-@endsection
-
-@section('custom_js')
-    <script type="text/javascript" src="{{ url('plugins/pignose/pignose.layerslider.js') }}"></script>
-    <script type="text/javascript">
-        //<![CDATA[
-        $(window).load(function() {
-            $('#visual').pignoseLayerSlider({
-                play    : '.btn-play',
-                pause   : '.btn-pause',
-                next    : '.btn-next',
-                prev    : '.btn-prev'
-            });
-        });
-        //]]>
-    </script>
-
-    <script src="{{ url('js/website/easyResponsiveTabs.js') }}" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#horizontalTab').easyResponsiveTabs({
-                type: 'default', //Types: default, vertical, accordion
-                width: 'auto', //auto or any width like 600px
-                fit: true   // 100% fit in a container
-            });
-        });
-
-    </script>
-    <script>
-         $(document).ready(function () {
-             $.ajax({
-                method: 'GET',
-                url: 'http://103.66.199.105:10028/',
-                success: function(res){
-                    console.log(res);
-                }
-            });
-        });
-    </script>
+						</ul>
+						<div id="myTabContent" class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+                                <div class="bootstrap-tab-text-grid">
+                                        <div class="bootstrap-tab-text-grid-left">
+											<img src="{{ url('img/website/images/logo_mini2.PNG') }}" alt=" " class="img-responsive">
+										</div>
+										<div class="bootstrap-tab-text-grid-right">
+											<ul>
+												<h3><b>Laporan Penjualan Bulanan</b></h3>
+								                <br>
+                                                <hr>
+                                                <h3><b>Laporan Penjualan Tahunan</b></h3>
+                                                <br>
+                                                <hr>
+											</ul>   
+										</div>
+                                        
+							     </div>
+                            </div>
+							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
+								<div class="bootstrap-tab-text-grids">
+									<div class="bootstrap-tab-text-grid">
+										<div class="bootstrap-tab-text-grid-left">
+											<img src="{{ url('img/website/images/logo_mini2.PNG') }}" alt=" " class="img-responsive">
+										</div>
+										<div class="bootstrap-tab-text-grid-right">
+											<ul>
+												<h3><b>Laporan Penjualan Bulanan</b></h3>
+								                <br>
+                                                <hr>
+                                                <h3><b>Laporan Penjualan Tahunan</b></h3>
+                                                <br>
+                                                <hr>
+											</ul>
+                                            
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+</div>
+<!-- //single -->
 @endsection
