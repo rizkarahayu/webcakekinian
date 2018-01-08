@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class CheckoutController extends Controller
 {
-    $toko  = app('toko')->get();
+    //$toko  = app('toko')->get();
     public function cart(){
         return view('websites.checkout.cart');
     }
