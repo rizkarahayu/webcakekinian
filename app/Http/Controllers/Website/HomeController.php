@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index() {
-        $toko  = app('toko')->get();
-        return view('websites.index');
+        $toko1  = app('toko')->getLimit(6, 'asc');
+        $toko2  = app('toko')->getLimit(6, 'desc');
+
+        return view('websites.index', compact(['toko1', 'toko2']));
     }
 }

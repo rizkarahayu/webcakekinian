@@ -4,12 +4,6 @@
 @section('page_title', 'Data Produk')
 @section('page_description', 'Halaman ini adalah untuk mengedit data produk.')
 
-
-@section('content')
-    <div class="row">
-@section('title','halaman test')
-@section('page_title','halaman test')
-@section('page_description','Halaman ini adalah untuk mengedit data produk.')
 @section('content')
 <div class="row">
         <div class="col-xs-12">
@@ -57,7 +51,7 @@
                           <div class="form-group">
                               <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-money"> &nbsp;</i>Harga</label>
                               <div class="col-sm-4">
-                                  <input type="number" class="form-control" name="harga" id="harga" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" value="{{ $produk->stock }}" required>
+                                  <input type="number" class="form-control" name="harga" id="harga" placeholder="Masukkan Jumlah Stok" style="text-transform:capitalize" value="{{ $produk->harga }}" required>
                               </div>
                           </div>
                          <div class="form-group">
@@ -67,16 +61,16 @@
                             </div>
                         </div>
                           <div class="form-group">
-                              <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
+                              <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Foto Profil</label>
                               <div class="col-sm-4">
-                                  <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize" {{ $produk->gambar }}>
+                                  <input type="file" class="" name="gambar" id="gambar" value="{{ $produk->gambar }}"><span class="label label-default">{{ $produk->gambar }}</span>
                               </div>
                           </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-sm-3 control-label"></label>
-                          <div class="col-sm-4">
-                              <img src="{{ asset('img/produk' . $produk->gambar) }}" id="gambar_preview" width="100%">
+                          <div class="form-group">
+                              <label class="col-sm-2 control-label"></label>
+                              <div class="col-sm-4">
+                                  <img src="{{ asset('img/produk/' . $produk->gambar) }}" id="gambar_preview" width="100%">
+                              </div>
                           </div>
                       </div>
                     <div class="box-footer">
@@ -85,6 +79,17 @@
                         <button type="submit" class="btn btn-primary pull-right flat" id="insert"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
                     </div><!-- /.box-footer -->
                 </form>
+                 </div>
+            </div>
+        </div>
     </div>
 
+@endsection
+
+@section('modal')
+    @include('admin.produk._modal_detail')
+@endsection
+
+@section('custom_js')
+    @include('admin.produk._js')
 @endsection

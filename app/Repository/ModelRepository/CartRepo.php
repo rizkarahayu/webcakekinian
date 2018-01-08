@@ -19,4 +19,16 @@ class CartRepo extends BaseRepo
     {
         $this->model = $cart;
     }
+
+    public function isExists($users_id, $produk_id) {
+        $cart   = $this->model
+            ->where('users_id', $users_id)
+            ->where('produk_id', $produk_id)
+            ->first();
+
+        if (!$cart)
+            return false;
+
+        return $cart;
+    }
 }

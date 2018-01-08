@@ -8,7 +8,7 @@ Route::prefix('')->group(function () {
     Route::get('/cart','Website\Checkout\CheckoutController@cart');
     Route::get('/hometoko','Website\HomeToko\HomeTokoController@hometoko');
 
-    Route::middleware('auth', function () {
+    Route::middleware('auth')->group(function () {
         Route::get('/checkout/payment','Website\Checkout\CheckoutController@payment');
     });
 });

@@ -5,21 +5,25 @@
         }
     });
 
-    function getDetail(id) {
+    function getDetailToko(id) {
         $.ajax({
             type    : 'GET',
-            url     : '/ck-admin/api/toko/' + id,
+            url     : 'api/toko/' + id,
             data    : {},
             success : function (res) {
                 console.log(res);
 
-                $('#gambar').src(res.gambar);
-                $('#name').val(res.name);
-                $('#username').val(res.username);
-                $('#alamat').val(res.alamat);
-                $('#no_telp').val(res.no_telp);
-                $('#email').val(res.email);
-                $('#role_name').val(res.role_users.role);
+                $('#name').val(res.nama);
+                $('#username').val(res.users.username);
+                $('#email').val(res.users.email);
+                $('#kota').val(res.kota);
+                $('#alamat').val(res.users.alamat);
+                $('#no_telp').val(res.users.no_telp);
+                $('#siup').val(res.siup);
+                $('#npwp').val(res.npwp);
+                $('#nama_bank').val(res.nama_bank);
+                $('#no_rek').val(res.no_rek);
+                $('#gambar').src(res.users.gambar);
             }
 
         });

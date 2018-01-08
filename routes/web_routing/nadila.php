@@ -33,4 +33,10 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::post('/events/create/','Admin\Events\EventsController@store');
     Route::post('/events/update/{id}', 'Admin\Events\EventsController@update');
     Route::get('/events/delete/{id}', 'Admin\Events\EventsController@delete');
+
+    
+});
+
+Route::prefix('ck-admin/api/')->middleware('auth')->group(function () {
+    Route::get('/toko/{id}', 'API\ApiTokoController@getById');
 });

@@ -1,3 +1,4 @@
+
 <!-- header -->
 <div class="header">
     <div class="container">
@@ -6,21 +7,25 @@
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
             @guest
                 <li>
-                    <span class="fa fa-sign-in" aria-hidden="true"></span>
-                    <a href="{{ route('login') }}">Login</a> &nbsp; | &nbsp;
-                    <span class="fa fa-signing" aria-hidden="true"></span>
-                    <a href="{{ route('register') }}">Register</a>
+                    <div class="dropdown">
+                      <button class="dropbtn">Masuk</button>
+                      <div class="dropdown-content">
+                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>
+                      </div>
+                    </div>
                 </li>
             @else
                 <li>
-                    <span class="fa fa-user" aria-hidden="true"></span>
-                    <a href="{{ url('ck-admin') }}">
-                        Goto Admin Dashboard
-                    </a> &nbsp; | &nbsp;
-                    <span class="fa fa-envelope" aria-hidden="true"></span>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </a>
+                    <div class="dropdown">
+                      <button class="dropbtn">Menu</button>
+                      <div class="dropdown-content">
+                        <a href="{{ url('ck-admin') }}">Dashboard Admin</a>
+                        <a href="#">Edit Profil</a>
+                        <a href="#">Lihat History Transaksi</a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                      </div>
+                    </div>
                 </li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
@@ -106,23 +111,15 @@
                                     <div class="row">
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="{{url('/toko/fosterlampung')}}">Banana Foster Lampung</a></li>
-                                                <li><a href="{{url('/toko/bandungmakuta')}}">Bandung Makuta</a></li>
-                                                <li><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></li>
-                                                <li><a href="{{url('/toko/bosangmakassar')}}">Bosang Makassar</a></li>
-                                                <li><a href="{{url('/toko/mamahke')}}">Mamahke Jogja</a></li>
-                                                <li><a href="{{url('/toko/lapisminangnantigo')}}">Lapis Minang Nantigo</a></li>
+                                                @foreach($toko1 as $toko)
+                                                    <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="{{url('/toko/malangstruddle')}}">Malang Struddle</a></li>
-                                                <li><a href="{{url('/toko/medannapoleon')}}">Medan Napoleon</a></li>
-                                                <li><a href="{{url('/toko/queenpuff')}}">Queenpuff</a></li>
-                                                <li><a href="{{url('/toko/solopluffy')}}">Solo Pluffy</a></li>
-                                                <li><a href="{{url('/toko/surabayapatata')}}">Surabaya Patata</a></li>
-                                                <li><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></li>
-                                            </ul>
+                                            @foreach($toko2 as $toko)
+                                                <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
+                                            @endforeach
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">
                                             <a href="womens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>

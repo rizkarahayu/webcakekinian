@@ -7,9 +7,10 @@ use App\Http\Controllers\Controller;
 
 class AboutController extends Controller
 {
-    $toko  = app('toko')->get();
     public function about(){
-        $toko  = app('toko')->get();
-        return view('websites.about.about', compact('toko'));
+        $toko1  = app('toko')->getLimit(6, 'asc');
+        $toko2  = app('toko')->getLimit(6, 'desc');
+
+        return view('websites.about.about', compact(['toko1', 'toko2']));
     }
 }

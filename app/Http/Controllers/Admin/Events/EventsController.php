@@ -38,7 +38,6 @@ class EventsController extends Controller
         $form = $request->all();
         $rules = Event::$validation_rules;
 
-        $create = app('event')->create($form, $rules);
         if (@$form['gambar'] != '') {
             $extension  = $request->file('gambar')->getClientOriginalExtension();
 
@@ -55,9 +54,11 @@ class EventsController extends Controller
         } else {
             unset($form['gambar']);
         }
+
+        $create = app('event')->create($form, $rules);
         $request->session()->flash('message', $create['message']);
 
-        if (!$create)
+        if ($create['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/events/tambah');
 
         return redirect('/ck-admin/events/');
@@ -66,16 +67,16 @@ class EventsController extends Controller
     public function update(Request $request, $id) {
         $form   = $request->all();
         $rules  = Event::$validation_rules;
-        return response()->json($form);
 
-        $update = app('event')->update($form, $rules, $id);
+        unset($rules['gambar']);
+
         if (@$form['gambar'] != '') {
             $extension  = $request->file('gambar')->getClientOriginalExtension();
 
             if ($extension == 'jpg' || $extension == 'png'  || $extension == 'jpeg'
                 || $extension == 'svg' || $extension == 'gif' ) {
 
-                $name   = $form['name'] . date('-d_m_Y-h_i_s');
+                $name   = $form['nama'] . date('-d_m_Y-h_i_s');
                 $request->file('gambar')->move('img/events/', $name . '.' . $extension);
                 $form['gambar']    = $name. '.' . $extension;
             } else {
@@ -85,9 +86,11 @@ class EventsController extends Controller
         } else {
             unset($form['gambar']);
         }
+
+        $update = app('event')->update($form, $rules, $id);
         $request->session()->flash('message', $update['message']);
 
-        if (!$update)
+        if ($update['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/events/edit/' . $id);
 
         return redirect('/ck-admin/events/');

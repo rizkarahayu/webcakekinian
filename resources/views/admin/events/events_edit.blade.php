@@ -24,6 +24,8 @@
                         </div>
                     @endif
                     <form class="form-horizontal" method="POST" action="{{ url('/ck-admin/events/update/'.$events->id ) }}" autocomplete="off" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
@@ -63,21 +65,22 @@
                                     <textarea class="form-control" rows="4" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi Event">{{ $events->deskripsi }}</textarea>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Gambar</label>
-                                <div class="col-sm-4">
-                                    <input type="file" class="form-control" name="gambar" id="gambar"  style="text-transform:capitalize" {{ $events->gambar }}>
+                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-image"> &nbsp;</i>Foto Profil</label>
+                                <div class="col-sm-9">
+                                    <input type="file" class="" name="gambar" id="gambar" value="{{ $events->gambar }}"><span class="label label-default">{{ $events->gambar }}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label"></label>
+                                <div class="col-sm-5">
+                                    <img src="{{ asset('img/events/' . $events->gambar) }}" id="gambar_preview" width="100%">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"></label>
-                            <div class="col-sm-4">
-                                <img src="{{ asset('img/events' . $events->gambar) }}" id="gambar_preview" width="100%">
-                            </div>
-                        </div>
                         <div class="box-footer">
-                            <a href="{{ url('/ck-admin/events') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
+                            <a href="{{ url('ck-admin/events') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
                             <input type="submit" class="btn btn-primary pull-right flat" id="insert" value="Save">
                         </div><!-- /.box-footer -->
                     </form>

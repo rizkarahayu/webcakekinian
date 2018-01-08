@@ -76,14 +76,14 @@ class TokoController extends Controller
 
         $create_user    = app('users')->create($form_user, $rules_user);
 
-        if ($create_user) {
+        if ($create_user['status'] == GeneralFunction::$SUCCESS_STATUS) {
             $form_toko['users_id']  = $create_user['data']['id'];
             $form_toko['nama']      = $form_user['name'];
 
             $create_toko    = app('toko')->create($form_toko, $rules_toko);
             $request->session()->flash('message', $create_toko['message']);
             
-            if (!$create_toko)
+            if ($create_toko['status'] == GeneralFunction::$FAILED_STATUS)
                 return redirect('/ck-admin/toko/tambah');
             else
                 return redirect('/ck-admin/toko/');
@@ -128,11 +128,11 @@ class TokoController extends Controller
 
         $update_user    = app('users')->update($form_user, $rules_user, $toko->users_id);
 
-        if ($update_user) {
+        if ($update_user['status'] == GeneralFunction::$SUCCESS_STATUS) {
             $update_toko    = app('toko')->update($form_toko, $rules_toko, $id);
             $request->session()->flash('message', $update_toko['message']);
 
-            if (!$update_toko)
+            if ($update_toko['status'] == GeneralFunction::$FAILED_STATUS)
                 return redirect('/ck-admin/toko/edit');
             else
                 return redirect('/ck-admin/toko/');

@@ -49,9 +49,7 @@
                                     <td>{{ $tk->nama }}</td>
                                     <td>{{ $tk->kota }}</td>
                                     <td>{{ $tk->npwp }}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetail({{ $tk->id }})">Details</button>
-                                    </td>
+                                    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetailToko({{ $tk->id }})">Details</button></td>
                                     <td>
                                         <a href="{{url('ck-admin/toko/edit/' . $tk->id)}}" class="btn btn-warning">
                                             <i class="fa fa-pencil"></i>

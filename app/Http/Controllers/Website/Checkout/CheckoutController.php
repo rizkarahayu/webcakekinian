@@ -9,9 +9,15 @@ class CheckoutController extends Controller
 {
     //$toko  = app('toko')->get();
     public function cart(){
-        return view('websites.checkout.cart');
+        $toko1  = app('toko')->getLimit(6, 'asc');
+        $toko2  = app('toko')->getLimit(6, 'desc');
+
+        return view('websites.checkout.cart', compact(['toko1', 'toko2']));
     }
     public function payment(){
-        return view('websites.checkout.payment', compact('toko'));
+        $toko1  = app('toko')->getLimit(6, 'asc');
+        $toko2  = app('toko')->getLimit(6, 'desc');
+
+        return view('websites.checkout.payment', compact(['toko1', 'toko2']));
     }
 }
