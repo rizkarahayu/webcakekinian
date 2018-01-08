@@ -13,19 +13,23 @@ class TransaksiController extends Controller
         $form   = $request->all();
         $rules  = Cart::$validation_rules;
 
-        $form['users_id']   = Auth::user()->id;
-        $form['produk_id']  = $produk_id;
-        if (@$form['qty'] == null || @$form['qty'] == '')
-            $form['qty']    = 1;
+        if (Auth::guest()) {
+            return $this->responseJson(Auth::guest());
+        } else {
+            $form['users_id']   = Auth::user()->id;
+            $form['produk_id']  = $produk_id;
+            if (@$form['qty'] == null || @$form['qty'] == '')
+                $form['qty']    = 1;
 
-        $checkIfExists  = app('cart')->isExists($form['users_id'], $form['produk_id']);
+            $checkIfExists  = app('cart')->isExists($form['users_id'], $form['produk_id']);
 
-        if (!$checkIfExists && $action == 'add')
-            $cartAction = $this->cartAdd($form, $rules);
-        else if ($checkIfExists != false || $action == 'update')
-            $cartAction = $this->cartUpdate($form, $rules, $checkIfExists['id']);
+            if (!$checkIfExists && $action == 'add')
+                $cartAction = $this->cartAdd($form, $rules);
+            else if ($checkIfExists != false || $action == 'update')
+                $cartAction = $this->cartUpdate($form, $rules, $checkIfExists['id']);
 
-        return $this->responseJson($cartAction);
+            return $this->responseJson($cartAction);
+        }
     }
 
     public function cartAdd($form, $rules) {
