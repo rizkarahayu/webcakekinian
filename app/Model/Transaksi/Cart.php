@@ -15,9 +15,9 @@ class Cart extends Model
         'qty',
     ];
 
-    protected static $validation_rules = [
+    public static $validation_rules = [
         'users_id'                  => 'required',
-        'produk'                    => 'required',
+        'produk_id'                 => 'required',
         'qty'                       => 'required',
     ];
 
