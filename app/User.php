@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Master\Customer;
 use App\Model\Master\RoleUsers;
 use App\Model\Master\Toko;
 use Illuminate\Notifications\Notifiable;
@@ -45,6 +46,10 @@ class User extends Authenticatable
         'role_id'   => 'required',
 //        'gambar'    => 'image|mimes:jpg,png|max:4096'
     ];
+
+    public function customer() {
+        return $this->hasOne(Customer::class, 'users_id');
+    }
 
     public function role_users() {
         return $this->belongsTo(RoleUsers::class, 'role_id');

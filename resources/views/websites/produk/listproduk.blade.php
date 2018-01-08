@@ -36,38 +36,38 @@
 			</div>
 		</div>
 		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
-					<h3>{{$list['nama_produk']}}</h3>
-					<p><span class="item_price">{{ $list['harga'] }}</span> <del>-{{ $list['harga'] }} </del></p>
-					<div class="rating1">
-						<span class="starRating">
-							<input id="rating5" type="radio" name="rating" value="5">
-							<label for="rating5">5</label>
-							<input id="rating4" type="radio" name="rating" value="4">
-							<label for="rating4">4</label>
-							<input id="rating3" type="radio" name="rating" value="3" checked="">
-							<label for="rating3">3</label>
-							<input id="rating2" type="radio" name="rating" value="2">
-							<label for="rating2">2</label>
-							<input id="rating1" type="radio" name="rating" value="1">
-							<label for="rating1">1</label>
-						</span>
+			<h3>{{$list['nama_produk']}}</h3>
+			<p><span class="item_price">{{ $list['harga'] }}</span> <del>-{{ $list['harga'] }} </del></p>
+			<div class="rating1">
+				<span class="starRating">
+					<input id="rating5" type="radio" name="rating" value="5">
+					<label for="rating5">5</label>
+					<input id="rating4" type="radio" name="rating" value="4">
+					<label for="rating4">4</label>
+					<input id="rating3" type="radio" name="rating" value="3" checked="">
+					<label for="rating3">3</label>
+					<input id="rating2" type="radio" name="rating" value="2">
+					<label for="rating2">2</label>
+					<input id="rating1" type="radio" name="rating" value="1">
+					<label for="rating1">1</label>
+				</span>
+			</div>
+
+			<form action="{{ url('cart/3/add') }}" method="POST">
+				{{ csrf_field() }}
+				<div class="color-quality">
+					<br>
+					<div class="color-quality-right">
+						<h5>Jumlah :</h5>
+						<input type="number" name="qty" value="Name" onfocus="this.value = '';" required="">
 					</div>
-                    <br>
-					<div class="color-quality">
-                        <br>
-						<div class="color-quality-right">
-							<h5>Jumlah :</h5>
-                            <form>
-							     <input type="number" value="Name" onfocus="this.value = '';" required="">
-                            </form>
-						</div>
-					</div>
-                    <div>
-                    </div>
-                    <br>
-					<div class="occasion-cart">
-						<a href="#" class="item_add hvr-outline-out button2">Add to cart</a>
-					</div>
+				</div>
+				<br>
+				<div class="occasion-cart">
+					<a href="#" class="item_add hvr-outline-out button2">Add to cart</a>
+					<button type="submit" class="item_add hvr-outline-out button2">Add to cart</button>
+				</div>
+			</form>
 					
 		</div>
 				<div class="clearfix"> </div>
@@ -104,7 +104,7 @@
 										<h4>Tambahkan review</h4>
 										<form>
 											<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-											<inendput type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+											<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
 											
 											<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Pesan...</textarea>
 											<input type="submit" value="Kirim">

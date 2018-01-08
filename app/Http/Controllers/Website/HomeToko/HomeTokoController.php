@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 class HomeTokoController extends Controller
 {
      public function hometoko(){
-         $toko  = app('toko')->get();
+         $toko1  = app('toko')->getLimit(6, 'asc');
+         $toko2  = app('toko')->getLimit(6, 'desc');
+
          $list = [];
          $list['id_produk'] = '10';
          $list['nama_toko'] = 'Banana Foster Lampung';
@@ -17,6 +19,6 @@ class HomeTokoController extends Controller
          $list['harga'] = 'Rp68.000,00';
          $list['harga_diskon'] = 'Rp65.000,00'; 
          $list['review'] = "Pengiriman sangat cepat";
-         return view('websites.hometoko.hometoko', compact('list'));
+         return view('websites.hometoko.hometoko', compact('list', 'toko1', 'toko2'));
     }
 }

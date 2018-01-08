@@ -1,3 +1,4 @@
+
 <!-- header -->
 <div class="header">
     <div class="container">
@@ -106,23 +107,15 @@
                                     <div class="row">
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="{{url('/toko/fosterlampung')}}">Banana Foster Lampung</a></li>
-                                                <li><a href="{{url('/toko/bandungmakuta')}}">Bandung Makuta</a></li>
-                                                <li><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></li>
-                                                <li><a href="{{url('/toko/bosangmakassar')}}">Bosang Makassar</a></li>
-                                                <li><a href="{{url('/toko/mamahke')}}">Mamahke Jogja</a></li>
-                                                <li><a href="{{url('/toko/lapisminangnantigo')}}">Lapis Minang Nantigo</a></li>
+                                                @foreach($toko1 as $toko)
+                                                    <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="{{url('/toko/malangstruddle')}}">Malang Struddle</a></li>
-                                                <li><a href="{{url('/toko/medannapoleon')}}">Medan Napoleon</a></li>
-                                                <li><a href="{{url('/toko/queenpuff')}}">Queenpuff</a></li>
-                                                <li><a href="{{url('/toko/solopluffy')}}">Solo Pluffy</a></li>
-                                                <li><a href="{{url('/toko/surabayapatata')}}">Surabaya Patata</a></li>
-                                                <li><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></li>
-                                            </ul>
+                                            @foreach($toko2 as $toko)
+                                                <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
+                                            @endforeach
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">
                                             <a href="womens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>

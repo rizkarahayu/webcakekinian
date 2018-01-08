@@ -51,7 +51,7 @@ class ProdukController extends Controller
         $create = app('produk')->create($form, $rules);
         $request->session()->flash('message', $create['message']);
 
-        if (!$create)
+        if ($create['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/produk/tambah');
 
         return redirect('/ck-admin/produk/');
@@ -81,7 +81,7 @@ class ProdukController extends Controller
         $update = app('produk')->update($form, $rules, $id);
         $request->session()->flash('message', $update['message']);
 
-        if (!$update)
+        if ($update['status'] == GeneralFunction::$FAILED_STATUS)
             return redirect('/ck-admin/produk/edit/' . $id);
 
         return redirect('/ck-admin/produk/');
