@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers\Admin\Laporan;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Master\Laporan;
+use App\Model\Transaksi\Transaksi;
 
 class LaporanController extends Controller
 {
     public function laporanbln(){
-        return view('admin.laporan.laporanbln');
+        $transaksi  = app('transaksi')->get();
+        return view('admin.laporan.laporanbln', compact('transaksi'));
     }
     public function laporanproduk(){
-           return view('admin.laporan.laporanproduk');
+        $produk  = app('produk')->get();
+        return view('admin.laporan.laporanproduk', compact('produk'));
         }
 }
