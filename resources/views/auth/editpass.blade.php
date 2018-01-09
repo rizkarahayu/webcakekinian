@@ -135,24 +135,23 @@
 <body>
 
     <div class="container">
+       <div class="container">
+
       <div id="login">
-        <form method="POST" action="{{ route('register') }}">
-        <div class="col-md-6">
+
+        <form method="POST" action="{{ route('#') }}">
+
           <fieldset class="clearfix">
-            <p>Nama</p>
-            <p><span class="fontawesome-user"></span><input type="text" value="Nama" onBlur="if(this.value == '') this.value = 'Nama'" onFocus="if(this.value == 'Nama') this.value = ''" required></p>
-            <p>Username</p>
-            <p><span class="fontawesome-user"></span><input type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p>
-            <p>Email</p>
-            <p><span class="fontawesome-envelope"></span><input type="text" value="Email" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p>
-            <p>Password</p>
+            <p>Masukkan Password Lama</p>
             <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
-            <p>Re-type Password</p>
-            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
-            <p><input type="submit" value="Register" ></p>
+            <p>Masukkan Password Baru</p>
+            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p><input type="submit" value="Ubah Password"></p>
+
           </fieldset>
-            </div>
+
         </form>
+
       </div> <!-- end login -->
 
     </div>
