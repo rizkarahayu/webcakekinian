@@ -4,18 +4,22 @@
     <div class="container">
         <ul>
             <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
-            <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
             @guest
+                    <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">Register</a></li>
+            @else
+                    <li><p>Selamat datang di Cake-kinian!</p></li>
+            @endguest
+                @guest
                 <li>
                     <div class="dropdown">
                       <button class="dropbtn">Masuk</button>
                       <div class="dropdown-content">
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+
                       </div>
                     </div>
                 </li>
-            @else
+                @else
                 <li>
                     <div class="dropdown">
                       <button class="dropbtn">Menu</button>
