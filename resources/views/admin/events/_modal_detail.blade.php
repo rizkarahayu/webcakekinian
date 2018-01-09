@@ -21,31 +21,43 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Nama Event</label>
-                                                    <div class="col-md-4">
-                                                        <input type="text" class="form-control" id="inputPassword3" disabled placeholder="Masukan Nama Event">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-check-o"> &nbsp;</i>Tanggal Mulai</label>
-                                                    <div class="col-md-4">
-                                                        <input type="date" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Tanggal Mulai">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-calendar-times-o"> &nbsp;</i>Tanggal Selesai</label>
-                                                    <div class="col-md-4">
-                                                        <input type="date" class="form-control" id="inputPassword3" disabled placeholder="Masukkan Tanggal Selesai">
-                                                    </div>
+                                                  <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Event</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="nama" disabled placeholder="Savana">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword3" class="col-sm-2 control-label"><i class="fa fa-id-badge"> &nbsp;</i>Deskripsi Events</label>
-                                                <div class="col-sm-9">
-                                                    <textarea class="form-control" rows="4" disabled placeholder="Masukkan Alamat"></textarea>
+                                                  <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Toko</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="toko" disabled placeholder="Savanacake">
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Tanggal Mulai</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" id="tanggal_mulai" disabled placeholder="savanacake@gmail.com">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Tanggal Selesai</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" id="tanggal_selesai" disabled placeholder="Banyuwangi">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Deskripsi</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="deskripsi" disabled placeholder="Jl. Prajurit Syakur 48">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Gambar</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" id="gambar" disabled placeholder="0867865">
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                         <a href="{{ url('/ck-admin/event') }}" data-dismiss="modal" class="btn btn-default flat"><span class="glyphicon glyphicon-ban-circle"></span> Cancel</a>
 

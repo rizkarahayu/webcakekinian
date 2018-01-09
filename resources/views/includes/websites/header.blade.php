@@ -11,7 +11,6 @@
                       <button class="dropbtn">Masuk</button>
                       <div class="dropdown-content">
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
                       </div>
                     </div>
                 </li>

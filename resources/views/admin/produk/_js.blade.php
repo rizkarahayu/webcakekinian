@@ -5,17 +5,17 @@
         }
     });
 
-    function getDetail(id) {
+    function getDetailProduk(id) {
         $.ajax({
             type    : 'GET',
-            url     : '/ck-admin/api/produk/' + id,
+            url     : 'api/produk/' + id,
             data    : {},
             success : function (res) {
                 console.log(res);
 
-                $('#gambar').src(res.gambar);
-                $('#name').val(res.nama);
-                $('#toko_id').val(res.toko_id);
+              //  $('#gambar').src(res.gambar);
+                $('#nama').val(res.nama);
+                $('#toko').val(res.toko.nama);
                 $('#deskripsi').val(res.deskripsi);
                 $('#harga').val(res.harga);
                 $('#stock').val(res.stock);
