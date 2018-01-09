@@ -12,4 +12,3 @@ class ApiEventController extends Controller
         return $this->responseJson($event);
     }
 }
-g
