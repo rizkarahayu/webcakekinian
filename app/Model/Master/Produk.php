@@ -2,6 +2,7 @@
 
 namespace App\Model\Master;
 
+use App\Models\Cart;
 use Illuminate\Database\Eloquent\Model;
 use App\Model\Master\Toko;
 
@@ -31,5 +32,9 @@ class Produk extends Model
 
     public function toko() {
         return $this->belongsTo(Toko::class, 'toko_id');
+    }
+
+    public function cart() {
+        return $this->belongsTo(Cart::class, 'produk_id', 'id');
     }
 }

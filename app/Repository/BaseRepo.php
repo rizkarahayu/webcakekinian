@@ -22,6 +22,10 @@ class BaseRepo extends GeneralFunction
         return $this->model->orderBy('id', 'asc')->get();
     }
 
+    public function getOrder($key, $orderBy) {
+        return $this->model->orderBy($key, $orderBy)->get();
+    }
+
     public function getLimit($limit, $orderBy) {
         return $this->model->orderBy('id', $orderBy)->limit($limit)->get();
     }
@@ -32,6 +36,10 @@ class BaseRepo extends GeneralFunction
 
     public function getWith($with = []) {
         return $this->model->with($with)->get();
+    }
+
+    public function getWithOrder($with = [], $key, $orderBy) {
+        return $this->model->with($with)->orderBy($key, $orderBy)->get();
     }
 
     public function getWhereWith($where = [], $with = []) {

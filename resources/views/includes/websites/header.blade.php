@@ -50,20 +50,11 @@
                     <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
                 </div>
                 <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                        <option value="null">Semua Toko</option>
-                        <option value="AX">Banana Foster Lampung</option>
-                        <option value="AX">Bandung Makuta</option>
-                        <option value="AX">Bogor Rain Cake</option>
-                        <option value="AX">Bosang Makassar</option>
-                        <option value="AX">Mamahke Jogja</option>
-                        <option value="AX">Lapis Minang Nantigo</option>
-                        <option value="AX">Malang Struddle</option>
-                        <option value="AX">Medan Napoleon</option>
-                        <option value="AX">Queenpuff</option>
-                        <option value="AX">Solo Pluffy</option>
-                        <option value="AX">Surabaya Patata</option>
-                        <option value="AX">Surabaya Snowcake</option>
+                    <select id="toko_id" name="toko_id" onchange="change_country(this.value)" class="frm-field required">
+                        <option value="null" disabled selected>Pilih toko -></option>
+                        @foreach($toko as $tk)
+                            <option value="{{ $tk->id }}">{{ $tk->nama }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="sear-sub">

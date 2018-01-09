@@ -14,12 +14,13 @@ class TokoController extends Controller
          $data['deskripsi_toko'] = 'Super Delicious Banana Foster Lampung';
          $data['harga'] = 'Rp68.000,00';
          $data['harga_diskon'] = 'Rp65.000,00';
+         $toko   = app('toko')->getWithOrder(['users'], 'id', 'asc');
          $toko1  = app('toko')->getLimit(6, 'asc');
          $toko2  = app('toko')->getLimit(6, 'desc');
          $produks = app('produk')->getWhereWith(['toko_id' => $id_toko ], ['toko']);
 //         return response()->json($produks);
 
-        return view('websites.toko.listtoko', compact(['data', 'toko1', 'toko2', 'produks']));
+        return view('websites.toko.listtoko', compact(['data','toko', 'toko1', 'toko2', 'produks']));
     }
 }
 
