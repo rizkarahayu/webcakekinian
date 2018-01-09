@@ -11,5 +11,6 @@ Route::prefix('')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::get('/checkout/payment','Website\Checkout\CheckoutController@payment');
+        Route::get('/checkout/invoice','Website\Checkout\CheckoutController@invoice');
     });
 });

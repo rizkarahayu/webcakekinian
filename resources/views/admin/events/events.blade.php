@@ -47,7 +47,7 @@
                   <td>{{ ++$i }}</td>
                   <td>{{ $event->nama}}</td>
                   <td>{{ $event->toko->nama}}</td>
-                  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="getDetailEvent({{ $event->id }})" data-toggle="modal" data-target="#myModal">Details</button></td>
                     <td>
                         <a href="{{url('ck-admin/events/edit/' . $event->id)}}" class="btn btn-warning">
                             <i class="fa fa-pencil"></i>

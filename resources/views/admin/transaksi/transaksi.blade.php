@@ -28,7 +28,8 @@
                 <tbody>
                     @foreach($transaksi as $trans)
                 <tr>
-                  <td>{{$trans->customer->user->username}}</td>
+                  {{--<td>{{$trans->customer->user->username}}</td>--}}
+                  <td></td>
                   <td>{{$trans->total}}</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td style="text-align:center">

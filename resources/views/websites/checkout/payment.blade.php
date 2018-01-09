@@ -101,7 +101,7 @@
                         <h4> <b>Pesan (Opsional)</b></h4>
                         <hr>
                         <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'tujuan';}" required="">Masukkan pesan opsional...</textarea>
-                        <td style="border: 0;"><a href="{{url('/checkout/payment')}}" class="btn-lg btn-success" role="button">Buat Pesanan</a></td>
+                        <td style="border: 0;"><a href="{{url('/checkout/invoice')}}" class="btn-lg btn-success" role="button">Buat Pesanan</a></td>
                     </div>
                 </form>
             </div>
