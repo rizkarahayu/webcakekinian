@@ -5,7 +5,7 @@
         }
     });
 
-    function getDetail(id) {
+    function getDetailEvent(id) {
         $.ajax({
             type    : 'GET',
             url     : '/ck-admin/api/events/' + id,
@@ -13,12 +13,12 @@
             success : function (res) {
                 console.log(res);
 
-                $('#gambar').src(res.gambar);
                 $('#name').val(res.nama);
-                $('#toko_id').val(res.toko_id);
+                $('#toko_id').val(res.toko.nama);
                 $('#deskripsi').val(res.deskripsi);
                 $('#tanggal_mulai').val(res.tanggal_mulai);
                 $('#tanggal_selesai').val(res.tanggal_selesai);
+                $('#gambar').src(res.gambar);
             }
 
         });
