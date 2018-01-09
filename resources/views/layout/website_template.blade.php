@@ -46,6 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     @yield('custom_css')
 </head>
 <body>
+    <input type="hidden" value="{{ url('/') }}" id="url_path">
 
 <!-- Header -->
 @include('includes.websites.header')
@@ -61,5 +62,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 @yield('modal')
 
 @yield('custom_js')
+
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    function addToCart(produk_id) {
+        var url = $('#url_path').val();
+        console.log(url);
+        $.ajax({
+            type    : 'POST',
+            url     : url + '/cart/' + produk_id + '/add',
+            data    : {},
+            success : function (res) {
+                console.log(res);
+            }
+
+        });
+    }
+</script>
+
 </body>
 </html>

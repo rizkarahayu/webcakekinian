@@ -6,6 +6,7 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
     Route::get('/transaksi','Admin\Transaksi\TransaksiController@transaksi'); Route::get('/transaksi/detail/{id_transaksi}','Admin\Transaksi\TransaksiController@detailtransaksi');
     
     Route::get('/laporanbln','Admin\Laporan\LaporanController@laporanbln');
-  Route::get('/laporanproduk','Admin\Laporan\LaporanProdukController@laporanproduk');
+    Route::get('/laporanproduk','Admin\Laporan\LaporanProdukController@laporanproduk');
+    Route::get('/pdf_laporanproduk',array('as'=>'pdf_laporanproduk','uses'=>'Admin\Laporan\LaporanProdukController@pdf_laporanproduk'));
 });
 

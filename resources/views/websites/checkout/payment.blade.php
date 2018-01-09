@@ -53,20 +53,20 @@
                             <div class="form-group{{ $errors->has('kota_id') ? ' has-error' : '' }}">
                                 <label for="kota" class="col-md-2 control-label">Kabupaten/Kota</label>
                                 <div class="col-md-5">
-                                    <select class="form-control" id="provinsi" name="provinsi">
-                                        <option value="">-- Pilih Provinsi --</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-5">
-                                    <select class="form-control" id="kota_id" name="kota">
-                                        <option value="">-- Pilih Kota --</option>
+                                    <select class="form-control select2" name="kota" id="kota" style="width: 100%;">
+                                        <option selected="selected">Pilih Kota -></option>
+                                        @if (count($kota) > 0)
+                                            @for($i = 0; $i < count($kota); $i++)
+                                                <option value="{{ $kota[$i] }}">{{ $kota[$i] }}</option>
+                                            @endfor
+                                        @endif
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('kode_pos') ? ' has-error' : '' }}">
                                 <label for="kode_pos" class="col-md-2 control-label">Kode Pos</label>
                                 <div class="col-md-2">
-                                    <input id="kode_pos" type="text" class="form-control" name="kode_pos" placeholder="Masukkan Kode Pos" onKeyPress="return numbersonly(this, event)" maxlength="5" value="@if(!empty($pelanggan)){{ $pelanggan->kode_pos }}@endif">
+                                    <input id="kode_pos" type="text" class="form-control" name="kode_pos" placeholder="Kode Pos" onKeyPress="return numbersonly(this, event)" maxlength="5" value="@if(!empty($pelanggan)){{ $pelanggan->kode_pos }}@endif">
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('hp') ? ' has-error' : '' }}">

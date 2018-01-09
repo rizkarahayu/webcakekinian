@@ -1318,6 +1318,7 @@ h2.resp-accordion {
 }
 .men-thumb-item {
     position: relative;
+    height: 240px;
 }
 .item-info-product {
     text-align: center;
