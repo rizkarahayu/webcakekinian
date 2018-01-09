@@ -50,7 +50,7 @@
                                     </select>
                                 </div>
                                 <button class="btn btn-primary">Tampilkan</button>
-                                <button class="btn btn-primary">Cetak</button>
+                                <button class="btn btn-primary"><a href="{{ route('pdf_laporanproduk',['download'=>'pdf']) }}">Cetak</a></button>
                             </div>
                         </div>
                     </div>
