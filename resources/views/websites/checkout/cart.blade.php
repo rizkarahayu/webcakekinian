@@ -137,6 +137,20 @@
 						<td class="invert">$45.99</td>
 						
 					</tr>
+                    <tr class="rem1">
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"></td>
+                        <td style="background-color: #D83192;"><b>TOTAL</b></td>
+						<td class="invert">$45.99</td>
+					</tr>
+                    <tr class="rem1">
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"></td>
+                        <td style="border: 0;"><a href="{{url('/checkout/payment')}}" class="btn btn-success" role="button">Payment <i class="fa fa-credit-card-alt" aria-hidden="true"></i></a></td>
+                    </tr>
 					
 								<!--quantity-->
 									<script>
@@ -144,7 +158,6 @@
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
 										divUpd.text(newVal);
 									});
-
 									$('.value-minus').on('click', function(){
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 										if(newVal>=1) divUpd.text(newVal);
@@ -156,20 +169,7 @@
 		<div class="checkout-left">	
 				
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-                    <a href="{{url('/')}}"><span class="fa fa-long-arrow-left" aria-hidden="true"></span><b> Kembali</b></a>
-				</div>
-				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
-					<h4>Keranjang Belanja</h4>
-					<ul>
-						<li>Hand Bag <i>-</i> <span>$45.99</span></li>
-						<li>Watches <i>-</i> <span>$45.99</span></li>
-						<li>Sandals <i>-</i> <span>$45.99</span></li>
-						<li>Wedges <i>-</i> <span>$45.99</span></li>
-						<li>Total <i>-</i> <span>$183.96</span></li>
-                        <li><div class="checkout-right-basket"><a href="{{url('/checkout/payment')}}"><b>Payment</b><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a></div></li>
-                        <li></br></li>
-                        <li></br></li>
-					</ul>
+                    <a type="button" class="btn-lg btn-success" href="{{url('/')}}"><span class="fa fa-long-arrow-left" aria-hidden="true"></span> Kembali</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>

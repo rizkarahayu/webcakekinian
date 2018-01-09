@@ -13,54 +13,41 @@
     <!-- //banner -->
     <div class="payment">
         <h4> <b>Pilih Metode Bayar</b></h4>
+        <hr>
         <form>
             <div class="contact-form2">
                 <div class="container">
                     <form>
-                        <div class="checkbox" required="">
-                            <label><input type="checkbox" value="">Indomart</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">ATM</label>
+                        <div class="form-group col-md-5">
+                          <select class="form-control">
+                            <option>Indomart</option>
+                            <option>Transfer</option>
+                          </select>
                         </div>
                         <span><input type="submit" value="Request Kode Bayar" ></span>
                     </form>
                 </div>
-                </br>
-                <h4> <b>Pilih Metode Pengiriman</b></h4>
-                </br>
-                <form>
-                    <div class="contact-form2">
-                        <div class="container">
-                            <form>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Express</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Reguler</label>
-                                </div>
-                            </form>
-                        </div>
                         </br>
-                        <h4> <b>Alamat Tujuan</b></h4></br>
+                        <h4> <b>Detail Pengiriman</b></h4>
+                        <hr>
                         <form class="form-horizontal" action="{{ url('/checkout/data_pembayaran') }}" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" value="" name="nama" placeholder="Masukkan nama">
+                                    <input type="text" class="form-control col-md-5" value="" name="nama" placeholder="Masukkan nama">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" value="" name="email" placeholder="Masukkan email">
+                                    <input type="email" class="form-control col-md-5" value="" name="email" placeholder="Masukkan email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Alamat</label>
                                 <div class="col-sm-10">
-                                    <textarea type="text" class="form-control" name="alamat" placeholder="Masukkan alamat"></textarea>
+                                    <textarea type="text" class="form-control col-md-5" name="alamat" placeholder="Masukkan alamat"></textarea>
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('kota_id') ? ' has-error' : '' }}">
@@ -95,7 +82,7 @@
                             </div>
                             <div class="form-group{{ $errors->has('metode_pengiriman') ? ' has-error' : '' }}">
                                 <label for="hp_sales" class="col-md-2 control-label">Metode Pengiriman</label>
-                                <div class="col-md-10">
+                                <div class="col-md-5">
                                     <select class="form-control" name="metode_pengiriman">
                                         <option value="">-- Pilih metode pengiriman --</option>
                                     </select>
@@ -112,22 +99,11 @@
 
 
                         <h4> <b>Pesan (Opsional)</b></h4>
+                        <hr>
                         <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'tujuan';}" required="">Masukkan pesan opsional...</textarea>
+                        <td style="border: 0;"><a href="{{url('/checkout/payment')}}" class="btn-lg btn-success" role="button">Buat Pesanan</a></td>
                     </div>
                 </form>
-            </div>
-            <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
-                <h4>Keranjang Belanja</h4>
-                <ul>
-                    <li>Hand Bag <i>-</i> <span>$45.99</span></li>
-                    <li>Watches <i>-</i> <span>$45.99</span></li>
-                    <li>Sandals <i>-</i> <span>$45.99</span></li>
-                    <li>Wedges <i>-</i> <span>$45.99</span></li>
-                    <li>Total <i>-</i> <span>$183.96</span></li>
-                    <li><div class="checkout-right-basket"><a href="{{url('/checkout/payment')}}"><b>Buat Pesanan</b></a></div></li>
-                    <li><br></li>
-                    <li><br></li>
-                </ul>
             </div>
         </form>
         <div class="clearfix"> </div>
