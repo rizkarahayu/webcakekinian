@@ -33,7 +33,6 @@ class TokoController extends Controller
         $json1   = file_get_contents(url('data/bank.json'));
         $bank   = json_decode($json1, true);
         return view('admin.toko.toko_edit', compact(['toko', 'kota', 'bank']));
-
     }
 
     public function store(Request $request){

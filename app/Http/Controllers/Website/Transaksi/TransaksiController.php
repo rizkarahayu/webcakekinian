@@ -28,7 +28,8 @@ class TransaksiController extends Controller
             else if ($checkIfExists != false || $action == 'update')
                 $cartAction = $this->cartUpdate($form, $rules, $checkIfExists['id']);
 
-            return $this->responseJson($cartAction);
+            return redirect(url('cart'));
+//            return $this->responseJson($cartAction);
         }
     }
 

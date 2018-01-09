@@ -80,261 +80,38 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-				<div class="col-md-4 product-men no-pad-men">
-					<div class="men-pro-item simpleCart_shelfItem">
-						<div class="men-thumb-item">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-						</div>
-						<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 product-men no-pad-men">
-					<div class="men-pro-item simpleCart_shelfItem">
-						<div class="men-thumb-item">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-						</div>
-						<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 product-men no-pad-men">
-					<div class="men-pro-item simpleCart_shelfItem">
-						<div class="men-thumb-item">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-							<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-						</div>
-						<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-						</div>
-					</div>
-				</div>
-				
-				<div class="clearfix"></div>
 		</div>
 		<div class="clearfix"></div>
 		<div class="single-pro">
-			<div class="col-md-3 product-men">
-				<div class="men-pro-item simpleCart_shelfItem">
-					<div class="men-thumb-item">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-							<div class="men-cart-pro">
-								<div class="inner-men-cart-pro">
-									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
+			@foreach($produks as $produk)
+				<div class="col-md-3 product-men">
+					<div class="men-pro-item simpleCart_shelfItem">
+						<div class="men-thumb-item">
+							<img src="{{ url('img/produk/' . $produk->gambar) }}" alt="" class="pro-image-front">
+							<img src="{{ url('img/produk/' . $produk->gambar) }}" alt="" class="pro-image-back">
+								<div class="men-cart-pro">
+									<div class="inner-men-cart-pro">
+										<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
+									</div>
 								</div>
+								<span class="product-new-top">New</span>
+						</div>
+						<div class="item-info-product ">
+							<h4><a href="single.html">{{ $produk->nama }}</a></h4>
+							<div class="info-product-price">
+								<span class="item_price">Rp. {{ number_format($produk->harga) }}</span>
+								<del>Rp. {{ number_format(rand($produk->harga + 10000, $produk->harga + 50000)) }}</del>
 							</div>
-							<span class="product-new-top">New</span>				
-					</div>
-					<div class="item-info-product ">
-						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-						<div class="info-product-price">
-				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
-							<del>{{ $data['harga'] }}</del>
-    					</div>
-						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+							<form action="{{ url('cart/' . $produk->id . '/add') }}" method="post" >
+								{{ csrf_field() }}
+								{{--<a class="item_add single-item hvr-outline-out button2">--}}
+									<button type="submit">Add to cart</button>
+								{{--</a>--}}
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="col-md-3 product-men">
-				<div class="men-pro-item simpleCart_shelfItem">
-					<div class="men-thumb-item">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-							<div class="men-cart-pro">
-								<div class="inner-men-cart-pro">
-									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-								</div>
-							</div>
-							<span class="product-new-top">New</span>				
-					</div>
-					<div class="item-info-product ">
-						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-						<div class="info-product-price">
-				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
-							<del>{{ $data['harga'] }}</del>
-                        </div>
-						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 product-men">
-				<div class="men-pro-item simpleCart_shelfItem">
-					<div class="men-thumb-item">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-							<div class="men-cart-pro">
-								<div class="inner-men-cart-pro">
-									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-								</div>
-							</div>
-							<span class="product-new-top">New</span>				
-					</div>
-					<div class="item-info-product ">
-						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-						<div class="info-product-price">
-				        <span class="item_price">{{ $data['harga_diskon'] }}</span>
-                            <del>{{ $data['harga'] }}</del>
-						</div>
-						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 product-men">
-				<div class="men-pro-item simpleCart_shelfItem">
-					<div class="men-thumb-item">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-						<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-							<div class="men-cart-pro">
-								<div class="inner-men-cart-pro">
-									<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-								</div>
-							</div>
-							<span class="product-new-top">New</span>				
-					</div>
-					<div class="item-info-product ">
-						<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-						<div class="info-product-price">
-				            <span class="item_price">{{ $data['harga_diskon'] }}</span>
-							<del>{{ $data['harga'] }}</del>
-  					   </div>
-						<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-			<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-			<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}g" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-			<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-front">
-									<img src="{{ url('img/website/images/fosterlampung/3.jpg') }}" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="{{url('/produk/caramelized')}}">{{ $data['nama_produk'] }}</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">{{ $data['harga_diskon'] }}</span>
-										<del>{{ $data['harga'] }}</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
+			@endforeach
 			<div class="clearfix"></div>
 		</div>
 	</div>

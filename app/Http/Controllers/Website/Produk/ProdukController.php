@@ -10,7 +10,7 @@ class ProdukController extends Controller
       public function listproduk($nama_produk){
           $toko1  = app('toko')->getLimit(6, 'asc');
           $toko2  = app('toko')->getLimit(6, 'desc');
-          
+
          $list = [];
          $list['id_produk'] = '10';
          $list['nama_produk'] = 'Caramelized Foster Lampung';
