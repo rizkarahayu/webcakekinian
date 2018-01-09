@@ -514,7 +514,7 @@
                         <div class="login">
                             <div class="login-bottom">
                                 <h3>Daftar Sekarang</h3>
-                                <form>
+                                <form method="POST" action="{{ route('register') }}">
                                      <div class="sign-up">
                                         <h4>Nama :</h4>
                                         <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama';}" required="">

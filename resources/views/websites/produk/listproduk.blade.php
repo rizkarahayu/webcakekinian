@@ -64,8 +64,7 @@
 				</div>
 				<br>
 				<div class="occasion-cart">
-					<a href="#" class="item_add hvr-outline-out button2">Add to cart</a>
-					<button type="submit" class="item_add hvr-outline-out button2">Add to cart</button>
+					<a href="#" class="item_add hvr-outline-out button2" onclick="addToCart">Add to cart</a>
 				</div>
 			</form>
 					

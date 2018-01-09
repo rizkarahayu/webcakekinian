@@ -4,25 +4,28 @@
     <div class="container">
         <ul>
             <li><span class="fa fa-hourglass" aria-hidden="true"></span>Free and Fast Delivery</li>
-            <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">cakekinian@gmail.com</a></li>
             @guest
+                    <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a data-toggle="modal" data-target="#test" href="">Register</a></li>
+            @else
+                    <li><p>Selamat datang di Cake-kinian!</p></li>
+            @endguest
+                @guest
                 <li>
                     <div class="dropdown">
                       <button class="dropbtn">Masuk</button>
                       <div class="dropdown-content">
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
                       </div>
                     </div>
                 </li>
-            @else
+                @else
                 <li>
                     <div class="dropdown">
                       <button class="dropbtn">Menu</button>
                       <div class="dropdown-content">
                         <a href="{{ url('ck-admin') }}">Dashboard Admin</a>
                         <a href="#">Edit Profil</a>
-                        <a href="#">Lihat History Transaksi</a>
+                        <a href="{{ url('checkout/history') }}">Lihat History Transaksi</a>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                       </div>
                     </div>
@@ -117,9 +120,11 @@
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
-                                            @foreach($toko2 as $toko)
-                                                <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
-                                            @endforeach
+                                            <ul class="multi-column-dropdown">
+                                                @foreach($toko2 as $toko)
+                                                    <li><a href="{{url('/toko/' . $toko->id)}}">{{ $toko->nama }}</a></li>
+                                                @endforeach
+                                            </ul>
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">
                                             <a href="womens.html"><img src="{{ url('img/website/images/logo.PNG') }}" alt=" "/></a>

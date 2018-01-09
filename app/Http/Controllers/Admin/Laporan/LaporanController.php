@@ -12,8 +12,5 @@ class LaporanController extends Controller
         $transaksi  = app('transaksi')->get();
         return view('admin.laporan.laporanbln', compact('transaksi'));
     }
-    public function laporanproduk(){
-        $produk  = app('produk')->get();
-        return view('admin.laporan.laporanproduk', compact('produk'));
-        }
+
 }

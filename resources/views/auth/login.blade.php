@@ -1,69 +1,175 @@
-@extends('layouts.app')
+<html>
+    <head>
+        <title>Cake-kinian - Login</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
+        <style>
+                /* CSS Document */
+        /* ---------- FONTAWESOME ---------- */
+        /* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+        /* ---------- http://weloveiconfonts.com/ ---------- */
+        @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+        /* ---------- ERIC MEYER'S RESET CSS ---------- */
+        /* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+        @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+        /* ---------- FONTAWESOME ---------- */
+        [class*="fontawesome-"]:before {
+          font-family: 'FontAwesome', sans-serif;
+        }
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+        /* ---------- GENERAL ---------- */
+        * {
+          -moz-box-sizing: border-box;
+               box-sizing: border-box;
+        }
+        *:before, *:after {
+          -moz-box-sizing: border-box;
+               box-sizing: border-box;
+        }
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+        body {
+          background: #2c3338;
+          color: #606468;
+          font: 87.5%/1.5em 'Open Sans', sans-serif;
+          margin: 0;
+        }
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+        a {
+          color: #eee;
+          text-decoration: none;
+        }
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+        a:hover {
+          text-decoration: underline;
+        }
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+        input {
+          border: none;
+          font-family: 'Open Sans', Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.5em;
+          padding: 0;
+          -webkit-appearance: none;
+        }
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+        p {
+          line-height: 1.5em;
+        }
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+        .clearfix {
+          *zoom: 1;
+        }
+        .clearfix:before, .clearfix:after {
+          content: ' ';
+          display: table;
+        }
+        .clearfix:after {
+          clear: both;
+        }
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+        .container {
+          left: 50%;
+          position: fixed;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+        }
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+        /* ---------- LOGIN ---------- */
+        #login {
+          width: 280px;
+        }
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
+        #login form span {
+          background-color: #363b41;
+          border-radius: 3px 0px 0px 3px;
+          color: #606468;
+          display: block;
+          float: left;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50px;
+        }
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            form p {
+                color: darkgoldenrod;
+            }
+        #login form input {
+          height: 50px;
+        }
+
+        #login form input[type="text"], input[type="password"], input[type="email"] {
+          background-color: #3b4148;
+          border-radius: 0px 3px 3px 0px;
+          color: #606468;
+          margin-bottom: 1em;
+          padding: 0 16px;
+          width: 230px;
+        }
+
+        #login form input[type="submit"] {
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          background-color: #ea4c88;
+          color: #eee;
+          font-weight: bold;
+          margin-bottom: 2em;
+          text-transform: uppercase;
+          width: 280px;
+        }
+
+        #login form input[type="submit"]:hover {
+          background-color: #d44179;
+        }
+
+        #login > p {
+          text-align: center;
+        }
+
+        #login > p span {
+          padding-left: 5px;
+        }
+
+    </style>
+    </head>
+    
+    <body>
+        <div class="container">
+
+              <div id="login">
+                
+                <form method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
+                    @if ($errors->has('email'))
+                        <p class="">
+                            {{ $errors->first('email') }}
+                        </p>
+                    @endif
+                    @if ($errors->has('password'))
+                        <p class="">
+                            {{ $errors->first('password') }}
+                        </p>
+                    @endif
+                  <fieldset class="clearfix">
+
+                    <p><span class="fa fa-user"></span><input type="email" name="email" placeholder="Email" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> 
+                    <p><span class="fa fa-lock"></span><input type="password" name="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
+                      
+                    <p><input type="submit" value="Sign In"></p>
+
+                  </fieldset>
+                </form>
+
+                <p>Not a member? <a href={{ url('/register') }}>Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+
+              </div> <!-- end login -->
+
         </div>
-    </div>
-</div>
-@endsection
+    </body>
+</html>
+    
+
+

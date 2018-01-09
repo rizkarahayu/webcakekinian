@@ -39,5 +39,6 @@ Route::prefix('ck-admin')->middleware('auth')->group(function () {
 
 Route::prefix('ck-admin/api/')->middleware('auth')->group(function () {
     Route::get('/toko/{id}', 'API\ApiTokoController@getById');
-    Route::get('/event/{id}', 'API\ApiEventController@getById');
+    Route::get('/events/{id}', 'API\ApiEventController@getById');
+    Route::get('/produk/{id}', 'API\ApiProdukController@getById');
 });
