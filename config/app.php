@@ -178,7 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Sweetalert
-        \Softon\SweetAlert\SweetAlertServiceProvider::class
+        \Softon\SweetAlert\SweetAlertServiceProvider::class,
+        Stevebauman\Location\LocationServiceProvider::class,
 
     ],
 
@@ -231,6 +232,7 @@ return [
 
         // Swal
         'SWAL'  => \Softon\SweetAlert\Facades\SWAL::class,
+        'Location' => Stevebauman\Location\Facades\Location::class,
     ],
 
 ];
