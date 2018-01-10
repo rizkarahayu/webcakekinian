@@ -71,7 +71,9 @@
                         <td style="border: 0;"></td>
                         <td style="border: 0;"></td>
                         <td style="border: 0;"></td>
-                        <td style="border: 0;"><a href="{{url('/checkout/payment')}}" class="btn btn-success" role="button">Payment <i class="fa fa-credit-card-alt" aria-hidden="true"></i></a></td>
+                        <td style="border: 0;">
+							<a href="{{url('/checkout/payment')}}" class="btn btn-success" role="button">Payment <i class="fa fa-credit-card-alt" aria-hidden="true"></i></a>
+						</td>
                     </tr>
 					
 								<!--quantity-->

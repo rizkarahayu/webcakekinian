@@ -1,154 +1,77 @@
-<html>
-    <head>
-        <title>Cakekinian - Register</title>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
-                <style>
-                /* CSS Document */
-        /* ---------- FONTAWESOME ---------- */
-        /* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
-        /* ---------- http://weloveiconfonts.com/ ---------- */
-            @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-        /* ---------- ERIC MEYER'S RESET CSS ---------- */
-        /* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
-        @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
-        /* ---------- FONTAWESOME ---------- */
-        [class*="fontawesome-"]:before {
-          font-family: 'FontAwesome', sans-serif;
-        }
+@extends('layouts.app')
 
-        /* ---------- GENERAL ---------- */
-        * {
-          -moz-box-sizing: border-box;
-               box-sizing: border-box;
-        }
-        *:before, *:after {
-          -moz-box-sizing: border-box;
-               box-sizing: border-box;
-        }
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Register</div>
 
-        body {
-          background: #2c3338;
-          color: #606468;
-          font: 87.5%/1.5em 'Open Sans', sans-serif;
-          margin: 0;
-        }
+                    <div class="panel-body">
+                        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                            {{ csrf_field() }}
 
-        a {
-          color: #eee;
-          text-decoration: none;
-        }
+                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                <label for="name" class="col-md-4 control-label">Name</label>
 
-        a:hover {
-          text-decoration: underline;
-        }
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
-        input {
-          border: none;
-          font-family: 'Open Sans', Arial, sans-serif;
-          font-size: 14px;
-          line-height: 1.5em;
-          padding: 0;
-          -webkit-appearance: none;
-        }
+                                    @if ($errors->has('name'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
-        p {
-          line-height: 1.5em;
-        }
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-        .clearfix {
-          *zoom: 1;
-        }
-        .clearfix:before, .clearfix:after {
-          content: ' ';
-          display: table;
-        }
-        .clearfix:after {
-          clear: both;
-        }
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
-        .container {
-          left: 50%;
-          position: fixed;
-          top: 50%;
-          -webkit-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-                  transform: translate(-50%, -50%);
-        }
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
-        /* ---------- LOGIN ---------- */
-        #login {
-          width: 280px;
-        }
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password" class="col-md-4 control-label">Password</label>
 
-        #login form span {
-          background-color: #363b41;
-          border-radius: 3px 0px 0px 3px;
-          color: #606468;
-          display: block;
-          float: left;
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          width: 50px;
-        }
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control" name="password" required>
 
-        #login form input {
-          height: 50px;
-        }
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
-        #login form input[type="text"], input[type="password"] {
-          background-color: #3b4148;
-          border-radius: 0px 3px 3px 0px;
-          color: #606468;
-          margin-bottom: 1em;
-          padding: 0 16px;
-          width: 230px;
-        }
+                            <div class="form-group">
+                                <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
-        #login form input[type="submit"] {
-          border-radius: 3px;
-          -moz-border-radius: 3px;
-          -webkit-border-radius: 3px;
-          background-color: #ea4c88;
-          color: #eee;
-          font-weight: bold;
-          margin-bottom: 2em;
-          text-transform: uppercase;
-          width: 280px;
-        }
+                                <div class="col-md-6">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                </div>
+                            </div>
 
-        #login form input[type="submit"]:hover {
-          background-color: #d44179;
-        }
-
-        #login > p {
-          text-align: center;
-        }
-
-        #login > p span {
-          padding-left: 5px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div id="login">
-                
-                <form method="POST" action="{{ route('register') }}">
-                    {{ csrf_field() }}
-                  <fieldset class="clearfix">
-
-                    <p><span class="fa fa-user"></span><input type="email" name="email" placeholder="Email" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> 
-                    <p><span class="fa fa-lock"></span><input type="password" name="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
-                      
-                    <p><input type="submit" value="Register"></p>
-
-                  </fieldset>
-                </form>
-
-              </div> <!-- end login -->
-
-  </body>
-</html>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

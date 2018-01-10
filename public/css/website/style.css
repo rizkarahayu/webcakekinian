@@ -723,7 +723,7 @@ top: 9%;
     font-size: 14px;
     margin-top: 22px;
 }
-.newsright input[type="text"] {
+.newsright input[type="text"], .newsright input[type="email"] {
     outline: none;
     width: 100%;
     padding: 14px 10px;
@@ -1502,7 +1502,7 @@ a.single-item{
     width: 46%;
     margin: 0 2%;
 }
-.login-right input[type="text"] ,.login-right input[type="password"] ,.login-bottom input[type="text"] ,.login-bottom input[type="password"]{
+.login-right input[type="text"] ,.login-right input[type="email"] ,.login-right input[type="password"] ,.login-bottom input[type="text"] ,.login-bottom input[type="password"]{
     width: 100%;
     padding: 10px;
     font-weight: normal;
@@ -1513,7 +1513,7 @@ a.single-item{
     font-size: 14px;
     margin: 6px 0 17px 0px;
 }
-.login-right input[type="text"]:hover, .login-right input[type="password"]:hover, .login-bottom input[type="text"]:hover, .login-bottom input[type="password"]:hover{
+.login-right input[type="text"]:hover,.login-right input[type="email"]:hover, .login-right input[type="password"]:hover, .login-bottom input[type="text"]:hover, .login-bottom input[type="password"]:hover{
     border: 1px solid #D83192;	
 }
 .login-right h4,.login-bottom h4 {
@@ -1767,7 +1767,7 @@ h3.tittle {
     text-transform: uppercase;
     margin: 0px 0 50px;
 }
-.contact-form2 input[type="text"],.contact-form2 input[type="email"],.contact-form2 textarea{
+.contact-form2 input[type="text"],.contact-form2 input[type="email"],.contact-form2 textarea,.contact-form2 select{
     outline: none;
     padding: 10px;
     border: 1px solid #DFDFDF;
@@ -1776,13 +1776,13 @@ h3.tittle {
     color: #999;
     resize: none;
 }
-.contact-form2 input[type="text"],.contact-form2 input[type="email"]{
+.contact-form2 input[type="text"],.contact-form2 input[type="email"],.contact-form2 select{
     width: 49%;	
 }
 .contact-form2 input[type="email"]{
-	margin-left:1.5%;
+	/*margin-left:1.5%;*/
 }
-.contact-form2 input[type="text"]:hover,.contact-form2 input[type="email"]:hover,.contact-form2 textarea:hover{
+.contact-form2 input[type="text"]:hover,.contact-form2 input[type="email"]:hover,.contact-form2 textarea:hover,.contact-form2 select:hover{
     border: 1px solid #D83192;	
 }
 .contact-form2 textarea{

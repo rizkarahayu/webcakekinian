@@ -91,7 +91,7 @@
 							<img src="{{ url('img/produk/' . $produk->gambar) }}" alt="" class="pro-image-back">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="{{url('/produk/caramelized')}}" class="link-product-add-cart">Lihat Detail</a>
+										<a href="{{url('/produk/' . $produk->id)}}" class="link-product-add-cart">Lihat Detail</a>
 									</div>
 								</div>
 								<span class="product-new-top">New</span>

@@ -2,6 +2,7 @@
 
 namespace App\Model\Master;
 
+use App\Model\Transaksi\DetailTransaksi;
 use App\Models\Cart;
 use Illuminate\Database\Eloquent\Model;
 use App\Model\Master\Toko;
@@ -36,5 +37,9 @@ class Produk extends Model
 
     public function cart() {
         return $this->belongsTo(Cart::class, 'produk_id', 'id');
+    }
+
+    public function detail_transaksi() {
+        return $this->belongsTo(DetailTransaksi::class, 'produk_id');
     }
 }

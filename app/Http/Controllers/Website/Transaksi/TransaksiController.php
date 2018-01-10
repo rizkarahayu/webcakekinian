@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\Website\Transaksi;
 
 use App\Model\Transaksi\Cart;
+use App\Model\Transaksi\DetailPengirimanTransaksi;
+use App\Model\Transaksi\DetailTransaksi;
+use App\Model\Transaksi\PaymentTransaksi;
+use App\Model\Transaksi\Transaksi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class TransaksiController extends Controller
@@ -44,5 +49,64 @@ class TransaksiController extends Controller
         $update         =   app('cart')->update($form, $rules, $cart_id);
 
         return $update;
+    }
+
+    public function checkout(Request $request) {
+        $form   = $request->all();
+//        return $this->responseJson($form);
+
+        $rules_transaksi    = Transaksi::$validation_rules;
+        $form_transaksi     = [];
+        $form_transaksi['customer_id']          = Auth::user()->customer->id;
+        $form_transaksi['total']                = 0;
+        $form_transaksi['status_pembayaran']    = 0;
+        $form_transaksi['kode_pembayaran']      = bin2hex(random_bytes(3));
+        $form_transaksi['status_pengiriman']    = 0;
+        $form_transaksi['status_kedatangan']    = 0;
+        $form_transaksi['status_transaksi']     = 0;
+        $form_transaksi['tanggal_transaksi']    = Carbon::now()->toDateString();
+        if (@$form_transaksi['deskripsi_pemesanan'] != null)
+            $form_transaksi['deskripsi_pemesanan']  = $form['deskripsi_pemesanan'];
+        else
+            $form_transaksi['deskripsi_pemesanan']  = '-';
+
+        $transaksi      = app('transaksi')->create($form_transaksi, $rules_transaksi);
+        $transaksi_id   = $transaksi['data']['id'];
+
+        $total  = 0;
+        $carts  = app('cart')->getWhereWith(['users_id' => Auth::user()->id], ['produk']);
+        foreach ($carts as $cart) {
+            $detail     = new DetailTransaksi();
+            $detail->transaksi_id   = $transaksi_id;
+            $detail->produk_id      = $cart['produk_id'];
+            $detail->qty            = $cart['qty'];
+            $detail->subtotal       = $cart['produk']['harga'] * $cart['qty'];
+            $detail->created_at     = Carbon::now()->toDateTimeString();
+            $detail->updated_at     = Carbon::now()->toDateTimeString();
+            $detail->save();
+
+            $produk         = app('produk')->getById($cart['produk_id']);
+            $update_stock   = app('produk')->update(['stock' => ($produk->stock - $detail->qty)], [], $produk->id);
+
+            $total  += $detail->subtotal;
+
+            $cart_delete    = app('cart')->delete($cart['id']);
+        }
+        $update_trans   = app('transaksi')->update(['total' => $total], [], $transaksi_id);
+
+        $metode_pengiriman  = app('payment_transaksi')->create(
+            [
+                'transaksi_id'      => $transaksi_id,
+                'metode_payment_id' => $form['metode_payment_id']
+            ],
+            PaymentTransaksi::$validation_rules
+        );
+
+        unset($form['metode_payment_id']);
+        unset($form['deskripsi_pemesanan']);
+        $form['transaksi_id']   = $transaksi_id;
+        $detail_pengiriman  = app('detail_pengiriman_transaksi')->create($form, []);
+
+        return redirect(url('/checkout/invoice/' . $transaksi_id));
     }
 }

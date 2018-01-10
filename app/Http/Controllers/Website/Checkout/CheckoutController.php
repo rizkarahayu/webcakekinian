@@ -23,15 +23,27 @@ class CheckoutController extends Controller
         $toko   = app('toko')->getWithOrder(['users'], 'id', 'asc');
         $toko1  = app('toko')->getLimit(6, 'asc');
         $toko2  = app('toko')->getLimit(6, 'desc');
+        $methods= app('payment_method')->get();
 
-        return view('websites.checkout.payment', compact(['toko', 'toko1', 'toko2', 'kota']));
+        return view('websites.checkout.payment', compact(['methods', 'toko', 'toko1', 'toko2', 'kota']));
     }
 
-    public function invoice(){
-        $transaksi = app('transaksi')->get();
+    public function invoice($transaksi_id){
+        $transaksi = app('transaksi')->getWhereWithFirst(['id' => $transaksi_id], ['detail_pengiriman',
+            'payment_transaksi' => function($query) {
+                $query->with(['metode_payment']);
+            }, 'customer'=> function($query) {
+            $query->with(['users']);
+        }, 'detail_transaksi' => function($query) {
+              $query->with(['produk' => function($query) {
+                  $query->with('toko');
+              }]);
+        }]);
         $toko   = app('toko')->getWithOrder(['users'], 'id', 'asc');
         $toko1  = app('toko')->getLimit(6, 'asc');
         $toko2  = app('toko')->getLimit(6, 'desc');
+
+//        return $this->responseJson($transaksi);
         return view('websites.checkout.invoice', compact('toko', 'transaksi', 'toko1', 'toko2'));
     }
 }

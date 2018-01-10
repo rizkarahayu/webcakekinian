@@ -15,7 +15,7 @@ class PaymentTransaksi extends Model
         
     ];
 
-    protected static $validation_rules = [
+    public static $validation_rules = [
         'transaksi_id'           => 'required',
         'metode_payment_id'      => 'required',
     ];

@@ -3,10 +3,6 @@
 @section('title', 'Data Transaksi')
 @section('page_title', 'Transaksi Penjualan')
 @section('content')
-    <div class="row">@section('title', 'Data Toko')
-@section('page_title', 'Data Transaksi')
-@section('page_description', 'Data Transaksi')
-@section('content')
 <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -16,6 +12,7 @@
                 <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
+                  <th style="text-align:center">No.</th>
                   <th style="text-align:center">Nama Customer</th>
                   <th style="text-align:center">Total</th>
                   <th style="text-align:center">Detail Pengiriman</th>
@@ -26,18 +23,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($transaksi as $trans)
+                    @foreach($transaksi as $i => $trans)
                 <tr>
-                  {{--<td>{{$trans->customer->user->username}}</td>--}}
-                  <td></td>
+                  <td>{{++$i}}</td>
+                  <td>{{$trans->customer->users->name}}</td>
                   <td>{{$trans->total}}</td>
                   <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td style="text-align:center">
-                      @php $status_bayar = 1; @endphp
-                      @if($status_bayar == 0)
-                    <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</label>
+                      @if($trans->status_pembayaran == 0)
+                        <a class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</a>
                       @else
-                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>bayar</label>
+                        <a class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>bayar</a>
                       @endif
                   </td>
                   <td style="text-align:center"><a href="{{url('ck-admin/transaksi/detail/1')}}">
@@ -45,8 +41,7 @@
                    </a></td>
                   <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
                   <td style="text-align:center">
-                      @php $status_datang = 0; @endphp
-                      @if($status_datang == 0)
+                      @if($trans->status_kedatangan == 0)
                     <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum Sampai</label>
                       @else
                     <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>Sampai</label>

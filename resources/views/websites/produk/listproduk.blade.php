@@ -36,8 +36,8 @@
 			</div>
 		</div>
 		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
-			<h3>{{$list['nama_produk']}}</h3>
-			<p><span class="item_price">{{ $list['harga'] }}</span> <del>-{{ $list['harga'] }} </del></p>
+			<h3>{{$produk->nama}}</h3>
+			<p><span class="item_price">Rp. {{ number_format($produk->harga) }}</span> <del>Rp. {{ number_format(rand($produk->harga + 10000, $produk->harga + 50000)) }}</del></p>
 			<div class="rating1">
 				<span class="starRating">
 					<input id="rating5" type="radio" name="rating" value="5">
@@ -53,7 +53,7 @@
 				</span>
 			</div>
 
-			<form action="{{ url('cart/3/add') }}" method="POST">
+			<form action="{{ url('cart/'. $produk->id .'/add') }}" method="POST">
 				{{ csrf_field() }}
 				<div class="color-quality">
 					<br>
@@ -64,7 +64,7 @@
 				</div>
 				<br>
 				<div class="occasion-cart">
-					<a href="#" class="item_add hvr-outline-out button2" onclick="addToCart">Add to cart</a>
+					<button type="submit" class="btn item_add hvr-outline-out button2">Add to cart</button>
 				</div>
 			</form>
 					

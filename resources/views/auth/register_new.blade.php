@@ -1,14 +1,14 @@
 <html>
     <head>
-        <title>Cake-kinian - Login</title>
+        <title>Cakekinian - Register</title>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
-        <style>
+                <style>
                 /* CSS Document */
         /* ---------- FONTAWESOME ---------- */
         /* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
         /* ---------- http://weloveiconfonts.com/ ---------- */
-        @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+            @import url(http://weloveiconfonts.com/api/?family=fontawesome);
         /* ---------- ERIC MEYER'S RESET CSS ---------- */
         /* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
         @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
@@ -93,14 +93,11 @@
           width: 50px;
         }
 
-            form p {
-                color: darkgoldenrod;
-            }
         #login form input {
           height: 50px;
         }
 
-        #login form input[type="text"], input[type="password"], input[type="email"] {
+        #login form input[type="text"], input[type="password"] {
           background-color: #3b4148;
           border-radius: 0px 3px 3px 0px;
           color: #606468;
@@ -134,43 +131,24 @@
         }
 
     </style>
-    </head>
-    
-    <body>
-        <div class="container">
+</head>
+<body>
 
-              <div id="login">
+    <div id="login">
                 
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
-                    @if ($errors->has('email'))
-                        <p class="">
-                            {{ $errors->first('email') }}
-                        </p>
-                    @endif
-                    @if ($errors->has('password'))
-                        <p class="">
-                            {{ $errors->first('password') }}
-                        </p>
-                    @endif
                   <fieldset class="clearfix">
 
                     <p><span class="fa fa-user"></span><input type="email" name="email" placeholder="Email" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> 
                     <p><span class="fa fa-lock"></span><input type="password" name="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
                       
-                    <p><input type="submit" value="Sign In"></p>
+                    <p><input type="submit" value="Register"></p>
 
                   </fieldset>
                 </form>
 
-                <p>Not a member? <a href={{ url('/register') }}>Sign up now</a><span class="fontawesome-arrow-right"></span></p>
-                <p><a href={{ url('/') }}>Back to Site</a><span class="fontawesome-arrow-right"></span></p>
-
               </div> <!-- end login -->
 
-        </div>
-    </body>
+  </body>
 </html>
-    
-
-

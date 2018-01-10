@@ -12,9 +12,7 @@ class DetailPengirimanTransaksi extends Model
         'nama_pembeli',
         'no_telp',
         'alamat',
-        'kecamatan',
         'kabupaten',
-        'provinsi',
         'kode_pos',
     ];
 

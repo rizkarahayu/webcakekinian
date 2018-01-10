@@ -13,7 +13,6 @@ class DetailTransaksi extends Model
         'produk_id',
         'qty',
         'subtotal',
-        'deskripsi_pemesanan',
     ];
 
     protected static $validation_rules = [
@@ -21,13 +20,12 @@ class DetailTransaksi extends Model
         'produk_id'                 => 'required',
         'qty'                       => 'required',
         'subtotal       '           => 'required',
-        'deskripsi_pemesanan'       => 'required',
     ];
 
     public function transaksi() {
-        return $this->belongsTo(Transaksi::class, 'transaksi_id', 'transaksi_id');
+        return $this->belongsTo(Transaksi::class, 'transaksi_id');
     }
      public function produk() {
-        return $this->hasOne(Produk::class, 'produk_id', 'id');
+        return $this->hasOne(Produk::class, 'id', 'produk_id');
     }
 }

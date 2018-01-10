@@ -7,10 +7,12 @@ use App\Http\Controllers\Controller;
 
 class ProdukController extends Controller
 {
-      public function listproduk($nama_produk){
+      public function listproduk($id_produk){
           $toko   = app('toko')->getWithOrder(['users'], 'id', 'asc');
           $toko1  = app('toko')->getLimit(6, 'asc');
           $toko2  = app('toko')->getLimit(6, 'desc');
+          $produk = app('produk')->getWhereWithFirst(['id' => $id_produk], ['toko']);
+//          return $produk
 
          $list = [];
          $list['id_produk'] = '10';
@@ -19,6 +21,6 @@ class ProdukController extends Controller
          $list['harga'] = 'Rp68.000,00';
          $list['harga_diskon'] = 'Rp65.000,00'; 
          $list['review'] = "Pengiriman sangat cepat";
-        return view('websites.produk.listproduk', compact('toko','list', 'toko1', 'toko2'));
+        return view('websites.produk.listproduk', compact(['produk','toko','list', 'toko1', 'toko2']));
     }
 }

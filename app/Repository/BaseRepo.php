@@ -46,6 +46,10 @@ class BaseRepo extends GeneralFunction
         return $this->model->where($where)->with($with)->get();
     }
 
+    public function getWhereWithFirst($where = [], $with = []) {
+        return $this->model->where($where)->with($with)->first();
+    }
+
     public function getById($id) {
         return $this->model->find($id);
     }

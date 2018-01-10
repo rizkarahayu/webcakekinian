@@ -21,9 +21,11 @@
                 @else
                 <li>
                     <div class="dropdown">
-                      <button class="dropbtn">Menu</button>
+                      <button class="dropbtn"><i class="fa fa-toggle-down"></i> Menu</button>
                       <div class="dropdown-content">
-                        <a href="{{ url('ck-admin') }}">Dashboard Admin</a>
+                          @if (\Illuminate\Support\Facades\Auth::user()->role_id == 1)
+                            <a href="{{ url('ck-admin') }}">Dashboard Admin</a>
+                          @endif
                         <a href="#">Edit Profil</a>
                         <a href="{{ url('checkout/history') }}">Lihat History Transaksi</a>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -134,11 +136,14 @@
                 <a href="{{url('/cart')}}">
                     <h3> <div class="total">
                             <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+                            {{--<span class="simpleCart_total"></span> --}}
+                            {{--(<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)--}}
+                            <span id="" class=""></span> Cart
+                        </div>
 
                     </h3>
                 </a>
-                <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                <p><a href="{{url('/cart')}}" class="simpleCart_empty"><span class="">Items</span></a></p>
 
             </div>
         </div>
