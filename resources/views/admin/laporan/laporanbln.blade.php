@@ -73,11 +73,10 @@
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>No.</th>
+              <th width="10%">No.</th>
+              <th width="10%">No Transaksi</th>
               <th>Tgl Transaksi</th>
-              <th>No Transaksi</th>
               <th>Nama Customer</th>
-              <th>Nama Toko</th>
               <th>Total</th>
             </tr>
             </thead>
@@ -86,11 +85,10 @@
               @foreach($transaksi as $i => $transaksis)
                 <tr>
                   <td>{{ ++$i }}</td>
-                  <td>{{ $transaksis->tanggal_transaksi}}</td>
                   <td>{{ $transaksis->id}}</td>
-                  <td>{{ $transaksis->customer_id}}</td>
-                  <td>{{ $transaksis->toko_id}}</td>
-                  <td>{{ $transaksis->total}}</td>
+                  <td>{{ $transaksis->tanggal_transaksi}}</td>
+                  <td>{{ $transaksis->customer->users->name}}</td>
+                  <td>Rp. {{ number_format($transaksis->total)}}</td>
                 </tr>
               @endforeach
             @else
@@ -98,8 +96,13 @@
                 <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
               </tr>
             @endif
-            </tbody>
-            <th class="col-ms-6"><bold>Total Pendapatan</bold></th>
+            </tbody><tr>
+              <th class="col-ms-6"><bold>Total Pendapatan</bold></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Rp. {{ number_format($total_trans) }}</td>
+            </tr>
           </table>
         </div>
       </div>

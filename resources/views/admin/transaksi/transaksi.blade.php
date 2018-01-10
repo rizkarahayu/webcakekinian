@@ -15,11 +15,9 @@
                   <th style="text-align:center">No.</th>
                   <th style="text-align:center">Nama Customer</th>
                   <th style="text-align:center">Total</th>
-                  <th style="text-align:center">Detail Pengiriman</th>
-                  <th style="text-align:center">Status Bayar</th>
-                  <th style="text-align:center">Detail Transaksi</th>
-                  <th style="text-align:center">Status Pengiriman</th>
-                  <th style="text-align:center">Status Kedatangan</th>
+                  <th style="text-align:center">Detail </th>
+                  <th style="text-align:center" width="20%">Konfirmasi </th>
+                  <th style="text-align:center" width="10%">Status </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,23 +26,42 @@
                   <td>{{++$i}}</td>
                   <td>{{$trans->customer->users->name}}</td>
                   <td>{{$trans->total}}</td>
-                  <td style="text-align:center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td style="text-align:center">
-                      @if($trans->status_pembayaran == 0)
-                        <a class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</a>
-                      @else
-                        <a class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>bayar</a>
-                      @endif
+                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Pengiriman</button>
+                      <a href="{{url('ck-admin/transaksi/detail/1')}}">
+                          <button class='btn btn-info'>Transaksi</button>
+                      </a>
                   </td>
-                  <td style="text-align:center"><a href="{{url('ck-admin/transaksi/detail/1')}}">
-                  <button class='btn btn-info'>Detail Transaksi</button>
-                   </a></td>
-                  <td style="text-align:center"><input width=50px type="checkbox" name="my-checkbox" checked></td>
-                  <td style="text-align:center">
-                      @if($trans->status_kedatangan == 0)
-                    <label class="btn btn-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum Sampai</label>
+                    <td>
+                        @if($trans->status_pembayaran == 0)
+                            <a href="{{ url('ck-admin/transaksi/'. $trans->id .'/konfirmasi/bayar') }}" class="btn btn-success"><i class="fa fa-check"></i>Konfirmasi Bayar</a>
+                        @endif
+
+                        @if($trans->status_pengiriman == 0)
+                            <a class="btn btn-success" ><i class="fa fa-check"></i>Konfirmasi Terkirim</a>
+                        @endif
+
+                        @if($trans->status_kedatangan == 0)
+                            <label class="btn btn-success"><i class="fa fa-check"></i>Konfirmasi Tiba</label>
+                        @endif
+                    </td>
+                  <td style="text-align:left">
+                      @if($trans->status_pembayaran == 0)
+                          <a class="label label-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum bayar</a>
                       @else
-                    <label class="btn btn-success" style="cursor:text;"><i class="fa fa-check"></i>Sampai</label>
+                          <a class="label label-success" style="cursor:text;"><i class="fa fa-check"></i>Lunas</a>
+                      @endif
+
+                      @if($trans->status_pengiriman == 0)
+                          <a class="label label-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum Terkirim</a>
+                      @else
+                          <a class="label label-success" style="cursor:text;"><i class="fa fa-check"></i>Terkirim</a>
+                      @endif
+
+                      @if($trans->status_kedatangan == 0)
+                          <label class="label label-danger" style="cursor:text;"><i class="fa fa-close"></i> Belum Sampai</label>
+                      @else
+                          <label class="label label-success" style="cursor:text;"><i class="fa fa-check"></i>Sampai</label>
                       @endif
                   </td>
                 </tr>
