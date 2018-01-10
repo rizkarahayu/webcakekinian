@@ -50,7 +50,7 @@
                   <td>{{ $produks->nama}}</td>
                   <td>{{ $produks->toko->nama}}</td>
                   <td>{{ $produks->harga}}</td>
-                  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Details</button></td>
+                  <td><button type="button" class="btn btn-info" onclick="getDetailProduk({{ $produks->id }})" data-toggle="modal" data-target="#myModal">Details</button></td>
                   <td>
                       <a href="{{url('ck-admin/produk/edit/' . $produks->id)}}" class="btn btn-warning">
                           <i class="fa fa-pencil"></i>

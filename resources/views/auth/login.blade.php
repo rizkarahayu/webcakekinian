@@ -163,7 +163,7 @@
                   </fieldset>
                 </form>
 
-                <p>Not a member? <a href="#">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+                <p>Not a member? <a href={{ url('/register') }}>Sign up now</a><span class="fontawesome-arrow-right"></span></p>
 
               </div> <!-- end login -->
 

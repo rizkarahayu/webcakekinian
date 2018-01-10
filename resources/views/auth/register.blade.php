@@ -8,7 +8,7 @@
         /* ---------- FONTAWESOME ---------- */
         /* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
         /* ---------- http://weloveiconfonts.com/ ---------- */
-        @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+            @import url(http://weloveiconfonts.com/api/?family=fontawesome);
         /* ---------- ERIC MEYER'S RESET CSS ---------- */
         /* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
         @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
@@ -134,28 +134,21 @@
 </head>
 <body>
 
-    <div class="container">
-      <div id="login">
-        <form method="POST" action="{{ route('register') }}">
-        <div class="col-md-6">
-          <fieldset class="clearfix">
-            <p>Nama</p>
-            <p><span class="fontawesome-user"></span><input type="text" value="Nama" onBlur="if(this.value == '') this.value = 'Nama'" onFocus="if(this.value == 'Nama') this.value = ''" required></p>
-            <p>Username</p>
-            <p><span class="fontawesome-user"></span><input type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p>
-            <p>Email</p>
-            <p><span class="fontawesome-envelope"></span><input type="text" value="Email" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p>
-            <p>Password</p>
-            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
-            <p>Re-type Password</p>
-            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
-            <p><input type="submit" value="Register" ></p>
-          </fieldset>
-            </div>
-        </form>
-      </div> <!-- end login -->
+    <div id="login">
+                
+                <form method="POST" action="{{ route('register') }}">
+                    {{ csrf_field() }}
+                  <fieldset class="clearfix">
 
-    </div>
+                    <p><span class="fa fa-user"></span><input type="email" name="email" placeholder="Email" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> 
+                    <p><span class="fa fa-lock"></span><input type="password" name="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
+                      
+                    <p><input type="submit" value="Register"></p>
+
+                  </fieldset>
+                </form>
+
+              </div> <!-- end login -->
 
   </body>
 </html>

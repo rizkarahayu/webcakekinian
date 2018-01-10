@@ -40,7 +40,7 @@
                            <div class="form-group">
                             <label  for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-institution"> &nbsp;</i>Nama Toko</label>
                             <div class="col-sm-4">
-                                <select class="form-control" name="toko_id">
+                                <select class="form-control" name="toko_id"  id="toko">
                                     <option value="1" disabled="" selected>Pilih Toko -></option>
                                     @if (count($tokos) > 0)
                                         @foreach($tokos as $toko)

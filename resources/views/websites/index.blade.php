@@ -52,222 +52,27 @@
                     </ul>
                     <div class="resp-tabs-container">
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo10.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo10.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/patata')}}" class="link-product-add-cart">Kunjungi Toko</a>
+                            @foreach($toko as $tk)
+                                <div class="col-md-3 product-men">
+                                    <div class="men-pro-item simpleCart_shelfItem">
+                                        <div class="men-thumb-item">
+                                            <img src="{{ url('img/users/' . $tk->users->gambar) }}" alt="" class="pro-image-front">
+                                            <img src="{{ url('img/users/' . $tk->users->gambar) }}" alt="" class="pro-image-back">
+                                            <div class="men-cart-pro">
+                                                <div class="inner-men-cart-pro">
+                                                    <a href="{{ url('/toko/' .$tk->id) }}" class="link-product-add-cart">Kunjungi Toko</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
+                                            <span class="product-new-top">New</span>
 
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/patata')}}">Surabaya Patata</a></h4>
+                                        </div>
+                                        <div class="item-info-product ">
+                                            <h4><a href="{{ url('/toko/' .$tk->id) }}">{{ $tk->nama }}</a></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo1.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo1.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/foster')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">new</span>
+                            @endforeach
 
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/foster')}}">Lampung Banana Foster</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo2.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo2.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/bosang')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/bosang')}}">Bosang Makassar </a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo3.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo3.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/makuta')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/makuta')}}">Bandung Makuta</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo4.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo4.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/queenpuff')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">Combo Pack</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/queenpuff')}}">Queen Puff</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo5.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo5.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/lapisminang')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/lapisminang')}}">Lapis Minang Nantigo</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo6.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo6.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/struddle')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/struddle')}}">Malang Struddle</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo7.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo7.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/napoleon')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/napoleon')}}">Medan Napoleon</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo8.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo8.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/snowcake')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/snowcake')}}">Surabaya Snowcake</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo9.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo9.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/pluffy')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/pluffy')}}"> Solo Pluffy</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo11.png') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo11.png') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/mamahke')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/mamahke')}}">Mamahke Jogja</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men yes-marg">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="{{ url('img/website/images/logo/logo12.jpg') }}" alt="" class="pro-image-front">
-                                        <img src="{{ url('img/website/images/logo/logo12.jpg') }}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="{{url('/toko/raincake')}}" class="link-product-add-cart">Kunjungi Toko</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="{{url('/toko/raincake')}}">Bogor Rain Cake</a></h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="clearfix"></div>
                         </div>
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
@@ -514,7 +319,7 @@
                         <div class="login">
                             <div class="login-bottom">
                                 <h3>Daftar Sekarang</h3>
-                                <form>
+                                <form method="POST" action="{{ route('register') }}">
                                      <div class="sign-up">
                                         <h4>Nama :</h4>
                                         <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama';}" required="">

@@ -11,7 +11,11 @@
 |
 */
 
-
+Route::get('ip',function(){
+    $ip= "111.140.167.18";
+    $data = \Location::get($ip);
+    dd($data);
+});
 Route::prefix('')->group(function () {
     Route::get('/', 'Website\HomeController@index');
     Route::get('/user', 'Website\HomeController@index');

@@ -5,10 +5,10 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ApiEventController extends Controller
+class ApiProdukController extends Controller
 {
     public function getById(Request $request, $id) {
-        $event  = app('event')->getWithbyId(['toko'], $id);
-        return $this->responseJson($event);
+        $produk  = app('produk')->getWithbyId(['toko'], $id);
+        return $this->responseJson($produk);
     }
 }
