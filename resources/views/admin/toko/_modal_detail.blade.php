@@ -14,6 +14,11 @@
                                     <form class="form-horizontal">
                                         <div class="box-body">
                                             <div class="form-group">
+                                                <div class="image text-center" >
+                                                    &nbsp;<img src="{{ url('img\admin\banana\1.jpg') }}" class="img-circle" style="max-width:280px">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                     <label for="inputEmail3" class="col-sm-2 control-label"><i class="fa fa-id-card"> &nbsp;</i>Nama Toko</label>
                                                     <div class="col-sm-5">
                                                         <input type="text" class="form-control" id="name" disabled placeholder="Savana">
