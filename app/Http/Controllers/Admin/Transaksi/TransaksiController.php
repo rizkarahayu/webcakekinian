@@ -27,6 +27,18 @@ class TransaksiController extends Controller
         return view('admin.transaksi.transaksi', compact('transaksi'));
     }
       public function detailtransaksi($id_transaksi){
-        return view('admin.detailtransaksi.detailtransaksi', compact('id_transaksi'));
+          $transaksi = app('transaksi')->getWhereWithFirst(['id' => $id_transaksi], ['detail_pengiriman',
+              'payment_transaksi' => function($query) {
+                  $query->with(['metode_payment']);
+              }, 'customer'=> function($query) {
+                  $query->with(['users']);
+              }, 'detail_transaksi' => function($query) {
+                  $query->with(['produk' => function($query) {
+                      $query->with('toko');
+                  }]);
+              }]);
+          //return $this->responseJson($transaksi);
+
+          return view('admin.detailtransaksi.detailtransaksi', compact('transaksi', 'id_transaksi'));
     }
 }

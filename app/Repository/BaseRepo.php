@@ -23,7 +23,7 @@ class BaseRepo extends GeneralFunction
     }
 
     public function getOrder($key, $orderBy) {
-        return $this->model->orderBy($key, $orderBy)->get();
+        return $this->model->orderBy($key, $orderBy )->get();
     }
 
     public function getLimit($limit, $orderBy) {

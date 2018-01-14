@@ -18,7 +18,7 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control" disabled data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                                <input type="text" class="form-control" disabled data-inputmask="'alias': 'dd/mm/yyyy'" value="{{ $transaksi->tanggal_transaksi }}" data-mask>
                             </div>
                         </div>
                     </div>
@@ -37,21 +37,23 @@
                             </tr>
                             </thead>
                             <tbody></tbody>
+                            @if (count($transaksi) > 0)
+                                @foreach($transaksi->detail_transaksi as $i => $detail)
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>{{ $detail->produk->nama}}</td>
+                                        <td>{{ $detail->produk->toko->nama}}</td>
+                                        <td>{{ $detail->produk->harga}}</td>
+                                        <td>{{ $detail->subtotal}}</td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <tr>
+                                    <td>{{ \App\GeneralFunction::$EMPTY_DATA_MESSAGE }}</td>
+                                </tr>
+                            @endif
 
-                            <tr>
-                                <td>Patata</td>
-                                <td>Keju</td>
-                                <td>Rp 65000,-</td>
-                                <td>5</td>
-                                <td>Rp 325000,-</td>
-                            </tr>
-                            <tr>
-                                <td>Patata</td>
-                                <td>Keju</td>
-                                <td>Rp 65000,-</td>
-                                <td>5</td>
-                                <td>Rp 325000,-</td>
-                            </tr>
+
                         </table>
                         <div class="form-group">
                             <label class="col-sm-2"></label>
@@ -71,7 +73,7 @@
                             <label for="inputEmail3" class="col-sm-2 control-label">Total</label>
                             <div class="col-sm-4">
                                 <div class="input-group">
-                                    <input disabled type="text" class="form-control">
+                                    <input disabled type="text" class="form-control" value="{{ $transaksi->total}}">
                                 </div>
                             </div>
                         </div>
@@ -89,10 +91,10 @@
                         <div class="col-lg-6">
                             <div class="input-group">
                         <span class="input-group-addon">
-                          <input type="radio" name="metode_transfer">&nbsp; Transfer
+                          <input type="radio" name="metode_transfer" @if($transaksi->payment_transaksi->metode_payment_id==1){{"checked"}} @endif>&nbsp; Transfer
                         </span>
                                 <span class="input-group-addon">
-                          <input type="radio" name="metode_transfer">&nbsp; Indomart
+                          <input type="radio" name="metode_transfer" @if($transaksi->payment_transaksi->metode_payment_id==2){{"checked"}} @endif>&nbsp; Indomart
                         </span>
                             </div>
                         </div>
@@ -103,7 +105,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <textarea class="form-control" disabled rows="4" placeholder="Enter ..."></textarea>
+                                    <textarea class="form-control" disabled rows="4" placeholder="Enter ..."> {{ $transaksi->deskripsi_pemesanan}}</textarea>
                             </div>
                         </div>
                     </div>
