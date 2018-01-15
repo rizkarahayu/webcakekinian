@@ -7,7 +7,7 @@
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3>{{ $data['nama_toko'] }}</h3>
+		<h3>{{$toko_detail->nama}}</h3>
 	</div>
 </div>
 <!-- //banner -->
@@ -72,11 +72,11 @@
 			</div>
 			<div class="men-wear-bottom">
 				<div class="col-sm-4 men-wear-left">
-					<img class="img-responsive" src="{{ url('img/website/images/logo/logo1.jpg') }}" alt=" " />
+					<img class="img-responsive" src="{{ url('img/users/' . $toko_detail->users->gambar) }}" alt=" " />
 				</div>
 				<div class="col-sm-8 men-wear-right">
-					<h4>Super Delicious {{ $data['nama_toko'] }}</h4>
-					<p>{{ $data['deskripsi_toko'] }}</p>
+					<h4>Super Delicious {{$toko_detail->nama}}</h4>
+					<p>{{$toko_detail->deskripsi }}</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>

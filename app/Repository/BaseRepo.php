@@ -38,6 +38,10 @@ class BaseRepo extends GeneralFunction
         return $this->model->with($with)->get();
     }
 
+    public function getWhereWithOrder($where, $with = [], $key, $orderBy) {
+        return $this->model->where($where)->with($with)->orderBy($key, $orderBy)->first();
+    }
+
     public function getWithOrder($with = [], $key, $orderBy) {
         return $this->model->with($with)->orderBy($key, $orderBy)->get();
     }

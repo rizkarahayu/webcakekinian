@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin\Transaksi;
 
+use App\GeneralFunction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Transaksi\Transaksi;
+use Illuminate\Support\Facades\Auth;
 
 class TransaksiController extends Controller
 {
@@ -40,5 +42,38 @@ class TransaksiController extends Controller
           //return $this->responseJson($transaksi);
 
           return view('admin.detailtransaksi.detailtransaksi', compact('transaksi', 'id_transaksi'));
+    }
+    public function confirmBayar(Request $request, $id) {
+        $form['status_pembayaran'] = 1;
+        $transaksi = app('transaksi')->update($form, [], $id);
+
+        if ($transaksi['status'] == GeneralFunction::$SUCCESS_STATUS) {
+            if ($transaksi['status'] == GeneralFunction::$FAILED_STATUS)
+                return redirect('/ck-admin/transaksi');
+            else
+                return redirect('/ck-admin/transaksi');
+        }
+    }
+    public function confirmTerkirim(Request $request, $id) {
+        $form['status_pengiriman'] = 1;
+        $transaksi = app('transaksi')->update($form, [], $id);
+
+        if ($transaksi['status'] == GeneralFunction::$SUCCESS_STATUS) {
+            if ($transaksi['status'] == GeneralFunction::$FAILED_STATUS)
+                return redirect('/ck-admin/transaksi');
+            else
+                return redirect('/ck-admin/transaksi');
+        }
+    }
+    public function confirmDatang(Request $request, $id) {
+        $form['status_kedatangan'] = 1;
+        $transaksi = app('transaksi')->update($form, [], $id);
+
+        if ($transaksi['status'] == GeneralFunction::$SUCCESS_STATUS) {
+            if ($transaksi['status'] == GeneralFunction::$FAILED_STATUS)
+                return redirect('/history/' . Auth::user()->id);
+            else
+                return redirect('/history/' . Auth::user()->id);
+        }
     }
 }

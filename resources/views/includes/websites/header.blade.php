@@ -27,7 +27,7 @@
                             <a href="{{ url('ck-admin') }}">Dashboard Admin</a>
                           @endif
                         <a href="#">Edit Profil</a>
-                        <a href="{{ url('checkout/history') }}">Lihat History Transaksi</a>
+                        <a href="{{ url('history/'. \Illuminate\Support\Facades\Auth::user()->id) }}">Lihat History Transaksi</a>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                       </div>
                     </div>

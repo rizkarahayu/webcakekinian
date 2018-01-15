@@ -7,6 +7,7 @@ use App\Model\Transaksi\DetailPengirimanTransaksi;
 use App\Model\Transaksi\DetailTransaksi;
 use App\Model\Transaksi\PaymentTransaksi;
 use App\Model\Transaksi\Transaksi;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
@@ -54,10 +55,11 @@ class TransaksiController extends Controller
     public function checkout(Request $request) {
         $form   = $request->all();
 //        return $this->responseJson($form);
+        $customer   = User::with('customer')->where('id', Auth::user()->id)->first();
 
         $rules_transaksi    = Transaksi::$validation_rules;
         $form_transaksi     = [];
-        $form_transaksi['customer_id']          = Auth::user()->customer->id;
+        $form_transaksi['customer_id']          = $customer->customer->id;
         $form_transaksi['total']                = 0;
         $form_transaksi['status_pembayaran']    = 0;
         $form_transaksi['kode_pembayaran']      = bin2hex(random_bytes(3));

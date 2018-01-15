@@ -4,7 +4,7 @@
 @section('page_title', 'Transaksi Penjualan')
 @section('content')
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="box box-info">
                 <div class="box-header with-border">
                     <div class="form-group">
@@ -29,6 +29,7 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th>No.</th>
                                 <th>Nama Produk</th>
                                 <th>Varian</th>
                                 <th>Harga</th>
@@ -40,10 +41,11 @@
                             @if (count($transaksi) > 0)
                                 @foreach($transaksi->detail_transaksi as $i => $detail)
                                     <tr>
-                                        <td>{{ ++$i }}</td>
+                                        <td>{{++$i}}</td>
                                         <td>{{ $detail->produk->nama}}</td>
                                         <td>{{ $detail->produk->toko->nama}}</td>
                                         <td>{{ $detail->produk->harga}}</td>
+                                        <td>{{ $detail->qty}}</td>
                                         <td>{{ $detail->subtotal}}</td>
                                     </tr>
                                 @endforeach
@@ -83,7 +85,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="box box-info">
                 <div class="box-body">
                     <h4>Metode Payment</h4>

@@ -6,7 +6,7 @@ Route::prefix('')->group(function () {
     Route::get('/produk/{id_produk}','Website\Produk\ProdukController@listproduk');
     Route::get('/about','Website\About\AboutController@about');
     Route::get('/hometoko','Website\HomeToko\HomeTokoController@hometoko');
-    Route::get('/history', 'Website\History\HistoryController@history');
+    Route::get('/history/{id}', 'Website\History\HistoryController@history');
 
     Route::middleware('auth')->group(function () {
         Route::get( '/cart','Website\Checkout\CheckoutController@cart');

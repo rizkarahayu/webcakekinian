@@ -227,33 +227,41 @@
 		<h3>RIWAYAT TRANSAKSI</h3>
     </div>
 </div>
+
+{{--@if($trans->status_kedatangan == 0)--}}
+    {{--<label class="btn btn-success"><i class="fa fa-check"></i>Konfirmasi Tiba</label>--}}
+{{--@endif--}}
 <!-- //banner -->  
   <div class="container">
   <table class="responsive-table">
     <thead>
       <tr>
+        <th scope="col">No</th>
         <th scope="col">Tanggal</th>
-        <th scope="col">Produk</th>
-        <th scope="col">Nama Toko</th>
-        <th scope="col">Jumlah</th>
+        <th scope="col">Nama</th>
         <th scope="col">Total</th>
+        <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">Frozen</th>
-        <td data-title="Released">2013</td>
-        <td data-title="Studio">Disney</td>
-        <td data-title="Worldwide Gross">$1,287,000,000</td>
-        <td data-title="Domestic Gross">$400,738,009</td>
-      </tr>
-      <tr>
-        <th scope="row">Minions</th>
-        <td data-title="Released">2015</td>
-        <td data-title="Studio">Universal</td>
-        <td data-title="Worldwide Gross">$1,159,398,397</td>
-        <td data-title="Domestic Gross">$336,045,770</td>
-      </tr>
+    @foreach($trans as $i => $tran)
+          <tr>
+            <th scope="row">{{ ++$i }}</th>
+            <td data-title="Released">{{ $tran->tanggal_transaksi }}</td>
+            <td data-title="Studio">{{ $tran->customer->users->name }}</td>
+            <td data-title="Worldwide Gross">Rp. {{ number_format($tran->total) }}</td>
+            <td data-title="Domestic Gross">
+
+                @if($tran->status_kedatangan == 0)
+                    <a href="{{ url('ck-admin/transaksi/'. $tran->id .'/confirm/datang') }}" class="btn btn-success"><i class="fa fa-check"></i>Konfirmasi Tiba</a>
+
+                @else
+                    <label class="label label-success"><i class="fa fa-check"></i>Sampai</label>
+
+                @endif
+            </td>
+          </tr>
+    @endforeach
     </tbody>
   </table>
 </div>
