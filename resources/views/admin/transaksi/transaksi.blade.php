@@ -24,7 +24,7 @@
                     @foreach($transaksi as $i => $trans)
                 <tr>
                   <td>{{++$i}}</td>
-                  <td>{{$trans->id}}</td>
+                  <td>{{$trans->customer->users->name}}</td>
                   <td>{{$trans->total}}</td>
                   <td style="text-align:center">
                       <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="getDetail({{$trans->id}})">Pengiriman</button>

@@ -42,13 +42,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Nomor Handphone</label>
+                        <label class="col-sm-2 control-label">Nomor HP</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" data-inputmask='"mask": "(+62)999-9999-9999"' data-mask2 placeholder="contoh: (+62)857-9999-9999" name="no_telp" value="{{ \Illuminate\Support\Facades\Auth::user()->no_telp }}" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Alamat</l abel>
+                        <label class="col-sm-2 control-label">Alamat</label>
                         <div class="col-sm-10">
                             <textarea class="form-control col-md-5" name="alamat" placeholder="Masukkan alamat" required> {{ \Illuminate\Support\Facades\Auth::user()->alamat }}</textarea>
                         </div>
