@@ -34,20 +34,7 @@
                         <li><i class="fa fa-phone" aria-hidden="true"></i>Phone : (+62)312345678</li>
                     </ul>
                 </div>
-                <div class="col-md-4 sign-gd flickr-post">
-                    <h4>RSS Feed</h4>
-                    <ul>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b15.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b16.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b17.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b18.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b15.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b16.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b17.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b18.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{ url('img/website/images/b15.jpg') }}" alt=" " class="img-responsive" /></a></li>
-                    </ul>
-                </div>
+
                 <div class="clearfix"></div>
             </div>
         </div>

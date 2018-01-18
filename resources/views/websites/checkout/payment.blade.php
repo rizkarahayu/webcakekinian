@@ -14,7 +14,7 @@
     <div class="payment">
         <h4> <b>Pilih Metode Bayar</b></h4>
         <hr>
-        <form method="POST" action="{{ url('checkout') }}">
+        <form method="POST" action="{{ url('checkout/' . \Illuminate\Support\Facades\Auth::user()->id) }}">
             {{ csrf_field() }}
             <div class="contact-form2">
                 <div class="container">

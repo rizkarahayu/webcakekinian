@@ -52,14 +52,14 @@ class TransaksiController extends Controller
         return $update;
     }
 
-    public function checkout(Request $request) {
+    public function checkout(Request $request, $id) {
         $form   = $request->all();
-//        return $this->responseJson($form);
-        $customer   = User::with('customer')->where('id', Auth::user()->id)->first();
+        $customer   = User::with('customer')->where('id', $id)->first();
 
+//        return $this->responseJson($customer);
         $rules_transaksi    = Transaksi::$validation_rules;
         $form_transaksi     = [];
-        $form_transaksi['customer_id']          = $customer->customer->id;
+        $form_transaksi['customer_id']          = Auth::user()->customer->id;
         $form_transaksi['total']                = 0;
         $form_transaksi['status_pembayaran']    = 0;
         $form_transaksi['kode_pembayaran']      = bin2hex(random_bytes(3));
